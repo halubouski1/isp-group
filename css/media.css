@@ -1,0 +1,737 @@
+/* ==========================================================================
+   1440px — the 1920px layout scaled down by 0.75
+   Generated from style.css: every px value is multiplied by 0.75
+   (1px hairlines are left untouched).
+   ========================================================================== */
+@media (max-width: 1919px) {
+  .btn {
+      gap: 30px;
+      min-width: 215.25px;
+      padding: 18px 13.5px 18px 22.5px;
+      border-radius: 3.75px;
+      font-size: 12px;
+  }
+
+  .btn--dark {
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+  }
+
+  .header {
+      gap: 30px;
+      padding: 30px;
+  }
+
+  .header__logo img {
+      width: 109.5px;
+  }
+
+  .header__right {
+      gap: 45px;
+  }
+
+  .nav__list {
+      gap: 10.5px;
+  }
+
+  .nav__link {
+      font-size: 11.25px;
+  }
+
+  .burger {
+      width: 29.25px;
+      height: 29.25px;
+      border-radius: 4.5px;
+  }
+
+  .burger img {
+    width: 14px;
+    height: auto;
+  }
+
+  .hero {
+      min-height: 480px;
+      padding: 135px 30px 37.5px;
+  }
+
+  .hero__title {
+      max-width: 603.75px;
+      font-size: 60px;
+  }
+
+  .hero__bottom {
+      gap: 30px;
+  }
+
+  .stats {
+      gap: 15px;
+  }
+
+  .stats__item {
+      gap: 22.5px;
+  }
+
+  .stats__circle {
+      width: 97.5px;
+      height: 97.5px;
+      border-radius: 750px;
+  }
+
+  .stats__value {
+      font-size: 22.5px;
+  }
+
+  .stats__text {
+      gap: 6px;
+  }
+
+  .stats__title {
+      font-size: 22.5px;
+  }
+
+  .stats__desc {
+      max-width: 172.5px;
+      font-size: 12px;
+  }
+
+  .stats__desc:last-child {
+      max-width: 150px;
+  }
+
+  .hero__subtitle {
+      max-width: 465px;
+      margin-bottom: 33px;
+      font-size: 41.25px;
+  }
+
+  .hero__buttons {
+      gap: 19.5px;
+  }
+
+  .hero__btn-small {
+      min-width: 207px;
+  }
+
+  .about {
+      padding: 108.75px 30px 165px;
+  }
+
+  .about::before {
+      bottom: -105px;
+  }
+
+  .about__title {
+      max-width: 870px;
+      margin-bottom: 202.5px;
+      font-size: 90px;
+  }
+
+  .about__text {
+      max-width: 326.25px;
+  }
+
+  .about__desc {
+      margin-bottom: 22.5px;
+      font-size: 13.5px;
+  }
+
+  .services {
+      padding-bottom: 112.5px;
+  }
+
+  .services__head {
+      gap: 30px;
+      margin-bottom: 45px;
+      padding-left: 11.25px;
+      padding-right: 30px;
+  }
+
+  .services__title {
+      font-size: 33.75px;
+  }
+
+  .services__nav {
+      gap: 6px;
+  }
+
+  .slider-btn {
+      width: 37.5px;
+      height: 37.5px;
+  }
+
+  .services__slider .swiper-slide {
+      width: 421.5px;
+  }
+
+  .service-card {
+      height: 564.75px;
+      padding: 0 24px 33.75px;
+      border-radius: 7.5px;
+  }
+
+  .service-card__top {
+      left: 15px;
+      right: 15px;
+  }
+
+  .service-card__cell {
+      gap: 22.5px;
+      padding: 8.25px 15px 8.25px 0;
+  }
+
+  .service-card__cell--right {
+      gap: 3.75px;
+      padding: 16.5px 0 16.5px 15px;
+  }
+
+  .service-card__num {
+      font-size: 56.25px;
+  }
+
+  .service-card__label {
+      max-width: 82.5px;
+      font-size: 12px;
+  }
+
+  .service-card__meta {
+      gap: 3.75px;
+  }
+
+  .service-card__index {
+      font-size: 12px;
+  }
+
+  .service-card__btn {
+      min-width: 161.25px;
+      padding: 12px 12px 12px 21px;
+      gap: 15px;
+      font-size: 10.5px;
+      transform: translate(15px, -50%);
+  }
+
+  .service-card__title {
+      font-size: 30px;
+  }
+
+  .service-card__circle {
+      right: 21.75px;
+      bottom: 33.75px;
+      width: 37.5px;
+      height: 37.5px;
+      transform: translateY(9px);
+  }
+
+  .service-card:hover .service-card__meta {
+      transform: translateX(-7.5px);
+  }
+
+  .build {
+      padding: 0 11.25px;
+  }
+
+  .build__inner {
+      min-height: 825px;
+      padding: 33.75px 30px 48.75px 45px;
+      border-radius: 11.25px;
+  }
+
+  .build__head {
+      gap: 30px;
+  }
+
+  .build__logo img {
+      width: 109.5px;
+  }
+
+  .build__link {
+      font-size: 15px;
+  }
+
+  .build__bottom {
+      gap: 30px;
+  }
+
+  .build__title {
+      max-width: 705px;
+      margin-bottom: 33.75px;
+      font-size: 67.5px;
+  }
+
+  .build__buttons {
+      gap: 13.5px;
+  }
+
+  .build__desc {
+      max-width: 286.5px;
+      font-size: 12px;
+      margin-right: 22.5px;
+  }
+
+  .build__desc--cta {
+      max-width: 307.5px;
+  }
+
+  .way {
+      padding: 108.75px 24px 142.5px;
+  }
+
+  .way__head {
+      gap: 30px;
+      margin-bottom: 86.25px;
+  }
+
+  .way__title {
+      font-size: 33.75px;
+  }
+
+  .way__list {
+      column-gap: 75px;
+      row-gap: 90px;
+  }
+
+  .way-card {
+      gap: 15px;
+  }
+
+  .way-card__icon {
+      width: 63.75px;
+      height: 63.75px;
+  }
+
+  .way-card__title {
+      margin-bottom: 4.5px;
+      font-size: 15px;
+  }
+
+  .way-card__text {
+      padding-top: 7.5px;
+  }
+
+  .way-card__desc {
+      font-size: 12px;
+  }
+
+  .grid-card {
+      height: 664.5px;
+      padding: 17.25px 22.5px 24px;
+  }
+
+  .grid-card__row {
+      gap: 12.75px;
+      margin-bottom: 26.25px;
+  }
+
+  .grid-card__num {
+      font-size: 12px;
+  }
+
+  .grid-card__title {
+      font-size: 24px;
+  }
+
+  .grid-card__btn {
+      min-width: 225px;
+  }
+
+  .conversation {
+      padding: 183.75px 18.75px 120px;
+  }
+
+  .conversation__head {
+      gap: 30px;
+      margin-bottom: 159.75px;
+  }
+
+  .conversation__title {
+      font-size: 60px;
+  }
+
+  .conversation__second {
+      padding-left: 198.75px;
+  }
+
+  .conversation__btn {
+      min-width: 187.5px;
+  }
+
+  .conversation__item {
+      gap: 30px;
+      padding: 63.75px 0;
+  }
+
+  .conversation__main {
+      gap: 161.25px;
+  }
+
+  .conversation__num {
+      font-size: 15px;
+  }
+
+  .conversation__name {
+      font-size: 22.5px;
+  }
+
+  .conversation__desc {
+      max-width: 333.75px;
+      font-size: 13.5px;
+  }
+
+  .conversation__media {
+      width: 130.5px;
+      height: 219px;
+      border-radius: 90px;
+  }
+
+  .purpose {
+      padding: 41.25px 0 30px 30px;
+  }
+
+  .purpose__head {
+      gap: 30px;
+      margin-bottom: 337.5px;
+      padding-right: 30px;
+  }
+
+  .purpose__title {
+      font-size: 75px;
+  }
+
+  .purpose__aside {
+      gap: 15px;
+  }
+
+  .purpose__logo {
+      width: 109.5px;
+  }
+
+  .purpose__note {
+      max-width: 180px;
+      font-size: 10.5px;
+  }
+
+  .purpose__nav {
+      gap: 9.75px;
+  }
+
+  .purpose-btn {
+      width: 48px;
+      height: 48px;
+  }
+
+  .purpose__slider .swiper-slide {
+      width: 360.75px;
+  }
+
+  .purpose-card {
+      height: 402.75px;
+      padding: 22.5px;
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+  }
+
+  .purpose-card__title {
+      margin-bottom: 18px;
+      font-size: 22.5px;
+  }
+
+  .purpose-card__line {
+      margin-bottom: 18px;
+  }
+
+  .purpose-card__desc {
+      font-size: 13.5px;
+  }
+
+  .fill {
+      padding-bottom: 135px;
+  }
+
+  .fill__inner {
+      padding: 142.5px 33.75px 0;
+  }
+
+  .fill__label {
+      margin-bottom: 80.25px;
+      padding-bottom: 18px;
+      font-size: 15px;
+  }
+
+  .fill__text {
+      max-width: 857.25px;
+  }
+
+  .fill__desc {
+      margin-bottom: 60px;
+      font-size: 48.75px;
+  }
+
+  .fill__img {
+      margin-top: 138.75px;
+  }
+
+  .faq {
+      gap: 30px;
+      padding: 0px 21px 165px;
+  }
+
+  .faq__title {
+      margin-bottom: 48px;
+      font-size: 60px;
+  }
+
+  .faq__desc {
+      max-width: 324px;
+      font-size: 13.5px;
+  }
+
+  .faq__btn--contact {
+      min-width: 187.5px;
+  }
+
+  .faq__buttons {
+      gap: 17.25px;
+  }
+
+  .faq__accordion {
+      gap: 13.5px;
+      max-width: 707.25px;
+  }
+
+  .faq-item {
+      border-radius: 11.25px;
+  }
+
+  .faq-item__trigger {
+      gap: 22.5px;
+      padding: 18px 18.75px 18px 30px;
+  }
+
+  .faq-item__question {
+      font-size: 16.5px;
+  }
+
+  .faq-item__icon {
+      width: 42.75px;
+      height: 42.75px;
+  }
+
+  .faq-item__answer {
+      padding: 0 30px 21px;
+      max-width: 525px;
+      font-size: 13.5px;
+  }
+
+  .footer {
+      margin: 0px 11.25px 19.5px;
+      border-radius: 11.25px;
+  }
+
+  .footer__content {
+      padding: 97.5px 37.5px 41.25px;
+  }
+
+  .footer__top {
+      gap: 30px;
+      margin-bottom: 105px;
+  }
+
+  .footer__links {
+      gap: 97.5px;
+    row-gap: 40px;
+  }
+
+  .footer__links a {
+      font-size: 48.75px;
+  }
+
+  .footer__totop {
+      width: 45px;
+      height: 45px;
+  }
+
+  .footer__totop img {
+      width: 10.5px;
+      height: 10.5px;
+  }
+
+  .footer__mid {
+      gap: 87px;
+      padding-top: 30px;
+  }
+
+  .footer__mid-row {
+      gap: 30px;
+  }
+
+  .footer__mid-right {
+      gap: 30px;
+  }
+
+  .footer__contact-link {
+      gap: 15px;
+      margin-bottom: 67.5px;
+      font-size: 18.75px;
+  }
+
+  .footer__arrow {
+      width: 9.75px;
+  }
+
+  .footer__dev {
+      gap: 15px;
+  }
+
+  .footer__dev-logo {
+      width: 42.75px;
+  }
+
+  .footer__dev-text {
+      font-size: 10.5px;
+  }
+
+  .footer__copy {
+      gap: 24.75px;
+      font-size: 15px;
+  }
+
+  .footer__policy {
+      font-size: 12px;
+      text-underline-offset: 6px;
+  }
+
+  .footer__contact-item {
+      gap: 10.5px;
+  }
+
+  .footer__contact-label {
+      gap: 8.25px;
+      font-size: 15px;
+  }
+
+  .footer__contact-label img {
+      margin-bottom: 3px;
+  }
+
+  .footer__contact-value {
+      font-size: 26.25px;
+  }
+
+  .footer__socials {
+      gap: 37.5px;
+  }
+
+  .footer__social {
+      gap: 6.75px;
+      font-size: 18.75px;
+  }
+
+  /* ----- Icons: the width/height attributes in the markup, scaled ----- */
+  .btn__arrow {
+      width: 12px;
+      height: 12px;
+  }
+
+  .nav__dot svg {
+      width: 3px;
+      height: 3px;
+  }
+
+  .burger img {
+      width: 14.25px;
+      height: 8.25px;
+  }
+
+  .slider-btn img,
+  .purpose-btn img,
+  .service-card__circle img {
+      width: 11.25px;
+      height: 11.25px;
+  }
+
+  .service-card__dots {
+      width: 37.5px;
+      height: 9px;
+  }
+
+  .way-card__icon img {
+      width: 30px;
+      height: 30px;
+  }
+
+  .purpose-card__icon img {
+      width: 24px;
+      height: 24px;
+  }
+
+  .faq-item__icon svg {
+      width: 13.5px;
+      height: 13.5px;
+  }
+
+  .footer__totop img,
+  .footer__arrow {
+      width: 10.5px;
+      height: 10.5px;
+  }
+
+  .footer__dev-logo {
+      width: 42.75px;
+      height: 26.25px;
+  }
+
+  .footer__contact-label img {
+      width: 14.25px;
+      height: 14.25px;
+  }
+
+  .footer__social img {
+      width: 15.75px;
+      height: 15.75px;
+  }
+}
+
+@media (max-width: 1340px) {
+    .about__title {
+        max-width: 570px;
+        margin-bottom: 202.5px;
+        font-size: 60px;
+    }
+
+    .build__title {
+        max-width: 505px;
+        margin-bottom: 33.75px;
+        font-size: 47.5px;
+    }
+
+    .way__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services-grid__list {
+        grid-template-columns: repeat(2, 1fr);   
+    }
+
+    .conversation__media {
+        display: none;
+    }
+
+    .conversation__title {
+        font-size: 50px;
+    }
+
+    .purpose__title {
+        font-size: 60px;
+    }
+
+    .fill__desc {
+        font-size: 38.75px;
+    }
+
+    .faq {
+        gap: 70px;
+    }
+
+    .faq__title {
+        font-size: 50px;
+    }
+}
