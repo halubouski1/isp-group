@@ -1,0 +1,66 @@
+@media (max-width: 1919px) {
+    /* Contact hero — everything scaled to 0.75.
+       The shared .contact__* form and the footer contact/social classes are
+       already scaled in media.css, so only the hero-specific values live here. */
+    .hero--contact {
+        padding-top: 250px;
+        min-height: 750px;
+    }
+
+    .co-hero__eyebrow {
+        padding-left: 48px;
+        font-size: 16px;
+    }
+
+    .co-hero__title {
+        font-size: 165px;
+        line-height: 90%;
+    }
+
+    /* Form: 466 + 20 + 487  →  350 + 15 + 365 */
+    .co-form {
+        gap: 15px;
+    }
+
+    .contact__input, .contact__select-trigger {
+        height: 39px;
+        font-size: 13px;
+    }
+
+    .contact__fields {
+        column-gap: 14px;
+        row-gap: 12px;
+    }
+
+    .contact__submit {
+        font-size: 12px;
+        margin-top: 14px;
+        padding: 13px 21px 13px 24px;
+    }
+
+    .co-form__left {
+        width: 350px;
+    }
+
+    .co-form__message {
+        width: 365px;
+        min-height: 135px;
+        padding: 14px 16px;
+        font-size: 13px;
+    }
+
+    /* Contacts (right) */
+    .co-contacts {
+        gap: 98px;
+    }
+}
+
+@media (max-width: 1270px) {
+    .co-contacts {
+        display: none;
+    }
+
+    .co-form__message {
+        width: 265px;
+    }
+}

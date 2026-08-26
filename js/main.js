@@ -169,3 +169,55 @@ if (typeof Accordion !== 'undefined' && document.querySelector('.faq__accordion'
     openOnInit: [0],
   });
 }
+
+// ========================================
+// Contact — custom dropdown(s)
+// ========================================
+document.querySelectorAll('[data-select]').forEach((select) => {
+  const trigger = select.querySelector('.contact__select-trigger');
+  const valueEl = select.querySelector('.contact__select-value');
+  const hidden = select.querySelector('input[type="hidden"]');
+  const options = select.querySelectorAll('.contact__select-option');
+
+  const close = () => {
+    select.classList.remove('is-open');
+    if (trigger) trigger.setAttribute('aria-expanded', 'false');
+  };
+
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const willOpen = !select.classList.contains('is-open');
+    // close any other open selects
+    document.querySelectorAll('[data-select].is-open').forEach((s) => {
+      if (s !== select) {
+        s.classList.remove('is-open');
+        const t = s.querySelector('.contact__select-trigger');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      }
+    });
+    select.classList.toggle('is-open', willOpen);
+    trigger.setAttribute('aria-expanded', String(willOpen));
+  });
+
+  options.forEach((option) => {
+    option.addEventListener('click', () => {
+      valueEl.textContent = option.textContent;
+      select.classList.add('is-filled');
+      if (hidden) hidden.value = option.dataset.value || option.textContent;
+      options.forEach((o) => o.classList.remove('is-selected'));
+      option.classList.add('is-selected');
+      close();
+    });
+  });
+
+  // close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!select.contains(e.target)) close();
+  });
+});
+
+// Prevent the demo contact form from reloading the page
+const contactForm = document.querySelector('.contact__form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => e.preventDefault());
+}

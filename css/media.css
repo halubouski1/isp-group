@@ -607,11 +607,7 @@
       gap: 8.25px;
       font-size: 15px;
   }
-
-  .footer__contact-label img {
-      margin-bottom: 3px;
-  }
-
+  
   .footer__contact-value {
       font-size: 26.25px;
   }

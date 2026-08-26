@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ren">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/media.css">
+      <link rel="stylesheet" href="css/contact.css">
+      <link rel="stylesheet" href="css/media-contact.css">
+      <script>document.documentElement.style.setProperty("--fixed-vh", window.innerHeight + "px");</script>
+      <title>KAR Interiors</title>
+</head>
+<body>
+
+<header class="header">
+    <a class="header__logo" href="/" aria-label="ISP Group">
+        <img src="assets/img/logo.svg" alt="ISP Group" width="146" height="21">
+    </a>
+
+    <div class="header__right">
+        <nav class="nav" aria-label="Main navigation">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#services">Services</a></li>
+                <li class="nav__dot" aria-hidden="true">
+<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="2" cy="2" r="2" fill="white" />
+</svg>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#about">About Us</a></li>
+                <li class="nav__dot" aria-hidden="true">
+<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="2" cy="2" r="2" fill="white" />
+</svg>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#services-list">Services</a></li>
+                <li class="nav__dot" aria-hidden="true">
+<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="2" cy="2" r="2" fill="white" />
+</svg>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+                <li class="nav__dot" aria-hidden="true">
+<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="2" cy="2" r="2" fill="white" />
+</svg>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="burger" type="button" aria-label="Open menu">
+            <img src="assets/icons/burger-menu.svg" alt="" width="19" height="11">
+        </button>
+    </div>
+</header>
+
+<section class="hero hero--contact" id="home">
+  <img class="hero__video" src="assets/img/contact-hero.jpg" alt="" aria-hidden="true">
+
+  <div class="co-hero__intro">
+    <span class="co-hero__eyebrow">Please contact us to discuss your project</span>
+    <h1 class="co-hero__title">/Contact</h1>
+  </div>
+
+  <div class="hero__bottom hero__bottom--contact">
+    <form class="co-form" novalidate>
+      <div class="co-form__left">
+        <div class="contact__fields">
+          <input class="contact__input" type="text" name="name" placeholder="Your name" autocomplete="name">
+          <input class="contact__input" type="tel" name="phone" placeholder="Phone number" autocomplete="tel">
+          <input class="contact__input" type="email" name="email" placeholder="E-Mail" autocomplete="email">
+
+          <div class="contact__select" data-select>
+            <button class="contact__select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="contact__select-value">Property Type</span>
+              <img class="contact__select-chevron" src="assets/icons/dropdown-chevron.svg" alt="" aria-hidden="true">
+            </button>
+            <ul class="contact__select-list" role="listbox">
+              <li class="contact__select-option" role="option" data-value="apartment">Apartment</li>
+              <li class="contact__select-option" role="option" data-value="house">House</li>
+              <li class="contact__select-option" role="option" data-value="office">Office</li>
+              <li class="contact__select-option" role="option" data-value="commercial">Commercial</li>
+            </ul>
+            <input type="hidden" name="propertyType" value="">
+          </div>
+        </div>
+
+        <button class="contact__submit btn btn--light" type="submit">
+          Leave a request
+                        <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+        </button>
+      </div>
+
+      <textarea class="co-form__message" name="message" placeholder="Additional Massage"></textarea>
+    </form>
+
+    <div class="co-contacts">
+      <div class="footer__mid-right">
+        <div class="footer__contact-item">
+          <div class="footer__contact-label contact-label--value">
+            <span>Phone</span>
+            <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true">
+          </div>
+          <a class="footer__contact-value" href="tel:+9712424048">971-242-4048</a>
+        </div>
+
+        <div class="footer__contact-item">
+          <div class="footer__contact-label contact-label--value">
+            <span>E-Mail</span>
+            <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true">
+          </div>
+          <a class="footer__contact-value" href="mailto:RazuConstruct@gmail.com">RazuConstruct@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="footer__socials">
+        <a class="footer__social" href="#">
+          <span>telegram</span>
+          <img src="assets/icons/contact-social.svg" alt="" aria-hidden="true">
+        </a>
+        <a class="footer__social" href="#">
+          <span>whatsapp</span>
+          <img src="assets/icons/contact-social.svg" alt="" aria-hidden="true">
+        </a>
+        <a class="footer__social" href="#">
+          <span>instagram</span>
+          <img src="assets/icons/contact-social.svg" alt="" aria-hidden="true">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__content">
+    <div class="footer__top">
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Projects</a>
+        <a href="about-us.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <button class="footer__totop" type="button" aria-label="Back to top">
+        <img src="assets/icons/to-top-arrow.svg" alt="" aria-hidden="true">
+      </button>
+    </div>
+
+    <div class="footer__mid">
+      <div class="footer__mid-row">
+        <div class="footer__mid-left">
+          <div>
+            <a class="footer__contact-link" href="#contact" data-popup-open>
+              <span>Contact Us</span>
+              <img class="footer__arrow" src="assets/icons/footer-contact-arrow.svg" alt="" aria-hidden="true">
+            </a>
+  
+            <div class="footer__dev">
+              <img class="footer__dev-logo" src="assets/icons/dev-logo.svg" alt="" aria-hidden="true">
+              <span class="footer__dev-text">Website<br>Development</span>
+            </div>
+          </div>
+
+      <button class="footer__totop--mobile footer__totop" type="button" aria-label="Back to top">
+        <img src="assets/icons/to-top-arrow.svg" alt="" aria-hidden="true">
+      </button>
+        </div>
+
+        <div class="footer__mid-right">
+          <div class="footer__contact-item">
+            <div class="footer__contact-label">
+              <span>Phone</span>
+              <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true">
+            </div>
+            <a class="footer__contact-value" href="tel:+19297075551">+1 929 707 5551</a>
+          </div>
+
+          <div class="footer__contact-item">
+            <div class="footer__contact-label">
+              <span>E-Mail</span>
+              <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true">
+            </div>
+            <a class="footer__contact-value" href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__mid-row footer__mid-row--bottom">
+        <div class="footer__copy">
+          <span>© 2026</span>
+          <a class="footer__policy" href="#">Pricacy and Policy</a>
+        </div>
+
+        <div class="footer__socials">
+          <a class="footer__social" href="#">
+            <span>telegram</span>
+            <img src="assets/icons/footer-social.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="footer__social" href="#">
+            <span>whatsapp</span>
+            <img src="assets/icons/footer-social.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="footer__social" href="#">
+            <span>instagram</span>
+            <img src="assets/icons/footer-social.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
