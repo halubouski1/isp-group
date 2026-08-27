@@ -247,3 +247,16 @@ const contactForm = document.querySelector('.contact__form');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => e.preventDefault());
 }
+// ========================================
+// Back to top
+// ========================================
+document.querySelectorAll('.footer__totop, .footer-mob__totop').forEach((button) => {
+  button.addEventListener('click', () => {
+    if (lenis) {
+      lenis.scrollTo(0, { duration: 1.6 });
+      return;
+    }
+    // no Lenis (failed to load, or reduced motion) — fall back to the browser
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});

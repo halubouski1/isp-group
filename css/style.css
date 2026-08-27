@@ -1520,11 +1520,11 @@ ul {
     height: 60px;
     border-radius: 50%;
     background: #173145;
-    transition: background-color 0.25s ease;
+    transition: opacity 0.25s ease;
 }
 
 .footer__totop:hover {
-    background-color: rgba(255, 255, 255, 0.18);
+    opacity: 0.75;
 }
 
 .footer__totop--mobile {
