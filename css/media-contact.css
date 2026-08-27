@@ -64,3 +64,117 @@
         width: 265px;
     }
 }
+
+@media (max-width: 769px) {
+    .co-form__message, .co-form {
+        width: 100%;
+    }
+
+    .co-form__left {
+        width: 50%;
+    }
+
+    .co-hero__title {
+        font-size: 100px;
+    }
+
+    .contact__fields {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 570px) {
+    .hero--contact {
+        padding-top: 122px;
+        min-height: 700px;
+    }
+
+    .co-hero__eyebrow {
+        padding-left: 0px;
+        font-size: 15px;
+        max-width: 200px;
+    }
+
+    .co-hero__title {
+        font-size: 76px;
+    }
+
+    /* Form → single column: [name | phone] , email, property, textarea, button.
+       display:contents lifts the fields grid + button into the form flex so the
+       textarea can be ordered between them. */
+    .co-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        width: 100%;
+    }
+
+    .co-form__left {
+        display: contents;
+    }
+
+    .co-form__left .contact__fields {
+        display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+        order: 1;
+        width: 100%;
+        gap: 4px;
+    }
+
+    .co-form__left .contact__input,  .co-form__left .contact__select-trigger {
+        max-width: 100%;
+    }
+
+    /* email (3rd) and property-type (4th) span the full width; name + phone stay 50/50 */
+    .co-form__left .contact__fields > :nth-child(n + 3) {
+        grid-column: 1 / -1;
+    }
+
+    .co-form__message {
+        order: 2;
+        width: 100%;
+        min-height: 148px;
+    }
+
+    .co-form__left .contact__submit {
+        order: 3;
+        margin-top: 0;
+        max-width: 100%;
+        align-self: flex-start;
+    }
+
+    .contact__input, .contact__select-trigger {
+        height: 45px;
+        font-size: 13px;
+    }
+
+    .contact__input::placeholder {
+        color: rgba(255, 255, 255, 0.45);
+    }
+
+    .co-form__message::placeholder {
+        color: rgba(255, 255, 255, 0.45);
+    }
+
+    .contact__select-trigger {
+        color: rgba(255, 255, 255, 0.45);
+    }
+
+    .contact__select-option {
+        font-size: 13px;
+    }
+
+    .co-hero__intro {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .hero__video {
+        left: -900px;
+        top: -41px;
+        scale: 1;
+        width: auto;
+        height: auto;
+    }
+}
