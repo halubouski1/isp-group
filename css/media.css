@@ -35,7 +35,7 @@
   }
 
   .nav__link {
-      font-size: 11.25px;
+      font-size: 13.25px;
   }
 
   .burger {
@@ -729,5 +729,859 @@
 
     .faq__title {
         font-size: 50px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .nav__list {
+        display: none;
+    }
+
+    .stats {
+        display: none;
+    }
+
+    .hero__subtitle {
+        max-width: 354px;
+    }
+
+    .build__desc {
+        display: none;
+    }
+
+    .way-card__desc br {
+        display: none;
+    }
+
+    .way__list {
+        column-gap: 35px;
+        row-gap: 50px;
+    }
+
+    .conversation__main {
+        gap: 60px;
+    } 
+
+    .conversation__title {
+        font-size: 45px;
+    }
+
+    .purpose__aside {
+        display: none;
+    }
+
+    .faq {
+        flex-direction: column;
+    }
+
+    .faq__buttons {
+        display: none;
+    }
+
+    .faq__accordion {
+        max-width: 100%;
+    }
+
+    .faq-item__answer {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 769px) {
+    .about__text {
+        margin-left: 0;
+    }
+
+    .way__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .conversation__item {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .conversation__btn {
+        display: none;
+    }
+
+    .conversation__head {
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .conversation__desc {
+        max-width: 100%;
+    }
+
+    .purpose__bottom {
+        flex-direction: column;
+        align-items: end;
+        gap: 30px;
+    }
+
+    .purpose__nav {
+        width: auto;
+        margin-right: 20px;
+    }
+
+    /* the row is a column now, so flex-grow no longer gives the slider its
+       width — without this Swiper measures a shrink-to-fit container */
+    .purpose__slider {
+        width: 100%;
+    }
+
+    /* ======================================================================
+       Footer — the desktop markup is hidden and .footer-mob takes over
+       ====================================================================== */
+    .footer {
+        display: none;
+    }
+
+    .footer-mob {
+        margin: 0 15px 26px;
+    }
+
+    .footer-mob__panel {
+        padding: 20px 16px 40px;
+        border-radius: 16px;
+        background-color: #f1f1f1;
+    }
+
+    /* ----- back-to-top + logo ----- */
+    .footer-mob__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 70px;
+    }
+
+    .footer-mob__totop {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: #173145;
+    }
+
+    .footer-mob__logo {
+        width: 86px;
+        height: auto;
+    }
+
+    /* ----- links ----- */
+    .footer-mob__links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 80px;
+    }
+
+    .footer-mob__links a {
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 115%;
+        color: #173145;
+        transition: opacity 0.25s ease;
+    }
+
+    /* ----- divider ----- */
+    .footer-mob__divider {
+        display: block;
+        height: 1px;
+        margin-bottom: 36px;
+        background-color: rgba(23, 49, 69, 0.25);
+    }
+
+    /* ----- e-mail + phone ----- */
+    .footer-mob__contacts {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        margin-bottom: 83px;
+    }
+
+    .footer-mob__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .footer-mob__contact-label {
+        display: flex;
+        align-items: start;
+        gap: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #222;
+    }
+
+    .footer-mob__contact-value {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        text-align: right;
+        color: #222;
+    }
+
+    /* ----- dev logo + socials ----- */
+    .footer-mob__bottom {
+        display: flex;
+        align-items: end;
+        gap: 50px;
+    }
+
+    .footer-mob__dev {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .footer-mob__dev-logo {
+        width: 121px;
+        height: auto;
+    }
+
+    .footer-mob__dev-text {
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 114%;
+        color: #959595;
+    }
+
+    .footer-mob__socials {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-mob__social {
+        display: inline-flex;
+    }
+
+    /* ----- copyright, outside the grey panel ----- */
+    .footer-mob__legal {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 85px;
+        padding: 0 16px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 1;
+        color: #222;
+    }
+
+    .footer-mob__policy {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 100%;
+        color: #acacac;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 1px;
+        text-decoration-skip-ink: none;
+    }
+}
+
+@media (max-width: 570px) {
+    /* header */
+    .header__logo img {
+        width: 100px;
+        height: 27px;
+    }
+
+    .burger {
+        width: 39px;
+        height: 39px;
+    }
+
+    .burger img {
+        width: auto;
+        height: auto;
+    }
+
+    .header {
+        gap: 10px;
+        padding: 20px;
+    }
+
+    /* hero */
+    .hero {
+        padding: 117px 20px 57px;
+    }
+
+    .hero__title {
+        max-width: 272px;
+        font-size: 40px;
+    }
+
+    .hero__subtitle {
+        font-size: 30px;
+        max-width: 260px;
+        margin-bottom: 30px;
+    }
+
+    .hero__buttons {
+        width: 100%;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .hero__cta {
+        width: 100%;
+    }
+
+    .hero__buttons .btn {
+        width: 100%;
+    }
+
+    .btn {
+        gap: 30px;
+        min-width: 215.25px;
+        padding: 20px 27px 20px 29px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .btn__arrow {
+        width: auto;
+        height: auto;
+    }
+
+    /* about */
+    .about {
+        padding: 60px 20px 130px;
+    }
+
+    .about__title {
+        max-width: 100%;
+        margin-bottom: 290px;
+        font-size: 45px;
+    }
+
+    .about__desc {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 144%;
+        letter-spacing: -0.03em;
+        color: #4a4a4a;
+        margin-bottom: 75px;
+    }
+
+    .about__text {
+        max-width: 100%;
+    }
+
+    .about__btn {
+        width: 100%;
+    }
+
+    .about::before {
+        background: url(../assets/img/dashed-bg-mob.png) center / cover no-repeat;
+    }
+
+    /* .services */
+    .services__title {
+        font-size: 35px;
+        line-height: 143%;
+    }
+
+    .services__head {
+        margin-bottom: 35px;
+    }
+
+    .services__nav {
+        display: none;
+    }
+
+    /* Swiper is destroyed below 570px (see main.js), but its stylesheet still
+       applies: overflow:hidden and the transform on .swiper-wrapper would both
+       break position:sticky, so they are reset here. */
+    .services__slider {
+        overflow: visible;
+        padding: 0 10px;
+    }
+
+    .services__slider .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        transform: none;
+    }
+
+    .services__slider .swiper-slide {
+        width: 100%;
+        height: auto;
+        transform: none;
+    }
+
+    .service-card {
+        height: 430px;
+        padding: 0 20px 24px;
+    }
+
+    .service-card__top {
+        left: 14px;
+        right: 14px;
+    }
+
+    .service-card__cell {
+        gap: 12px;
+        padding: 14px 12px 14px 0;
+    }
+
+    .service-card__cell--right {
+        padding: 14px 0 14px 12px;
+    }
+
+    .service-card__num {
+        font-size: 42px;
+    }
+
+    .service-card__label {
+        max-width: 70px;
+        font-size: 10px;
+    }
+
+    .service-card__index {
+        font-size: 12px;
+    }
+
+    .service-card__dots {
+        width: 37px;
+        height: auto;
+    }
+
+    .service-card__title {
+        font-size: 24px;
+    }
+
+    .services {
+        padding-bottom: 40px;
+    }
+
+    .service-card__btn {
+        min-width: 140.25px;
+        padding: 12px 12px 12px 21px;
+        gap: 15px;
+        font-size: 10.5px;
+        transform: translate(15px, -50%);
+    }
+
+    .service-card__circle {
+        bottom: 20.75px;
+    }
+    /* .build */
+    .build__inner {
+        min-height: 765px;
+        padding: 20px;
+        padding-top: 25px;
+        border-radius: 10px;
+    }
+
+    .build__logo img {
+        width: 70px;
+        height: auto;
+    }
+
+    .build__link {
+        font-size: 13px;
+    }
+
+    .build__title {
+        font-size: 44px;
+    }
+
+    .build__buttons .build__btn:last-child {
+        display: none;
+    }
+
+    .build__btn {
+        width: 100%;
+    }
+
+    /* way */
+    .way {
+        padding: 65px 20px 56px;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .way-card {
+        flex-direction: column;
+        align-items: start;
+        gap: 17px;
+    }
+
+    .way-card__icon {
+        width: 73px;
+        height: 73px;
+    }
+
+    .way-card__icon img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .way-card__title {
+        font-size: 16px;
+        line-height: 97%;
+        margin-bottom: 8px;
+        max-width: 115px;
+    }
+
+    .way-card__desc {
+        font-size: 13px;
+        line-height: 131%;
+        color: #606060;
+    }
+
+    .way__list {
+        column-gap: 35px;
+        row-gap: 70px;
+    }
+
+    .way__title {
+        display: none;
+    }
+
+    .way__head {
+        margin: 0;
+    }
+
+    .way .btn {
+        width: 100%;
+    }
+
+    /* .services-grid */
+    .services-grid__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .services-grid {
+        padding: 0 10px;
+    }
+
+    .grid-card {
+        padding: 20px;
+        padding-bottom: 23px;
+        height: 564px;
+    }
+
+    .grid-card__btn {
+        padding: 0;
+        background: none;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-skip-ink: none;
+        color: #fff;
+    }
+
+    .grid-card__btn .btn__arrow {
+        display: none;
+    }
+
+    /* conversation */
+    .conversation {
+        padding: 40px 20px 40px;
+    }
+
+    .conversation__title {
+        font-size: 35px;
+    }
+
+    .conversation__second {
+        padding-left: 85px;
+    }
+
+    .conversation__slash {
+        color: #B5BEC4;    
+    }
+
+    .conversation__head {
+        margin-bottom: 56px;
+    }
+
+    .conversation__item {
+        gap: 20px;
+        padding: 40px 0;
+    }
+
+    .conversation__name {
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    .conversation__num {
+        font-size: 14px;
+    }
+
+    .conversation__desc {
+        font-size: 14px;
+        line-height: 150%;
+        color: #84949e;
+        padding-left: 80px;
+    }
+
+    /* purpose */
+    .purpose {
+        padding: 34px 0 25px 20px;
+    }
+
+    .purpose__title {
+        font-size: 35px;
+    }
+
+    .purpose__head {
+        margin-bottom: 260px;
+    }
+
+    .purpose__nav {
+        margin-right: 15px;
+    }
+
+    .purpose-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .purpose__bottom {
+        gap: 10px;
+    }
+
+    .purpose-card {
+        height: 295px;
+        padding: 22px;
+        border-radius: 3px;
+    }
+
+    .purpose__slider .swiper-slide {
+        width: 221px;
+    }
+
+    .purpose-card__title {
+        font-size: 20px;
+        line-height: 1;
+        margin-bottom: 24px;
+    }
+
+    .purpose-card__line {
+        margin-bottom: 21px;
+    }
+
+    .purpose-card__desc {
+        font-size: 12px;
+        line-height: 167%;
+    }
+
+    .purpose-card__desc br {
+        display: none;
+    }
+
+    .purpose-card__desc--bold {
+        display: block;
+    }
+
+    /* fill */
+    .fill__inner {
+        padding: 125px 20px 0;
+    }
+
+    .fill__label {
+        margin-bottom: 50px;
+        padding-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .fill__desc {
+        font-size: 24px;
+        line-height: 140%;
+        margin-bottom: 70px;
+    }
+
+    .fill__btn {
+        width: 100%;
+    }
+
+    .fill__img {
+        margin-top: 70px;
+        object-fit: cover;
+        min-height: 400px;
+    }
+
+    .fill {
+        padding-bottom: 50px;
+    }
+
+    /* faq */
+    .faq {
+        gap: 36px;
+        padding: 0px 10px 60px;
+    }
+
+    .faq__title {
+        font-size: 35px;
+        margin-bottom: 22px;
+    }
+
+    .faq__slash {
+        color: #b4bcc3;
+    }
+
+    .faq__left {
+        padding: 0 10px;
+    }
+
+    .faq__desc {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #84949e;
+        max-width: 307px;
+    }
+
+    .faq-item__trigger {
+        gap: 22.5px;
+        padding: 25px 20px 25px 20px;
+    }
+
+    .faq-item__question {
+        font-size: 18px;
+        line-height: 139%;
+    }
+
+    .faq-item__icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .faq-item__icon svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .faq-item {
+        border-radius: 10px;
+    }
+
+    .faq-item__answer {
+        max-width: 100%;
+        padding: 0 20px 21px;
+    }
+
+    /* build */
+    .build {
+        padding: 0 12px;
+    }
+
+    .build__head a {
+        display: none;
+    }
+
+    .build--cta  .build__title {
+        font-size: 35px;
+        max-width: 255px;
+    }
+
+    .build__main {
+        width: 100%;
+    }
+
+    /* footer */
+    .footer-mob__totop {
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer-mob__totop img {
+        width: 10px;
+        height: 10px;
+    }
+
+    .footer-mob__links a {
+        font-size: 40px;
+        line-height: 1;
+    }
+
+    .footer-mob__contact-label img {
+        width: 19px;
+        height: 19px;
+    }
+
+    .footer-mob__contacts {
+        gap: 16px;
+    }
+
+    /* ----- mobile CTA under the video block ----- */
+    .cta-mob {
+        padding: 50px 12px 100px;
+    }
+
+    .cta-mob__desc {
+        margin-bottom: 30px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 169%;
+        color: #173145;
+    }
+
+    .cta-mob__btn {
+        width: 100%;
+    }
+
+    /* the same paragraph and button now live in .cta-mob */
+    .build--cta .build__desc--cta,
+    .build--cta .build__buttons .btn--dark {
+        display: none;
+    }
+}
+/* The cards pile up on scroll. It needs room for a whole card plus the peeking
+   edges of the ones below it, so on short screens they simply scroll instead. */
+@media (max-width: 570px) and (min-height: 580px) {
+    .services__slider {
+        --deck-top: 20px;
+        --deck-step: 28px;
+    }
+
+    .services__slider .swiper-slide {
+        position: sticky;
+    }
+
+    .services__slider .swiper-slide:nth-child(1) {
+        top: var(--deck-top);
+    }
+
+    .services__slider .swiper-slide:nth-child(2) {
+        top: calc(var(--deck-top) + var(--deck-step));
+    }
+
+    .services__slider .swiper-slide:nth-child(3) {
+        top: calc(var(--deck-top) + var(--deck-step) * 2);
+    }
+
+    .services__slider .swiper-slide:nth-child(4) {
+        top: calc(var(--deck-top) + var(--deck-step) * 3);
+    }
+
+    .services__slider .swiper-slide:nth-child(5) {
+        top: calc(var(--deck-top) + var(--deck-step) * 4);
     }
 }

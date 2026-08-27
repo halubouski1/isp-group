@@ -74,27 +74,47 @@ if (typeof countUp !== 'undefined') {
 }
 
 // ========================================
-// Services slider
+// Services slider — a stack of cards below 570px
 // ========================================
 if (typeof Swiper !== 'undefined' && document.querySelector('.services__slider')) {
-  new Swiper('.services__slider', {
-    slidesPerView: 'auto',
-    // values below 1920px are the layout scaled by 0.75 (see media.css)
-    spaceBetween: 11.25,
-    slidesOffsetBefore: 11.25,
-    breakpoints: {
-      1920: {
-        spaceBetween: 15,
-        slidesOffsetBefore: 15,
+  const deckQuery = window.matchMedia('(max-width: 570px)');
+  let servicesSwiper = null;
+
+  const syncServicesSlider = () => {
+    if (deckQuery.matches) {
+      // destroy(true, true) also strips the inline styles Swiper added, which
+      // would otherwise fight the sticky stack in media.css
+      if (servicesSwiper) {
+        servicesSwiper.destroy(true, true);
+        servicesSwiper = null;
+      }
+      return;
+    }
+
+    if (servicesSwiper) return;
+
+    servicesSwiper = new Swiper('.services__slider', {
+      slidesPerView: 'auto',
+      // values below 1920px are the layout scaled by 0.75 (see media.css)
+      spaceBetween: 11.25,
+      slidesOffsetBefore: 11.25,
+      breakpoints: {
+        1920: {
+          spaceBetween: 15,
+          slidesOffsetBefore: 15,
+        },
       },
-    },
-    slidesOffsetAfter: 15,
-    speed: 700,
-    navigation: {
-      nextEl: '.slider-btn--next',
-      prevEl: '.slider-btn--prev',
-    },
-  });
+      slidesOffsetAfter: 15,
+      speed: 700,
+      navigation: {
+        nextEl: '.slider-btn--next',
+        prevEl: '.slider-btn--prev',
+      },
+    });
+  };
+
+  syncServicesSlider();
+  deckQuery.addEventListener('change', syncServicesSlider);
 }
 
 // ========================================
@@ -108,6 +128,12 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.purpose__slider'))
     breakpoints: {
       1920: {
         spaceBetween: 34,
+      },
+      570: {
+        spaceBetween: 34,
+      },
+      0: {
+        spaceBetween: 10,
       },
     },
     slidesOffsetAfter: 34,

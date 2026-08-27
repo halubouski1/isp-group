@@ -1683,3 +1683,18 @@ ul {
 .footer__social:hover {
     opacity: 0.65;
 }
+/* The mobile footer is a separate block in the markup; above the breakpoint it
+   is hidden here, and the desktop .footer is hidden inside the media query —
+   so neither one has to out-cascade the other. */
+@media (min-width: 770px) {
+    .footer-mob {
+        display: none;
+    }
+}
+
+/* Mobile-only CTA under the video block; shown at 570px and below. */
+@media (min-width: 571px) {
+    .cta-mob {
+        display: none;
+    }
+}
