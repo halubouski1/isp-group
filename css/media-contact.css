@@ -81,6 +81,11 @@
     .contact__fields {
         grid-template-columns: 1fr;
     }
+
+    /* footer */
+    .footer-mob {
+        margin: 10px 15px 26px;
+    }
 }
 
 @media (max-width: 570px) {

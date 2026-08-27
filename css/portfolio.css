@@ -1,0 +1,768 @@
+/* hero */
+
+/* Rule across the top of the hero: it runs from the very left edge of the
+   screen (past the hero's side padding) and stops 80px short on the right,
+   where it ends in a 63x6 tip. --hero-pad mirrors the hero's horizontal
+   padding so the rule can reach out of it without touching the layout. */
+.hero {
+    --hero-pad: 40px;
+}
+
+/* the right inset lives on the wrapper so the note above the line ends at the
+   same point as the line's tip */
+.hero__top {
+    margin-right: 80px;
+}
+
+.hero__note {
+    display: none;
+}
+
+.hero__line {
+    position: relative;
+    display: block;
+    height: 6px;
+}
+
+.hero__line::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--hero-pad));
+    right: 0;
+    top: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero__video {
+    scale: 1.4;
+}
+
+.hero__content {
+    justify-content: end;
+    gap: 80px;
+}
+
+.hero__line::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 63px;
+    height: 6px;
+    background-color: #fff;
+}
+
+.hero__title {
+    font-weight: 300;
+    font-size: 300px;
+    line-height: 100%;
+    color: #f7f7f7;
+    max-width: 100%;
+}
+
+.hero__descr {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 135%;
+    color: #fff;
+    max-width: 750px;
+}
+
+.hero__cta {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero__btn-small {
+    min-width: 196px;
+}
+
+
+/* ---- Shared button (reused by the "Watch the case" card buttons) ---- */
+.header__request {
+    justify-self: end;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 50px;
+    padding: 13px 17px 13px 25px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: #000;
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
+}
+.header__request:hover {
+    background-color: #ece7df;
+}
+.header__request img {
+    width: 16px;
+    height: 16px;
+}
+
+/* ---- Small nav arrows (cases top bar) — base look (reused .reviews__arrow) ---- */
+.reviews__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: #ddd;            /* active: light fill + dark icon */
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+}
+.reviews__arrow img {
+    width: 12px;
+    height: 12px;
+    transition: filter 0.25s ease;
+}
+.reviews__arrow:not(.swiper-button-disabled):hover {
+    opacity: 0.9;
+}
+.reviews__arrow.swiper-button-disabled {   /* disabled: outlined + white icon */
+    background-color: transparent;
+    border-color: #9398a6;
+    cursor: default;
+}
+.reviews__arrow.swiper-button-disabled img {
+    filter: brightness(0) invert(1);
+}
+
+/* ---- Big slider arrows — base look (reused .portfolio__arrow) ---- */
+.portfolio__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #fff;            /* active: white + black icon */
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.portfolio__arrow img {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
+}
+.portfolio__arrow:not(.swiper-button-disabled):hover {
+    background-color: #ece7df;
+}
+.portfolio__arrow.swiper-button-disabled {  /* disabled: frosted glass + white icon */
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: default;
+}
+.portfolio__arrow.swiper-button-disabled img {
+    filter: brightness(0) invert(1);
+}
+
+/* =====================================================================
+   Cases (filterable grid slider + big slider)
+   ===================================================================== */
+.cases {
+    position: relative;
+    padding: 150px 0 200px;
+    background-color: #F7F7F7;
+    background-image: url("../assets/img/about-us-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Top bar: filters + arrows */
+.cases__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0 30px 48px 30px;
+    padding: 0 0px 27px 0cm;
+    margin-bottom: 48px;
+    border-bottom: 1px solid #D5D9DC;
+}
+.cases__filters {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+}
+.cases__filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 176%;
+    letter-spacing: -0.03em;
+    color: #9DA8B0;
+    transition: opacity 0.25s ease;
+}
+.cases__filter:hover {
+    opacity: 0.75;
+}
+.cases__filter.is-active {
+    color: #173145
+}
+.cases__dot {
+    flex-shrink: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+.cases__nav {
+    display: flex;
+    gap: 7px;
+    flex-shrink: 0;
+}
+.cases__arrow--prev img {
+    transform: scaleX(-1);
+}
+
+/* Same colour scheme as the services slider buttons: navy fill + white icon
+   when active, outlined + dimmed icon when disabled. The icon file is black
+   here (the services one is white), so the filters are inverted. */
+.cases__arrow {
+    background-color: #173145;
+    border-color: transparent;
+}
+
+.cases__arrow img {
+    filter: brightness(0) invert(1);
+}
+
+.cases__arrow:hover {
+    opacity: 0.75;
+}
+
+.cases__arrow.swiper-button-disabled {
+    background-color: transparent;
+    border-color: #9398a6;
+    opacity: 1;
+}
+
+.cases__arrow.swiper-button-disabled img {
+    filter: none;
+    opacity: 0.3;
+}
+
+/* Top grid slider */
+.cases__grid {
+    overflow: visible; /* the section clips instead, so cards can peek */
+}
+.cases__grid .swiper-wrapper {
+    align-items: stretch;
+}
+.cases__grid .swiper-slide {
+    width: 988px; /* 50 offset + 0 offset + 26 gap → 2 cards */
+    height: 491px;
+}
+.cases .swiper-slide.is-hidden {
+    display: none;
+}
+
+/* Cards fade/slide in when a filter is applied */
+@keyframes case-appear {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.cases .swiper-slide.is-appearing {
+    animation: case-appear 0.5s ease both;
+    animation-delay: var(--appear-delay, 0ms);
+}
+
+/* Shared card visuals */
+.case-card,
+.case-big {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 6px;
+    color: #fff;
+}
+.case-card {
+    padding: 15px 23px 23px 15px;
+}
+.case-card__img,
+.case-big__img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.case-card::after,
+.case-big::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 55%;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
+    pointer-events: none;
+}
+
+/* Tag (shared by both card types) */
+.case-card__tag {
+    gap: 16px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 27px;
+    background: rgba(255, 255, 255, 0.01);
+    position: relative;
+    z-index: 2;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 28px 11px 13px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Bottom of small card */
+.case-card__bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+}
+.case-card__info {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    margin-left: 10px;
+}
+.case-card__name {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 96%;
+    color: #fff;
+}
+.case-card__loc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    color: #fff;
+}
+.case-card__btn,
+.case-big__btn {
+    flex-shrink: 0;
+    padding: 18px 17px 18px 25px;
+    gap: 75px;
+}
+
+/* Big slider */
+.cases__big {
+    position: relative;
+    margin-top: 15px;
+    overflow: hidden;
+    /* side gutter — must match slidesOffsetBefore/After in main.js */
+    --gutter: 30px;
+}
+
+.cases__big .swiper-slide {
+    /* one slide per screen: container width minus both gutters, so the offsets
+       in main.js place it edge to edge instead of pushing it out of view */
+    width: calc(100% - var(--gutter) * 2);
+    height: 900px;
+}
+
+.case-big {
+    padding: 28px 34px 34px 20px;
+}
+.case-big__bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+}
+.case-big__info {
+    display: flex;
+    align-items: flex-end;
+    gap: 25px;
+    margin-left: 20px;
+}
+.case-big__name {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 111%;
+    color: #fff;
+}
+.case-big__desc {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 125%;
+    color: #fff;
+}
+
+/* Big slider arrows (positioning; look comes from .portfolio__arrow) */
+.cases__big-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 92px;
+    height: 92px;
+}
+.cases__big-arrow--prev { left: 90px; }
+.cases__big-arrow--next { right: 90px; }
+.cases__big-arrow--prev img { transform: scaleX(-1); }
+/* =====================================================================
+   Featured project
+   ===================================================================== */
+.featured {
+    padding: 100px 0 0;
+    background-color: #F7F7F7;
+}
+
+/* the side padding lives here so the image below can stay full width */
+.featured__inner {
+    padding: 0 28px;
+}
+
+.featured__divider {
+    display: block;
+    margin-bottom: 10px;
+    border-top: 1px dashed #b4bcc3;
+}
+
+.featured__label {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    margin-bottom: 90px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 98%;
+    letter-spacing: -0.03em;
+    color: #b4bcc3;
+}
+
+.featured__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.featured__title {
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 102%;
+    letter-spacing: -0.03em;
+    color: #183246;
+}
+
+.featured__title span {
+    display: block;
+    color: rgba(24, 50, 70, 0.3);
+}
+
+.featured__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+.featured__area {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 100%;
+    color: rgba(24, 50, 70, 0.7);
+}
+
+.featured__type {
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: #adadac;
+}
+
+.featured__img {
+    width: 100%;
+    height: auto;
+}
+
+.featured__btn {
+    min-width: 200px;
+}
+
+/* =====================================================================
+   CONTACT — full section (wrapper + top bar + heading + form)
+   ---------------------------------------------------------------------
+   .contact__bg is a full-cover <video> (or <img>) behind the content;
+   .contact__inner::after is a dark overlay for readability.
+   Dropdown needs JS (toggle .is-open on the trigger; on choose set
+   .is-filled + .is-selected, write .contact__select-value + hidden input).
+   Icons: dropdown-chevron.svg, btn-arrow.svg (submit).
+   ===================================================================== */
+
+.contact {
+    margin: 0 15px;
+    border-radius: 10px;
+    background-color: #000;
+}
+
+.contact__inner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 50px 50px 375px;
+    color: #fff;
+}
+
+.contact__bg,
+.contact__bg img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact__inner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+/* Top bar */
+.contact__top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.contact__logo img {
+    width: 146px;
+    height: auto;
+}
+
+.contact__link {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 272%;
+    letter-spacing: -0.03em;
+    color: #fff;
+    transition: opacity 0.25s ease;
+}
+
+.contact__link:hover {
+    opacity: 0.65;
+}
+
+/* Heading + form */
+.contact__main {
+    position: relative;
+    z-index: 2;
+    margin-top: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__title {
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #e7e7e7;
+}
+
+.contact__descr {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: #e7e7e7;
+    margin-bottom: 50px;
+}
+
+.contact__form {
+    width: 466px; /* 224 + 18 + 224 */
+    max-width: 100%;
+}
+
+.contact__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18px;
+    row-gap: 15px;
+}
+
+.contact__input,
+.contact__select-trigger {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    padding: 0 12px 0 22px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    background: rgba(255, 255, 255, 0.02);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: #fff;
+    transition: border-color 0.25s ease;
+}
+
+.contact__input::placeholder {
+    color: #fff;
+}
+
+.contact__input:focus,
+.contact__select-trigger:focus-visible {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Custom dropdown */
+.contact__select {
+    position: relative;
+}
+
+.contact__select-trigger {
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.contact__select-value {
+    color: #fff;
+    transition: color 0.2s ease;
+}
+
+.contact__select.is-filled .contact__select-value {
+    color: #fff;
+}
+
+.contact__select-chevron {
+    flex-shrink: 0;
+    width: 7px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.contact__select.is-open .contact__select-chevron {
+    transform: rotate(180deg);
+}
+
+.contact__select-list {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(28, 21, 15, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+
+.contact__select.is-open .contact__select-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.contact__select-option {
+    padding: 11px 14px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact__select-option:hover,
+.contact__select-option.is-selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Submit — full width */
+.contact__submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+    padding: 18px 28px 18px 32px;
+    border-radius: 6px;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+    transition: background-color 0.25s ease;
+}
+
+.contact__submit:hover {
+    background-color: #ece7df;
+}
+
+.contact__submit img {
+    width: 16px;
+    height: 16px;
+}
+
+/* footer */
+.footer {
+    margin-top: -60px;
+}

@@ -8,6 +8,8 @@
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/media.css">
+      <link rel="stylesheet" href="css/portfolio.css">
+      <link rel="stylesheet" href="css/media-portfolio.css">
       <script>document.documentElement.style.setProperty("--fixed-vh", window.innerHeight + "px");</script>
       <title>KAR Interiors</title>
 </head>
@@ -56,41 +58,20 @@
 </header>
 
 <section class="hero">
-    <video class="hero__video" src="assets/vid/hero.mp4" autoplay muted loop playsinline preload="auto"></video>
+    <video class="hero__video" src="assets/vid/portfolio.mp4" autoplay muted loop playsinline preload="auto"></video>
 
     <div class="hero__content">
-        <h1 class="hero__title">Construction &amp; Renovation Services</h1>
+        <div class="hero__top">
+            <p class="hero__note">A selection of completed interior finishing projects</p>
+            <span class="hero__line" aria-hidden="true"></span>
+        </div>
 
         <div class="hero__bottom">
-            <ul class="stats">
-                <li class="stats__item">
-                    <span class="stats__circle"><span class="stats__value" data-countup="120" data-countup-suffix="+">120+</span></span>
-                    <div class="stats__text">
-                        <span class="stats__title">Projects Completed</span>
-                        <p class="stats__desc">Whether it’s a quick oil change or complex engine repair</p>
-                    </div>
-                </li>
-                <li class="stats__item">
-                    <span class="stats__circle"><span class="stats__value" data-countup="10" data-countup-suffix="+">10+</span></span>
-                    <div class="stats__text">
-                        <span class="stats__title">Years of Expiriance</span>
-                        <p class="stats__desc">Decades of combined know-how under one roof.</p>
-                    </div>
-                </li>
-                <li class="stats__item">
-                    <span class="stats__circle"><span class="stats__value" data-countup="5">5</span></span>
-                    <div class="stats__text">
-                        <span class="stats__title">Core Sirvices</span>
-                        <p class="stats__desc">Efficient service with minimal wait times</p>
-                    </div>
-                </li>
-            </ul>
-
             <div class="hero__cta">
-                <h2 class="hero__subtitle">Where Quality Sets the Standard.</h2>
+                <h1 class="hero__title">Portfolio</h1>
                 <div class="hero__buttons">
                     <a class="btn btn--light hero__btn-big" href="#contact">
-                        <span class="btn__text">Build With Us</span>
+                        <span class="btn__text">Explore Projects</span>
                         <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -105,790 +86,274 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="about" id="about">
-    <div class="about__inner">
-        <h2 class="about__title" data-aos="fade-up">Building Spaces Made for Life &amp; Work</h2>
-
-        <div class="about__text" data-aos="fade-up" data-aos-delay="100">
-            <p class="about__desc">We create thoughtfully built residential and commercial spaces — from custom homes and renovations to offices, retail environments, and commercial buildings. Every project is approached with the same focus on quality, functionality, and lasting value.</p>
-            <a class="btn btn--navy about__btn" href="#contact">
-                <span class="btn__text">More About Our Company</span>
-                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="services" id="services" data-aos="fade-up">
-    <div class="services__head">
-        <h2 class="services__title">Our <span>Servives</span></h2>
-
-        <div class="services__nav">
-            <button class="slider-btn slider-btn--prev" type="button" aria-label="Previous slide">
-                <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
-            </button>
-            <button class="slider-btn slider-btn--next" type="button" aria-label="Next slide">
-                <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
-            </button>
-        </div>
-    </div>
-
-    <div class="services__slider swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <article class="service-card service-card--1">
-                    <div class="service-card__top">
-                        <div class="service-card__cell">
-                            <span class="service-card__num">200+</span>
-                            <span class="service-card__label">Homes improved</span>
-                        </div>
-                        <div class="service-card__cell service-card__cell--right">
-                            <div class="service-card__meta">
-                                <span class="service-card__index">001</span>
-                                <svg class="service-card__dots" width="50" height="12" viewBox="0 0 50 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <rect width="9.28118" height="11.0214" rx="3"/>
-                                    <rect x="10.4414" width="8.7011" height="11.0214" rx="3"/>
-                                    <rect x="20.3027" width="9.28118" height="11.0214" rx="3"/>
-                                    <rect x="30.7441" width="8.7011" height="11.0214" rx="3"/>
-                                    <rect x="40.6045" width="9.28118" height="11.0214" rx="3"/>
-                                </svg>
-                            </div>
-                            <a class="btn btn--dark service-card__btn" href="#contact">
-                                <span class="btn__text">Learn More</span>
-                                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <h3 class="service-card__title">Floor Screed</h3>
-
-                    <a class="service-card__circle" href="#contact" aria-label="Floor Screed — learn more">
-                        <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
-                    </a>
-                </article>
-            </div>
-
-            <div class="swiper-slide">
-                <article class="service-card service-card--2">
-                    <div class="service-card__top">
-                        <div class="service-card__cell">
-                            <span class="service-card__num">15+</span>
-                            <span class="service-card__label">Years in construction</span>
-                        </div>
-                        <div class="service-card__cell service-card__cell--right">
-                            <div class="service-card__meta">
-                                <span class="service-card__index">002</span>
-                                <svg class="service-card__dots" width="50" height="12" viewBox="0 0 50 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <rect width="9.28118" height="11.0214" rx="3"/>
-                                    <rect x="10.4414" width="8.7011" height="11.0214" rx="3"/>
-                                    <rect x="20.3027" width="9.28118" height="11.0214" rx="3"/>
-                                    <rect x="30.7441" width="8.7011" height="11.0214" rx="3"/>
-                                    <rect x="40.6045" width="9.28118" height="11.0214" rx="3"/>
-                                </svg>
-                            </div>
-                            <a class="btn btn--dark service-card__btn" href="#contact">
-                                <span class="btn__text">Learn More</span>
-                                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <h3 class="service-card__title">Floor Finishing</h3>
-
-                    <a class="service-card__circle" href="#contact" aria-label="Floor Finishing — learn more">
-                        <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
-                    </a>
-                </article>
-            </div>
-
-            <div class="swiper-slide">
-                <article class="service-card service-card--3">
-                    <div class="service-card__top">
-                        <div class="service-card__cell">
-                            <span class="service-card__num">50+</span>
-                            <span class="service-card__label">Custom renovations</span>
-                        </div>
-                        <div class="service-card__cell service-card__cell--right">
-                            <div class="service-card__meta">
-                                <span class="service-card__index">003</span>
-                                <svg class="service-card__dots" width="50" height="12" viewBox="0 0 50 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <rect width="9.28118" height="11.0214" rx="3"/>
-                                    <rect x="10.4414" width="8.7011" height="11.0214" rx="3"/>
-                                    <rect x="20.3027" width="9.28118" height="11.0214" rx="3"/>
-                                    <rect x="30.7441" width="8.7011" height="11.0214" rx="3"/>
-                                    <rect x="40.6045" width="9.28118" height="11.0214" rx="3"/>
-                                </svg>
-                            </div>
-                            <a class="btn btn--dark service-card__btn" href="#contact">
-                                <span class="btn__text">Learn More</span>
-                                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <h3 class="service-card__title">Plastering</h3>
-
-                    <a class="service-card__circle" href="#contact" aria-label="Plastering — learn more">
-                        <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
-                    </a>
-                </article>
-            </div>
-
-            <div class="swiper-slide">
-                <article class="service-card service-card--4">
-                    <div class="service-card__top">
-                        <div class="service-card__cell">
-                            <span class="service-card__num">100+</span>
-                            <span class="service-card__label">Interiors completed</span>
-                        </div>
-                        <div class="service-card__cell service-card__cell--right">
-                            <div class="service-card__meta">
-                                <span class="service-card__index">004</span>
-                                <svg class="service-card__dots" width="50" height="12" viewBox="0 0 50 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <rect width="9.28118" height="11.0214" rx="3"/>
-                                    <rect x="10.4414" width="8.7011" height="11.0214" rx="3"/>
-                                    <rect x="20.3027" width="9.28118" height="11.0214" rx="3"/>
-                                    <rect x="30.7441" width="8.7011" height="11.0214" rx="3"/>
-                                    <rect x="40.6045" width="9.28118" height="11.0214" rx="3"/>
-                                </svg>
-                            </div>
-                            <a class="btn btn--dark service-card__btn" href="#contact">
-                                <span class="btn__text">Learn More</span>
-                                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <h3 class="service-card__title">Wall &amp; Ceiling Works</h3>
-
-                    <a class="service-card__circle" href="#contact" aria-label="Wall and Ceiling Works — learn more">
-                        <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
-                    </a>
-                </article>
-            </div>
-
-            <div class="swiper-slide">
-                <article class="service-card service-card--5">
-                    <div class="service-card__top">
-                        <div class="service-card__cell">
-                            <span class="service-card__num">30+</span>
-                            <span class="service-card__label">Experts on site</span>
-                        </div>
-                        <div class="service-card__cell service-card__cell--right">
-                            <div class="service-card__meta">
-                                <span class="service-card__index">005</span>
-                                <svg class="service-card__dots" width="50" height="12" viewBox="0 0 50 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <rect width="9.28118" height="11.0214" rx="3"/>
-                                    <rect x="10.4414" width="8.7011" height="11.0214" rx="3"/>
-                                    <rect x="20.3027" width="9.28118" height="11.0214" rx="3"/>
-                                    <rect x="30.7441" width="8.7011" height="11.0214" rx="3"/>
-                                    <rect x="40.6045" width="9.28118" height="11.0214" rx="3"/>
-                                </svg>
-                            </div>
-                            <a class="btn btn--dark service-card__btn" href="#contact">
-                                <span class="btn__text">Learn More</span>
-                                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <h3 class="service-card__title">Tiling &amp; Stonework</h3>
-
-                    <a class="service-card__circle" href="#contact" aria-label="Tiling and Stonework — learn more">
-                        <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
-                    </a>
-                </article>
+            <div class="hero__descr">
+                A selection of completed interior finishing projects — floor screeds, tile and hardwood installations, plastering, drywall systems, and premium paint finishes across residential and commercial properties in South Florida.
             </div>
         </div>
     </div>
 </section>
 
-<section class="build">
-    <div class="build__inner" data-aos="fade-up">
-        <video class="build__video" src="assets/vid/right.mp4" autoplay muted loop playsinline preload="auto"></video>
+<section class="featured" data-aos="fade-up">
+    <div class="featured__inner">
+        <span class="featured__divider"></span>
 
-        <div class="build__content">
-            <div class="build__head">
-                <a class="build__logo" href="/" aria-label="ISP Group">
-                    <img src="assets/img/logo.svg" alt="ISP Group" width="146" height="21">
+        <div class="featured__label">
+            <img src="assets/icons/featured.svg" alt="" aria-hidden="true" width="20" height="19">
+            <span>Featured Project</span>
+        </div>
+
+        <div class="featured__bottom">
+            <h2 class="featured__title">Luxury Condo — Lobby <span>The Installation</span></h2>
+
+            <div class="featured__meta">
+                <span class="featured__area">3,200 sq ft total area</span>
+                <span class="featured__type">Floor Finishing</span>
+                <a class="btn btn--navy featured__btn" href="index.html#services">
+                    <span class="btn__text">View This Service</span>
+                    <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </a>
-                <a class="build__link" href="#contact">Contact Us</a>
-            </div>
-
-            <div class="build__bottom">
-                <div class="build__main">
-                    <h2 class="build__title">Every Space Deserves To Be Built Right.</h2>
-                    <div class="build__buttons">
-                        <a class="btn btn--light build__btn" href="#projects">
-                            <span class="btn__text">Explore Our Work</span>
-                            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a class="btn btn--dark build__btn" href="#contact">
-                            <span class="btn__text">Contact Our Team</span>
-                            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <p class="build__desc">Whether it’s a home, office, retail space, or commercial property, great construction starts with understanding how the space needs to perform.</p>
             </div>
         </div>
     </div>
+
+    <img class="featured__img" src="assets/img/featured-project.jpg" alt="" loading="lazy">
 </section>
 
-<section class="way" data-aos="fade-up">
-    <div class="way__head">
-        <h2 class="way__title"><span>A Better Way</span> to Build</h2>
-
-        <a class="btn btn--outline" href="#contact">
-            <span class="btn__text">Book the consultation</span>
-            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13.3337 2.6665V7.33317C13.3337 8.04041 13.0527 8.71869 12.5526 9.21879C12.0525 9.71889 11.3742 9.99984 10.667 9.99984H2.66699" stroke="#344A5B" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M6.00033 6.6665L2.66699 9.99984L6.00033 13.3332" stroke="#344A5B" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </a>
+<section class="cases" id="cases"  data-aos="fade-up">
+  <div class="cases__top">
+    <div class="cases__filters">
+      <button class="cases__filter is-active" type="button" data-filter="all"><span class="cases__dot"></span>All</button>
+      <button class="cases__filter" type="button" data-filter="apartments"><span class="cases__dot"></span>Apartments</button>
+      <button class="cases__filter" type="button" data-filter="houses"><span class="cases__dot"></span>Houses</button>
+      <button class="cases__filter" type="button" data-filter="public"><span class="cases__dot"></span>Public Spaces</button>
     </div>
 
-    <ul class="way__list">
-        <li class="way-card">
-            <span class="way-card__icon"><img src="assets/icons/way-1.svg" alt="" width="40" height="40"></span>
-            <div class="way-card__text">
-                <span class="way-card__title">Personalized Solutions</span>
-                <p class="way-card__desc">We develop solutions around your<br>property, lifestyle, priorities, and<br>preferred design direction.</p>
-            </div>
-        </li>
-        <li class="way-card">
-            <span class="way-card__icon"><img src="assets/icons/way-2.svg" alt="" width="40" height="40"></span>
-            <div class="way-card__text">
-                <span class="way-card__title">Detailed Estimates</span>
-                <p class="way-card__desc">You receive a clear description<br>of the proposed work before<br>the project begins.</p>
-            </div>
-        </li>
-        <li class="way-card">
-            <span class="way-card__icon"><img src="assets/icons/way-3.svg" alt="" width="40" height="40"></span>
-            <div class="way-card__text">
-                <span class="way-card__title">Reliable Materials</span>
-                <p class="way-card__desc">We recommend materials based on<br>durability, appearance, maintenance<br>requirements, and budget.</p>
-            </div>
-        </li>
-        <li class="way-card">
-            <span class="way-card__icon"><img src="assets/icons/way-4.svg" alt="" width="40" height="40"></span>
-            <div class="way-card__text">
-                <span class="way-card__title">Careful Workmanship</span>
-                <p class="way-card__desc">We pay attention not only to major<br>construction stages but also to the<br>details that shape the final result.</p>
-            </div>
-        </li>
-        <li class="way-card">
-            <span class="way-card__icon"><img src="assets/icons/way-5.svg" alt="" width="40" height="40"></span>
-            <div class="way-card__text">
-                <span class="way-card__title">Organized Process</span>
-                <p class="way-card__desc">Each stage is planned and<br>coordinated to keep the<br>project moving forward.</p>
-            </div>
-        </li>
-        <li class="way-card">
-            <span class="way-card__icon"><img src="assets/icons/way-6.svg" alt="" width="40" height="40"></span>
-            <div class="way-card__text">
-                <span class="way-card__title">Complete Project Support</span>
-                <p class="way-card__desc">From the first conversation<br>to the final walkthrough.</p>
-            </div>
-        </li>
-        <li class="way-card">
-            <span class="way-card__icon"><img src="assets/icons/way-7.svg" alt="" width="40" height="40"></span>
-            <div class="way-card__text">
-                <span class="way-card__title">Consistent Communication</span>
-                <p class="way-card__desc">Our team keeps you informed about<br>progress, upcoming stages, and<br>important decisions.</p>
-            </div>
-        </li>
-        <li class="way-card">
-            <span class="way-card__icon"><img src="assets/icons/way-8.svg" alt="" width="40" height="40"></span>
-            <div class="way-card__text">
-                <span class="way-card__title">Respect for Your Home</span>
-                <p class="way-card__desc">We understand that construction<br>happens in a space that matters to<br>you and your family.</p>
-            </div>
-        </li>
-    </ul>
-</section>
+    <div class="cases__nav">
+      <button class="reviews__arrow cases__arrow cases__arrow--prev" type="button" aria-label="Previous">
+        <img src="assets/icons/slider-arrow.svg" alt="" aria-hidden="true">
+      </button>
+      <button class="reviews__arrow cases__arrow cases__arrow--next" type="button" aria-label="Next">
+        <img src="assets/icons/slider-arrow.svg" alt="" aria-hidden="true">
+      </button>
+    </div>
+  </div>
 
-<section class="services-grid" id="projects"  data-aos="fade-up">
-    <ul class="services-grid__list">
-        <li class="grid-card grid-card--1">
-            <div class="grid-card__top">
-                <div class="grid-card__row">
-                    <span class="grid-card__line"></span>
-                    <span class="grid-card__num">001</span>
-                </div>
-                <h3 class="grid-card__title">Custom Homes</h3>
-            </div>
+  <div class="swiper cases__grid">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide case-card" data-cat="apartments">
+        <img class="case-card__img" src="assets/img/portfolio-card-1.jpg" alt="">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Meydan Horizon</span>
+        </span>
+        <div class="case-card__bottom">
+          <div class="case-card__info">
+            <span class="case-card__name">Case<br>Nameee</span>
+            <span class="case-card__loc">Located in Dubai<br>Dubai Marina</span>
+          </div>
+          <a class="header__request case-card__btn" href="#">Watch the case <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true"></a>
+        </div>
+      </div>
 
-            <a class="btn btn--light grid-card__btn" href="#contact">
-                <span class="btn__text">View Service</span>
-                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </li>
+      <div class="swiper-slide case-card" data-cat="houses">
+        <img class="case-card__img" src="assets/img/portfolio-card-1.jpg" alt="">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Meydan Horizon</span>
+        </span>
+        <div class="case-card__bottom">
+          <div class="case-card__info">
+            <span class="case-card__name">Case<br>Nameee</span>
+            <span class="case-card__loc">Located in Dubai<br>Dubai Marina</span>
+          </div>
+          <a class="header__request case-card__btn" href="#">Watch the case <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true"></a>
+        </div>
+      </div>
 
-        <li class="grid-card grid-card--2">
-            <div class="grid-card__top">
-                <div class="grid-card__row">
-                    <span class="grid-card__line"></span>
-                    <span class="grid-card__num">002</span>
-                </div>
-                <h3 class="grid-card__title">Commercial Spaces</h3>
-            </div>
+      <div class="swiper-slide case-card" data-cat="public">
+        <img class="case-card__img" src="assets/img/portfolio-card-1.jpg" alt="">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Meydan Horizon</span>
+        </span>
+        <div class="case-card__bottom">
+          <div class="case-card__info">
+            <span class="case-card__name">Case<br>Nameee</span>
+            <span class="case-card__loc">Located in Dubai<br>Dubai Marina</span>
+          </div>
+          <a class="header__request case-card__btn" href="#">Watch the case <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true"></a>
+        </div>
+      </div>
 
-            <a class="btn btn--light grid-card__btn" href="#contact">
-                <span class="btn__text">View Service</span>
-                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </li>
+      <div class="swiper-slide case-card" data-cat="apartments">
+        <img class="case-card__img" src="assets/img/portfolio-card-1.jpg" alt="">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Meydan Horizon</span>
+        </span>
+        <div class="case-card__bottom">
+          <div class="case-card__info">
+            <span class="case-card__name">Case<br>Nameee</span>
+            <span class="case-card__loc">Located in Dubai<br>Dubai Marina</span>
+          </div>
+          <a class="header__request case-card__btn" href="#">Watch the case <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true"></a>
+        </div>
+      </div>
 
-        <li class="grid-card grid-card--3">
-            <div class="grid-card__top">
-                <div class="grid-card__row">
-                    <span class="grid-card__line"></span>
-                    <span class="grid-card__num">003</span>
-                </div>
-                <h3 class="grid-card__title">Renovations</h3>
-            </div>
+      <div class="swiper-slide case-card" data-cat="houses">
+        <img class="case-card__img" src="assets/img/portfolio-card-1.jpg" alt="">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Meydan Horizon</span>
+        </span>
+        <div class="case-card__bottom">
+          <div class="case-card__info">
+            <span class="case-card__name">Case<br>Nameee</span>
+            <span class="case-card__loc">Located in Dubai<br>Dubai Marina</span>
+          </div>
+          <a class="header__request case-card__btn" href="#">Watch the case <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true"></a>
+        </div>
+      </div>
 
-            <a class="btn btn--light grid-card__btn" href="#contact">
-                <span class="btn__text">View Service</span>
-                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </li>
+      <div class="swiper-slide case-card" data-cat="public">
+        <img class="case-card__img" src="assets/img/portfolio-card-1.jpg" alt="">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Meydan Horizon</span>
+        </span>
+        <div class="case-card__bottom">
+          <div class="case-card__info">
+            <span class="case-card__name">Case<br>Nameee</span>
+            <span class="case-card__loc">Located in Dubai<br>Dubai Marina</span>
+          </div>
+          <a class="header__request case-card__btn" href="#">Watch the case <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true"></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <li class="grid-card grid-card--4">
-            <div class="grid-card__top">
-                <div class="grid-card__row">
-                    <span class="grid-card__line"></span>
-                    <span class="grid-card__num">004</span>
-                </div>
-                <h3 class="grid-card__title">Additions &amp; Expansions</h3>
-            </div>
+  <div class="swiper cases__big">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide case-big" data-cat="public">
+        <img class="case-big__img" src="assets/img/portfolio-card-1.png" alt="">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Meydan Horizon</span>
+        </span>
+        <div class="case-big__bottom">
+          <div class="case-big__info">
+            <span class="case-big__name">Projekte<br>GH-Projekt</span>
+            <span class="case-big__desc">Interior Design<br>By KAR Interiors</span>
+          </div>
+          <a class="header__request case-big__btn" href="#">Watch the case <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true"></a>
+        </div>
+      </div>
 
-            <a class="btn btn--light grid-card__btn" href="#contact">
-                <span class="btn__text">View Service</span>
-                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </li>
-    </ul>
-</section>
+      <div class="swiper-slide case-big" data-cat="houses">
+        <img class="case-big__img" src="assets/img/portfolio-card-2.png" alt="">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Meydan Horizon</span>
+        </span>
+        <div class="case-big__bottom">
+          <div class="case-big__info">
+            <span class="case-big__name">Coastal<br>Villa</span>
+            <span class="case-big__desc">Interior Design<br>By KAR Interiors</span>
+          </div>
+          <a class="header__request case-big__btn" href="#">Watch the case <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true"></a>
+        </div>
+      </div>
 
-<section class="conversation" id="process">
-    <div class="conversation__head" data-aos="fade-up">
-        <h2 class="conversation__title">From the First
-            <span class="conversation__second"><span class="conversation__slash">//</span> <span class="conversation__accent">Conversation</span></span>
-        </h2>
+      <div class="swiper-slide case-big" data-cat="apartments">
+        <img class="case-big__img" src="assets/img/portfolio-card-1.jpg" alt="">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Meydan Horizon</span>
+        </span>
+        <div class="case-big__bottom">
+          <div class="case-big__info">
+            <span class="case-big__name">Urban<br>Apartment</span>
+            <span class="case-big__desc">Interior Design<br>By KAR Interiors</span>
+          </div>
+          <a class="header__request case-big__btn" href="#">Watch the case <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true"></a>
+        </div>
+      </div>
 
-        <a class="btn btn--navy conversation__btn" href="#contact">
-            <span class="btn__text">Start Your Project</span>
-            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </a>
+      <div class="swiper-slide case-big" data-cat="public">
+        <img class="case-big__img" src="assets/img/services-card-2.png" alt="">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Meydan Horizon</span>
+        </span>
+        <div class="case-big__bottom">
+          <div class="case-big__info">
+            <span class="case-big__name">Riverside<br>Loft</span>
+            <span class="case-big__desc">Interior Design<br>By KAR Interiors</span>
+          </div>
+          <a class="header__request case-big__btn" href="#">Watch the case <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true"></a>
+        </div>
+      </div>
     </div>
 
-    <ul class="conversation__list">
-        <li class="conversation__item">
-            <div class="conversation__main">
-                <span class="conversation__num">/01</span>
-                <h3 class="conversation__name">Tell Us About Your Project</h3>
-            </div>
-
-            <p class="conversation__desc">Share your ideas, requirements, property information, and preferred timeline.</p>
-
-            <span class="conversation__media">
-                <img src="assets/img/conversation-card-1.png" alt="" loading="lazy">
-            </span>
-        </li>
-
-        <li class="conversation__item">
-            <div class="conversation__main">
-                <span class="conversation__num">/02</span>
-                <h3 class="conversation__name">Initial Consultation</h3>
-            </div>
-
-            <p class="conversation__desc">We discuss your goals, answer questions, and determine which services may be required.</p>
-
-            <span class="conversation__media">
-                <img src="assets/img/conversation-card-1.png" alt="" loading="lazy">
-            </span>
-        </li>
-
-        <li class="conversation__item">
-            <div class="conversation__main">
-                <span class="conversation__num">/03</span>
-                <h3 class="conversation__name">Site Visit</h3>
-            </div>
-
-            <p class="conversation__desc">Our specialist visits the property to assess the space and review important project details.</p>
-
-            <span class="conversation__media">
-                <img src="assets/img/conversation-card-1.png" alt="" loading="lazy">
-            </span>
-        </li>
-
-        <li class="conversation__item">
-            <div class="conversation__main">
-                <span class="conversation__num">/04</span>
-                <h3 class="conversation__name">Estimate and Proposal</h3>
-            </div>
-
-            <p class="conversation__desc">We coordinate materials, scheduling, design details, and preparation for construction.</p>
-
-            <span class="conversation__media">
-                <img src="assets/img/conversation-card-1.png" alt="" loading="lazy">
-            </span>
-        </li>
-
-        <li class="conversation__item">
-            <div class="conversation__main">
-                <span class="conversation__num">/05</span>
-                <h3 class="conversation__name">Planning</h3>
-            </div>
-
-            <p class="conversation__desc">We prepare the schedule, drawings, and material selections before the work begins.</p>
-
-            <span class="conversation__media">
-                <img src="assets/img/conversation-card-1.png" alt="" loading="lazy">
-            </span>
-        </li>
-
-        <li class="conversation__item">
-            <div class="conversation__main">
-                <span class="conversation__num">/06</span>
-                <h3 class="conversation__name">Construction</h3>
-            </div>
-
-            <p class="conversation__desc">Our team completes the approved work while maintaining communication throughout the project.</p>
-
-            <span class="conversation__media">
-                <img src="assets/img/conversation-card-1.png" alt="" loading="lazy">
-            </span>
-        </li>
-
-        <li class="conversation__item">
-            <div class="conversation__main">
-                <span class="conversation__num">/07</span>
-                <h3 class="conversation__name">Final Walkthrough</h3>
-            </div>
-
-            <p class="conversation__desc">Together, we review the completed space and confirm that the agreed work has been delivered.</p>
-
-            <span class="conversation__media">
-                <img src="assets/img/conversation-card-1.png" alt="" loading="lazy">
-            </span>
-        </li>
-    </ul>
+    <button class="portfolio__arrow cases__big-arrow cases__big-arrow--prev" type="button" aria-label="Previous case">
+      <img src="assets/icons/slider-arrow.svg" alt="" aria-hidden="true">
+    </button>
+    <button class="portfolio__arrow cases__big-arrow cases__big-arrow--next" type="button" aria-label="Next case">
+      <img src="assets/icons/slider-arrow.svg" alt="" aria-hidden="true">
+    </button>
+  </div>
 </section>
 
-<section class="purpose">
-    <video class="purpose__video" src="assets/vid/purpose.mp4" autoplay muted loop playsinline preload="auto"></video>
+<section class="contact" id="contact">
+  <div class="contact__inner">
+    <picture class="contact__bg">
+      <source media="(max-width: 570px)" srcset="assets/img/contacts-mob.jpg">
+      <img src="assets/img/contact.jpg" alt="" aria-hidden="true">
+    </picture>
 
-    <div class="purpose__content">
-        <div class="purpose__head" data-aos="fade-up">
-            <h2 class="purpose__title">Built with Purpose.</h2>
 
-            <div class="purpose__aside">
-                <img class="purpose__logo" src="assets/img/logo.svg" alt="ISP Group" width="146" height="21">
-                <p class="purpose__note">Explore residential spaces transformed through thoughtful planning</p>
-            </div>
+    <div class="contact__top">
+      <a class="contact__logo" href="#home" aria-label="KAR Interiors">
+        <img src="assets/img/logo.svg" alt="KAR Interiors">
+      </a>
+      <a class="contact__link" href="#contact">Contact Us</a>
+    </div>
+
+    <div class="contact__main">
+      <h2 class="contact__title">Fill out the forms</h2>
+      <p class="contact__descr">and we'll contact you for a free consultation</p>
+
+      <form class="contact__form" novalidate>
+        <div class="contact__fields">
+          <input class="contact__input" type="text" name="name" placeholder="Your name" autocomplete="name">
+          <input class="contact__input" type="tel" name="phone" placeholder="Phone number" autocomplete="tel">
+          <input class="contact__input" type="email" name="email" placeholder="E-Mail" autocomplete="email">
+
+          <div class="contact__select" data-select>
+            <button class="contact__select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="contact__select-value">Property Type</span>
+              <img class="contact__select-chevron" src="assets/icons/dropdown-chevron.svg" alt="" aria-hidden="true">
+            </button>
+            <ul class="contact__select-list" role="listbox">
+              <li class="contact__select-option" role="option" data-value="apartment">Apartment</li>
+              <li class="contact__select-option" role="option" data-value="house">House</li>
+              <li class="contact__select-option" role="option" data-value="office">Office</li>
+              <li class="contact__select-option" role="option" data-value="commercial">Commercial</li>
+            </ul>
+            <input type="hidden" name="propertyType" value="">
+          </div>
         </div>
 
-        <div class="purpose__bottom">
-            <div class="purpose__nav">
-                <button class="purpose-btn purpose-btn--prev" type="button" aria-label="Previous slide">
-                    <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
-                </button>
-                <button class="purpose-btn purpose-btn--next" type="button" aria-label="Next slide">
-                    <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
-                </button>
-            </div>
-
-            <div class="purpose__slider swiper">
-                <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <article class="purpose-card">
-                        <span class="purpose-card__icon">
-                            <img src="assets/icons/purpose-card-1.svg" alt="" width="32" height="32">
-                        </span>
-
-                        <div class="purpose-card__text">
-                            <h3 class="purpose-card__title">New Construction</h3>
-                            <span class="purpose-card__line"></span>
-                            <p class="purpose-card__desc"><span class="purpose-card__desc--bold">Built from the ground up.</span><br>Residential and commercial projects<br>delivered from planning to completion.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="swiper-slide">
-                    <article class="purpose-card">
-                        <span class="purpose-card__icon">
-                            <img src="assets/icons/purpose-card-2.svg" alt="" width="32" height="32">
-                        </span>
-
-                        <div class="purpose-card__text">
-                            <h3 class="purpose-card__title">Commercial Construction</h3>
-                            <span class="purpose-card__line"></span>
-                            <p class="purpose-card__desc"><span class="purpose-card__desc--bold">Built for business.</span><br>Offices, retail spaces, hospitality, and<br>commercial buildings designed to perform.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="swiper-slide">
-                    <article class="purpose-card">
-                        <span class="purpose-card__icon">
-                            <img src="assets/icons/purpose-card-3.svg" alt="" width="32" height="32">
-                        </span>
-
-                        <div class="purpose-card__text">
-                            <h3 class="purpose-card__title">Residential Construction</h3>
-                            <span class="purpose-card__line"></span>
-                            <p class="purpose-card__desc"><span class="purpose-card__desc--bold">Built for living.</span><br>Homes and residential spaces created<br>with comfort and durability in mind.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="swiper-slide">
-                    <article class="purpose-card">
-                        <span class="purpose-card__icon">
-                            <img src="assets/icons/purpose-4.svg" alt="" width="32" height="32">
-                        </span>
-
-                        <div class="purpose-card__text">
-                            <h3 class="purpose-card__title">Renovation &amp; Remodeling</h3>
-                            <span class="purpose-card__line"></span>
-                            <p class="purpose-card__desc"><span class="purpose-card__desc--bold">Built to last.</span><br>Existing spaces reworked with careful<br>planning and precise execution.</p>
-                        </div>
-                    </article>
-                </div>
-                </div>
-            </div>
-        </div>
+        <button class="contact__submit" type="submit">
+          Leave a request
+          <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true">
+        </button>
+      </form>
     </div>
-</section>
-
-<section class="fill" data-aos="fade-up">
-    <div class="fill__inner">
-        <span class="fill__label">A space built around its purpose</span>
-
-        <div class="fill__text">
-            <p class="fill__desc" data-fill-text>Every project begins with understanding how the space needs to work. For this project, our team managed the process from early planning through construction and final finishes, creating an environment that balances functionality, durability, and thoughtful design.</p>
-
-            <a class="btn btn--navy fill__btn" href="#contact">
-                <span class="btn__text">Book the consultation</span>
-                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-
-    <img class="fill__img" src="assets/img/fill-bg.jpg" alt="" loading="lazy">
-</section>
-
-<section class="faq" id="faq" data-aos="fade-up">
-    <div class="faq__left">
-        <div class="faq__intro">
-            <h2 class="faq__title">Questions
-                <span class="faq__second"><span class="faq__slash">//</span> <span class="faq__accent">Before You Build</span></span>
-            </h2>
-            <p class="faq__desc">We’ve answered the most common questions to help you plan your project with clarity and confidence.</p>
-        </div>
-
-        <div class="faq__buttons">
-            <a class="btn btn--navy" href="#contact">
-                <span class="btn__text">Start Your Build</span>
-                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-            <a class="btn btn--outline faq__btn--contact" href="#contact">
-                <span class="btn__text">Contact Us</span>
-                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-
-    <div class="faq__accordion accordion-container">
-            <div class="ac faq-item">
-                <h3 class="ac-header">
-                    <button class="ac-trigger faq-item__trigger" type="button">
-                        <span class="faq-item__question">What types of projects do you handle?</span>
-                        <span class="faq-item__icon">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M7.695 0H9.5076V7.695H17.2026V9.5076H9.5076V17.2026H7.695V9.5076H0V7.695H7.695V0Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                    </button>
-                </h3>
-                <div class="ac-panel">
-                    <p class="ac-text faq-item__answer">We work on custom homes, renovations, additions, and commercial interiors — from single-room updates to full ground-up construction.</p>
-                </div>
-            </div>
-
-            <div class="ac faq-item">
-                <h3 class="ac-header">
-                    <button class="ac-trigger faq-item__trigger" type="button">
-                        <span class="faq-item__question">Do you provide project estimates?</span>
-                        <span class="faq-item__icon">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M7.695 0H9.5076V7.695H17.2026V9.5076H9.5076V17.2026H7.695V9.5076H0V7.695H7.695V0Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                    </button>
-                </h3>
-                <div class="ac-panel">
-                    <p class="ac-text faq-item__answer">Yes. After the initial consultation and site visit we prepare a detailed estimate covering scope, materials, and timeline.</p>
-                </div>
-            </div>
-
-            <div class="ac faq-item">
-                <h3 class="ac-header">
-                    <button class="ac-trigger faq-item__trigger" type="button">
-                        <span class="faq-item__question">Can you help with material selection?</span>
-                        <span class="faq-item__icon">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M7.695 0H9.5076V7.695H17.2026V9.5076H9.5076V17.2026H7.695V9.5076H0V7.695H7.695V0Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                    </button>
-                </h3>
-                <div class="ac-panel">
-                    <p class="ac-text faq-item__answer">We recommend materials based on durability, appearance, maintenance requirements, and budget, and can coordinate ordering for you.</p>
-                </div>
-            </div>
-
-            <div class="ac faq-item">
-                <h3 class="ac-header">
-                    <button class="ac-trigger faq-item__trigger" type="button">
-                        <span class="faq-item__question">Can I renovate my home in stages?</span>
-                        <span class="faq-item__icon">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M7.695 0H9.5076V7.695H17.2026V9.5076H9.5076V17.2026H7.695V9.5076H0V7.695H7.695V0Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                    </button>
-                </h3>
-                <div class="ac-panel">
-                    <p class="ac-text faq-item__answer">Yes. We can break the work into phases so you can stay in the property while the project moves forward step by step.</p>
-                </div>
-            </div>
-
-            <div class="ac faq-item">
-                <h3 class="ac-header">
-                    <button class="ac-trigger faq-item__trigger" type="button">
-                        <span class="faq-item__question">How long does a renovation take?</span>
-                        <span class="faq-item__icon">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M7.695 0H9.5076V7.695H17.2026V9.5076H9.5076V17.2026H7.695V9.5076H0V7.695H7.695V0Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                    </button>
-                </h3>
-                <div class="ac-panel">
-                    <p class="ac-text faq-item__answer">Timelines depend on scope and property size. We share a realistic schedule with the estimate and keep you updated as work progresses.</p>
-                </div>
-            </div>
-
-            <div class="ac faq-item">
-                <h3 class="ac-header">
-                    <button class="ac-trigger faq-item__trigger" type="button">
-                        <span class="faq-item__question">Do I need to have a finished design before contacting you?</span>
-                        <span class="faq-item__icon">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M7.695 0H9.5076V7.695H17.2026V9.5076H9.5076V17.2026H7.695V9.5076H0V7.695H7.695V0Z" fill="currentColor"/>
-                            </svg>
-                        </span>
-                    </button>
-                </h3>
-                <div class="ac-panel">
-                    <p class="ac-text faq-item__answer">Not at all. Many projects start with only an idea — we help shape the plan, drawings, and material selections before construction begins.</p>
-                </div>
-            </div>
-    </div>
-</section>
-
-<section class="build">
-    <div class="build__inner" data-aos="fade-up">
-        <video class="build__video" src="assets/vid/cta.mp4" autoplay muted loop playsinline preload="auto"></video>
-
-        <div class="build__content">
-            <div class="build__head">
-                <span class="build__link">Let's discuss your project</span>
-                <a class="build__link" href="#contact">Contact Us</a>
-            </div>
-
-            <div class="build__bottom">
-                <div class="build__main">
-                    <h2 class="build__title">Tell Us What You Would Like to Build</h2>
-                    <div class="build__buttons">
-                        <a class="btn btn--light build__btn" href="#projects">
-                            <span class="btn__text">Discuss Your Project</span>
-                            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a class="btn btn--dark build__btn" href="#contact">
-                            <span class="btn__text">Call today</span>
-                            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <p class="build__desc build__desc--cta">Planning a home, office, commercial space, renovation, or ground-up development? Tell us about your project and let’s explore what we can build together.</p>
-            </div>
-        </div>
-    </div>
+  </div>
 </section>
 
 <footer class="footer">
@@ -969,6 +434,69 @@
     </div>
   </div>
 </footer>
+
+<div class="footer-mob">
+  <div class="footer-mob__panel">
+    <div class="footer-mob__head">
+      <button class="footer-mob__totop" type="button" aria-label="Back to top">
+        <img src="assets/icons/to-top-arrow.svg" alt="" aria-hidden="true" width="14" height="14">
+      </button>
+      <img class="footer-mob__logo" src="assets/img/dark-logo.svg" alt="ISP Group" width="86" height="12">
+    </div>
+
+    <nav class="footer-mob__links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="portfolio.html">Projects</a>
+      <a href="about-us.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <span class="footer-mob__divider"></span>
+
+    <div class="footer-mob__contacts">
+      <div class="footer-mob__contact">
+        <div class="footer-mob__contact-label">
+          <span>E-Mail</span>
+          <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true" width="12" height="12">
+        </div>
+        <a class="footer-mob__contact-value" href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a>
+      </div>
+
+      <div class="footer-mob__contact">
+        <div class="footer-mob__contact-label">
+          <span>Phone</span>
+          <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true" width="12" height="12">
+        </div>
+        <a class="footer-mob__contact-value" href="tel:+19297075551">+1 929 707 5551</a>
+      </div>
+    </div>
+
+    <div class="footer-mob__bottom">
+      <div class="footer-mob__dev">
+        <img class="footer-mob__dev-logo" src="assets/icons/dev-logo-mob.svg" alt="Fernandes Media" width="121" height="34">
+        <span class="footer-mob__dev-text">Website development</span>
+      </div>
+
+      <div class="footer-mob__socials">
+        <a class="footer-mob__social" href="#" aria-label="WhatsApp">
+          <img src="assets/icons/wp.svg" alt="" aria-hidden="true" width="20" height="21">
+        </a>
+        <a class="footer-mob__social" href="#" aria-label="Instagram">
+          <img src="assets/icons/ig.svg" alt="" aria-hidden="true" width="20" height="21">
+        </a>
+        <a class="footer-mob__social" href="#" aria-label="Telegram">
+          <img src="assets/icons/tg.svg" alt="" aria-hidden="true" width="20" height="21">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-mob__legal">
+    <span>&copy; 2026</span>
+    <a class="footer-mob__policy" href="#">Pricacy and Policy</a>
+  </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
