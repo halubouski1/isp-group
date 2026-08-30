@@ -454,8 +454,20 @@ if (experiencePin) {
   // end of the pin — no empty scrolling after the circle.
   const SCROLL_PER_STEP = 1.5;
 
+  // On mobile the address bar hiding fires resize, and window.innerHeight
+  // changes by ~100px. With 5 gaps that moved the pin's height by ~750px in
+  // the middle of a scroll: everything below shifted and the page looked like
+  // it jumped backwards. --fixed-vh deliberately ignores those address-bar
+  // changes, so the pin is measured against it instead.
+  const screenHeight = () => {
+    const fixed = parseFloat(
+      getComputedStyle(document.documentElement).getPropertyValue('--fixed-vh')
+    );
+    return fixed || window.innerHeight;
+  };
+
   const layout = () => {
-    const step = window.innerHeight * SCROLL_PER_STEP;
+    const step = screenHeight() * SCROLL_PER_STEP;
     experiencePin.style.height =
       stage.offsetHeight + step * (items.length - 1) + 'px';
   };
@@ -480,10 +492,22 @@ if (experiencePin) {
   layout();
   update();
   window.addEventListener('scroll', update, { passive: true });
+
+  // Only a real resize re-measures the pin; an address-bar resize just
+  // refreshes the current position.
+  let lastPinWidth = window.innerWidth;
   window.addEventListener('resize', () => {
+    if (window.innerWidth !== lastPinWidth) {
+      lastPinWidth = window.innerWidth;
+      layout();
+    }
+    update();
+  });
+  window.addEventListener('orientationchange', () => {
     layout();
     update();
   });
+
   if (lenis) lenis.on('scroll', update);
 }
 
