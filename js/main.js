@@ -374,3 +374,192 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.cases__grid')) {
     });
   });
 }
+
+// ========================================
+// Scroll down to the next section (hero control)
+// ========================================
+document.querySelectorAll('[data-scroll-next]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const section = button.closest('section');
+    const target = section && section.nextElementSibling;
+    if (!target) return;
+
+    if (lenis) {
+      lenis.scrollTo(target, { duration: 1.4 });
+      return;
+    }
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// ========================================
+// Experience — pinned circle
+// ========================================
+const experiencePin = document.querySelector('[data-experience]');
+
+if (experiencePin) {
+  const stage = experiencePin.querySelector('.experience__stage');
+  const items = [...experiencePin.querySelectorAll('[data-experience-item]')];
+  const slides = [...experiencePin.querySelectorAll('[data-experience-slide]')];
+  const line = experiencePin.querySelector('[data-experience-line]');
+
+  // six items evenly around the circle
+  const STEP = 360 / items.length;
+  // matches the transition on .experience__icon plus the line's delay
+  const TRAVEL = 450;
+  let activeIndex = -1;
+  let targetIndex = 0;
+  let stepTimer = null;
+
+  const setActive = (index) => {
+    if (index === activeIndex) return;
+    activeIndex = index;
+
+    items.forEach((item, i) => item.classList.toggle('is-active', i === index));
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+
+    // replay the line: collapse without a transition, then grow back
+    if (line) {
+      line.classList.add('is-resetting');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => line.classList.remove('is-resetting'));
+      });
+    }
+  };
+
+  const render = (index) => {
+    items.forEach((item, i) => {
+      // positive angle = clockwise, so an item leaves to the right once passed
+      item.style.setProperty('--a', (index - i) * STEP + 'deg');
+    });
+    setActive(index);
+  };
+
+  // Walk towards the index the scroll asks for one point at a time. A fast
+  // flick would otherwise jump several points at once and the ones in between
+  // would never be seen.
+  const stepTowardsTarget = () => {
+    if (stepTimer || targetIndex === activeIndex) return;
+
+    render(activeIndex + Math.sign(targetIndex - activeIndex));
+
+    stepTimer = setTimeout(() => {
+      stepTimer = null;
+      stepTowardsTarget();
+    }, TRAVEL);
+  };
+
+  // How far the page scrolls for one point. The pin is exactly this times the
+  // number of gaps plus the stage itself, so the last point lands at the very
+  // end of the pin — no empty scrolling after the circle.
+  const SCROLL_PER_STEP = 1.5;
+
+  const layout = () => {
+    const step = window.innerHeight * SCROLL_PER_STEP;
+    experiencePin.style.height =
+      stage.offsetHeight + step * (items.length - 1) + 'px';
+  };
+
+  const update = () => {
+    const distance = experiencePin.offsetHeight - stage.offsetHeight;
+    const scrolled = -experiencePin.getBoundingClientRect().top;
+    const progress = distance > 0 ? Math.min(Math.max(scrolled / distance, 0), 1) : 0;
+
+    // progress 0 → first point on top, progress 1 → last one, so the animation
+    // finishes exactly where the pin releases
+    targetIndex = Math.round(progress * (items.length - 1));
+
+    if (activeIndex === -1) {
+      render(targetIndex);
+      return;
+    }
+
+    stepTowardsTarget();
+  };
+
+  layout();
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', () => {
+    layout();
+    update();
+  });
+  if (lenis) lenis.on('scroll', update);
+}
+
+// ========================================
+// How We Work slider
+// ========================================
+if (typeof Swiper !== 'undefined' && document.querySelector('.how__slider')) {
+  new Swiper('.how__slider', {
+    slidesPerView: 'auto',
+    // the columns are separated by their own dashed borders, so no gap here
+    spaceBetween: 0,
+    // matches the .how__top padding at each breakpoint
+    slidesOffsetBefore: 20,
+    slidesOffsetAfter: 20,
+    breakpoints: {
+      571: { slidesOffsetBefore: 21, slidesOffsetAfter: 21 },
+      1920: { slidesOffsetBefore: 46, slidesOffsetAfter: 46 },
+    },
+    speed: 700,
+    grabCursor: true,
+    navigation: {
+      nextEl: '.how__arrow--next',
+      prevEl: '.how__arrow--prev',
+    },
+  });
+}
+
+// ========================================
+// Career path — the line fills on scroll
+// ========================================
+const careerGrid = document.querySelector('[data-career]');
+
+if (careerGrid) {
+  const track = careerGrid.querySelector('.career__track');
+  const years = [...careerGrid.querySelectorAll('[data-career-year]')];
+  const labels = [...careerGrid.querySelectorAll('[data-career-label]')];
+
+  // Below 1025px the timeline scrolls sideways, so the fill follows that
+  // swipe. On wider screens the row fits and the page's vertical scroll
+  // drives it instead.
+  const isSideways = () => careerGrid.scrollWidth - careerGrid.clientWidth > 1;
+
+  const getProgress = () => {
+    if (isSideways()) {
+      const travelled = careerGrid.scrollWidth - careerGrid.clientWidth;
+      return Math.min(Math.max(careerGrid.scrollLeft / travelled, 0), 1);
+    }
+
+    const rect = track.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    // starts once the line enters the lower part of the screen and completes
+    // by the time it has travelled to the upper third
+    const start = viewportHeight * 0.9;
+    const distance = viewportHeight * 0.55;
+    return Math.min(Math.max((start - rect.top) / distance, 0), 1);
+  };
+
+  const updateCareer = () => {
+    const progress = getProgress();
+
+    careerGrid.style.setProperty('--progress', progress);
+
+    // a step lights up as the fill reaches its column and stays lit
+    years.forEach((year, i) => {
+      const point = years.length > 1 ? i / (years.length - 1) : 0;
+      const reached = progress >= point;
+      year.classList.toggle('is-reached', reached);
+      if (labels[i]) labels[i].classList.toggle('is-reached', reached);
+    });
+  };
+
+  updateCareer();
+  careerGrid.addEventListener('scroll', updateCareer, { passive: true });
+  window.addEventListener('scroll', updateCareer, { passive: true });
+  window.addEventListener('resize', updateCareer);
+  if (lenis) lenis.on('scroll', updateCareer);
+}
+

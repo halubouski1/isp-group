@@ -1,0 +1,1091 @@
+/* =====================================================================
+   About Us — hero
+   ===================================================================== */
+
+/* --hero-pad mirrors the hero's horizontal padding so the rule below the
+   description can reach past it to the screen edge (see .hero__line::before) */
+.hero--about {
+    --hero-pad: 40px;
+}
+
+.hero--about .hero__content {
+    justify-content: flex-end;
+    gap: 200px;
+}
+
+/* the right inset sits on the wrapper, so the description ends exactly where
+   the rule's tip ends */
+.hero__top {
+    margin-right: 10px;
+}
+
+.hero__note {
+    max-width: 433px;
+    margin-left: auto;
+    margin-bottom: 45px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #fff;
+}
+
+.hero__line {
+    position: relative;
+    display: block;
+    height: 6px;
+}
+
+.hero__line::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--hero-pad));
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero__line::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 63px;
+    height: 6px;
+    background-color: #fff;
+}
+
+.hero--about .hero__title {
+    margin-bottom: 63px;
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 80%;
+    color: #fff;
+    max-width: 100%;
+}
+
+.hero__btn-big {
+    min-width: 235px;
+}
+
+.hero__btn-small {
+    min-width: 253px;
+}
+
+.hero--about .hero__buttons {
+    gap: 18px;
+}
+
+/* round scroll-down control */
+.hero__scroll {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 110px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1000px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.hero__scroll:hover {
+    opacity: 0.8;
+}
+
+/* =====================================================================
+   Experience — pinned circle animation
+   ===================================================================== */
+/* The top padding lives on the heading, not on the section: the sticky stage
+   has to start at the very top of the section, otherwise the pin only engages
+   after the padding has scrolled away. */
+.experience {
+    padding: 0 40px 0 70px;
+    background-color: #F7F7F7;
+    color: #173145;
+}
+
+.experience__top {
+    position: relative;
+    z-index: 2;
+    padding-top: 120px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.experience__title {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 111%;
+    letter-spacing: -0.03em;
+    color: #344a5b;
+}
+
+.experience__title span {
+    display: block;
+    color: #adb2b6;
+}
+
+.experience__intro {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    flex-shrink: 0;
+}
+
+.experience__descr {
+    max-width: 388px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 156%;
+    letter-spacing: -0.03em;
+    text-align: right;
+    color: #647889;
+}
+
+.experience__logo {
+    flex-shrink: 0;
+    width: 116px;
+    height: auto;
+}
+
+/* ----- the pin: its height is the scroll distance the stage stays fixed ----- */
+/* The height is set from main.js: stage height + one scroll step per point,
+   so the last point lands exactly at the end of the pin and there is no dead
+   scrolling left underneath the circle. */
+.experience__pin {
+    --ring-top: 294px; /* top padding + the heading above the circle */
+    /* The radius is what is left of the screen below the heading, so the arc
+       ends exactly at the bottom edge: half the circle, and no empty strip
+       under it while the section is pinned. */
+    --ring: calc((var(--fixed-vh, 100vh) - var(--ring-top)) * 2);
+    position: relative;
+}
+
+/* Cropped at the circle's centre line, so exactly the top half shows. On a
+   short screen the viewport is the limit instead, so nothing is cut off. */
+.experience__stage {
+    position: sticky;
+    top: 0;
+    height: var(--fixed-vh, 100vh);
+    overflow: hidden;
+}
+
+/* ----- the circle -----
+   The ring box matches the arc's viewBox, so its centre is at 50%/50% and the
+   arc radius is exactly half the box width. Items are placed by angle from
+   that centre, which keeps dots and icons on the same radius line. */
+.experience__ring {
+    --arc-r: calc(var(--ring) / 2);
+    --icon-r: calc(var(--arc-r) + 74px); /* 45px gap + half the icon circle */
+    position: absolute;
+    top: var(--ring-top);
+    left: 50%;
+    width: var(--ring);
+    height: calc(var(--ring) * 1.00687); /* 1612 / 1601 */
+    transform: translateX(-50%);
+}
+
+.experience__arc {
+    width: 100%;
+    height: 100%;
+}
+
+/* one item = an icon plus the dot that sits on the arc under it */
+.experience__item {
+    --a: 0deg;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+}
+
+.experience__icon,
+.experience__dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* the ring snaps from point to point, so the travel itself is animated */
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.25s ease,
+                background-color 0.25s ease,
+                border-color 0.25s ease;
+}
+
+/* rotate out to the radius, then rotate back so the icon stays upright */
+.experience__icon {
+    width: 72px;
+    height: 72px;
+    margin: -36px 0 0 -36px;
+    border: 1px solid rgba(23, 49, 69, 0.15);
+    border-radius: 50%;
+    background-color: #F7F7F7;
+    transform: rotate(var(--a)) translateY(calc(-1 * var(--icon-r))) rotate(calc(-1 * var(--a)));
+}
+
+.experience__icon img {
+    width: 25px;
+    height: 25px;
+    opacity: 0.45;
+    transition: opacity 0.4s ease;
+}
+
+.experience__dot {
+    width: 17px;
+    height: 17px;
+    margin: -8.5px 0 0 -8.5px;
+    border-radius: 50%;
+    background-color: #AAAFBB;
+    transform: rotate(var(--a)) translateY(calc(-1 * var(--arc-r))) rotate(calc(-1 * var(--a)));
+}
+
+.experience__item.is-active .experience__icon {
+    border-color: rgba(23, 49, 69, 0.35);
+}
+
+.experience__item.is-active .experience__icon img {
+    opacity: 1;
+}
+
+.experience__item.is-active .experience__dot {
+    background-color: #173145;
+}
+
+/* ----- line + text under the top point ----- */
+.experience__center {
+    position: absolute;
+    top: calc(var(--ring-top) + 15px); /* ring top + the dot's own radius */
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-50%);
+}
+
+.experience__line {
+    width: 1px;
+    height: 208px;
+    margin-bottom: 58px;
+    background-color: rgba(34, 34, 34, 0.25);
+    transform-origin: top center;
+    transform: scaleY(1);
+    /* the delay matches the ring's travel, so the line draws itself only once
+       the next point has settled at the top */
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1) 0.45s;
+}
+
+.experience__line.is-resetting {
+    transform: scaleY(0);
+    transition: none;
+}
+
+/* the slides sit in one grid cell so the block keeps the tallest one's height */
+.experience__slides {
+    display: grid;
+    width: 360px;
+    text-align: center;
+}
+
+.experience__slide {
+    grid-area: 1 / 1;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+}
+
+.experience__slide.is-active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    /* appears together with the line, once the ring has landed */
+    transition-delay: 0.45s;
+}
+
+.experience__slide-title {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 93%;
+    letter-spacing: -0.03em;
+    color: #344a5b;
+}
+
+.experience__slide-desc {
+    max-width: 360px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #adb2b6;
+}
+
+/* =====================================================================
+   What We Do
+   ===================================================================== */
+.deliverables {
+    margin: 0 15px;
+}
+
+.deliverables__inner {
+    --card: 311px;
+    position: relative;
+    padding: 60px 45px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url("../assets/img/deliverables.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+/* keeps the numbers and the copy readable over the photo */
+.deliverables__inner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 60%);
+    pointer-events: none;
+}
+
+.deliverables__top,
+.deliverables__bottom {
+    position: relative;
+    z-index: 2;
+}
+
+.deliverables__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 470px;
+}
+
+.deliverables__eyebrow {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 88%;
+    color: #fff;
+}
+
+.deliverables__logo {
+    width: 116px;
+    height: auto;
+}
+
+.deliverables__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.deliverables__title {
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 88%;
+    color: #fff;
+    max-width: 750px;
+}
+
+/* ----- cards ----- */
+.deliverables__cards {
+    display: flex;
+    gap: 8px;
+}
+
+.deliverables__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    width: var(--card);
+    height: var(--card);
+    padding: 0 20px 35px 33px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #fff;
+}
+
+.deliverables__card--light {
+    border-color: transparent;
+    background: #fff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    color: #173145;
+}
+
+.deliverables__num {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 100%;
+}
+
+.deliverables__label {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 129%;
+    letter-spacing: -0.03em;
+}
+
+/* ----- copy + button ----- */
+.deliverables__aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-shrink: 0;
+    height: var(--card);
+}
+
+.deliverables__descr {
+    max-width: 292px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #fff;
+}
+
+/* =====================================================================
+   How We Work
+   ===================================================================== */
+
+/* The side padding sits on .how__top only: the slider keeps running to the
+   right edge of the screen instead of being cut at the container. */
+.how {
+    padding: 150px 0 130px;
+    background-color: #F7F7F7;
+}
+
+.how__top {
+    padding: 0 46px;
+}
+
+.how__divider {
+    display: block;
+    margin-bottom: 80px;
+    border-top: 1px dashed rgba(23, 49, 69, 0.25);
+}
+
+.how__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 150px;
+}
+
+.how__title {
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #173145;
+}
+
+.how__nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* ----- cards ----- */
+.how__slider .swiper-slide {
+    width: 600px;
+}
+
+.how-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    padding-left: 87px;
+    padding-top: 85px;
+    border-left: 1px dashed #413421;
+}
+
+/* only the first column opens the row, so it is the one without a separator */
+.how__slider .swiper-slide:first-child .how-card {
+    border-left: none;
+    padding-left: 0;
+}
+
+/* the outer columns are narrower than the ones in the middle */
+.how__slider .swiper-slide:first-child,
+.how__slider .swiper-slide:last-child {
+    width: 450px;
+}
+
+.how__slider .swiper-slide:last-child .how-card__title {
+    max-width: 500px;
+}
+
+.how__slider .swiper-slide:first-child {
+    border: none;
+    padding-left: 0;
+}
+
+.how-card__icon img {
+    width: 21px;
+    height: 21px;
+}
+
+.how-card__title {
+    max-width: 400px;
+    margin-bottom: 27px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 93%;
+    letter-spacing: -0.03em;
+    color: #344a5b;
+}
+
+.how-card__desc {
+    max-width: 450px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    letter-spacing: -0.03em;
+    color: #adb2b6;
+}
+
+/* =====================================================================
+   Five trades
+   ===================================================================== */
+.trades {
+    margin: 0 15px;
+}
+
+/* the panel keeps its own height and pushes the two rows apart, so the gap
+   between them follows the panel instead of a fixed margin */
+.trades__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 1100px;
+    padding: 60px 65px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url("../assets/img/specialists.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.trades__inner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 55%);
+    pointer-events: none;
+}
+
+.trades__top,
+.trades__bottom {
+    position: relative;
+    z-index: 2;
+}
+
+.trades__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.trades__eyebrow {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 88%;
+    color: #fff;
+}
+
+.trades__logo {
+    width: 116px;
+    height: auto;
+}
+
+.trades__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.trades__title {
+    max-width: 960px;
+    margin-bottom: 45px;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+.trades__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.trades__btn {
+    min-width: 263px;
+}
+
+/* ----- the two columns on the right ----- */
+.trades__cols {
+    display: flex;
+    gap: 53px;
+    flex-shrink: 0;
+}
+
+.trades__col {
+    width: 288px;
+}
+
+.trades__col + .trades__col {
+    padding-left: 87px;
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+    width: 319px;
+}
+
+.trades__col-title {
+    margin-bottom: 22px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+.trades__col-desc {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+/* =====================================================================
+   Founder
+   ===================================================================== */
+.founder {
+    display: flex;
+    /* stretch, so the aside is as tall as the card grid and its last
+       paragraph can sit on the bottom edge */
+    align-items: stretch;
+    gap: 48px;
+    padding: 140px 55px;
+    background-color: #F7F7F7;
+}
+
+/* ----- left: six cells, two per row -----
+   The DOM order is the mobile order; on desktop the note and the numbered
+   cards are placed explicitly, so one column can be reflowed without
+   touching the markup. */
+.founder__grid {
+    --card-h: 425px;
+    flex: 1;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.founder__cell--photo { grid-area: 1 / 1; }
+.founder__card--two   { grid-area: 1 / 2; }
+.founder__card--three { grid-area: 2 / 1; }
+.founder__card--four  { grid-area: 2 / 2; }
+.founder__cell--note  { grid-area: 3 / 1; }
+.founder__card--five  { grid-area: 3 / 2; }
+
+.founder__cell,
+.founder__card {
+    height: var(--card-h);
+}
+
+.founder__cell--photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* the note has no frame and no padding — only its text sits on the baseline */
+.founder__cell--note {
+    display: flex;
+    align-items: flex-end;
+}
+
+.founder__cell--note p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 171%;
+    color: rgba(52, 74, 91, 0.4);
+    max-width: 340px;
+}
+
+/* ----- numbered cards ----- */
+.founder__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 40px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.founder__card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.founder__num {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 144%;
+    color: #adb2b6;
+}
+
+.founder__arrow {
+    position: absolute;
+    top: 42px;
+    right: 42px;
+    width: 12px;
+    height: 12px;
+}
+
+.founder__card--two .founder__arrow {
+    rotate: -180deg;
+}
+
+.founder__card--two .founder__card-text {
+    max-width: 380px;
+}
+
+.founder__card--three .founder__card-text {
+    max-width: 426px;
+}
+
+.founder__card--five .founder__card-text {
+    max-width: 460px;
+}
+
+/* the copy is pinned to the bottom of the card */
+.founder__card-text {
+    margin-top: auto;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 119%;
+    color: #344a5b;
+    margin-left: 20px;
+}
+
+/* the grey line at the top right of the last card */
+.founder__card-note {
+    max-width: 360px;
+    margin: 0px 0 0 auto;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 171%;
+    text-align: right;
+    color: rgba(52, 74, 91, 0.4);
+    text-align: right;
+    color: #9DA8B0;
+}
+
+.founder__card--five {
+    padding-top: 40px;
+    padding-right: 40px;
+}
+
+/* the plus in the middle of card four */
+.founder__plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 22px;
+    transform: translate(-50%, -50%);
+}
+
+.founder__plus::before,
+.founder__plus::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #173145;
+    transform: translate(-50%, -50%);
+}
+
+.founder__plus::before {
+    width: 100%;
+    height: 1.5px;
+}
+
+.founder__plus::after {
+    width: 1px;
+    height: 100%;
+}
+
+/* ----- right column ----- */
+.founder__aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 529px;
+    flex-shrink: 0;
+}
+
+/* greys out and fills in on scroll — see the fill-text handler in main.js */
+.founder__lead {
+    margin-bottom: 89px;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 111%;
+    letter-spacing: -0.03em;
+    color: #344a5b;
+    max-width: 501px;
+}
+
+.founder__photo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.founder__name {
+    margin-bottom: 11px;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 71%;
+    color: #344a5b;
+}
+
+.founder__role {
+    display: block;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 171%;
+    color: rgba(30, 30, 30, 0.35);
+}
+
+.founder__desc {
+    /* pushed to the bottom of the column instead of a fixed offset */
+    margin-top: auto;
+    padding-top: 40px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 165%;
+    color: rgba(52, 74, 91, 0.4);
+    max-width: 444px;
+}
+
+/* =====================================================================
+   Career Path
+   ===================================================================== */
+.career {
+    padding: 0 44px 190px;
+    background-color: #F7F7F7;
+}
+
+.career__title {
+    margin-bottom: 75px;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 171%;
+    letter-spacing: -0.03em;
+    color: #344a5b;
+}
+
+/* Three rows: the years, the line, the captions. A grid keeps every caption
+   under its own year; the last column is content-sized so it sits flush with
+   the right edge. */
+.career__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+}
+
+.career__year {
+    grid-row: 1;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 60%;
+    letter-spacing: -0.03em;
+    color: #9DA8B0;
+    transition: color 0.5s ease;
+}
+
+.career__year.is-reached {
+    color: #173145;
+}
+
+.career__track {
+    position: relative;
+    grid-row: 2;
+    grid-column: 1 / -1;
+    height: 1px;
+    margin: 45px 0 35px;
+    background-color: rgba(23, 49, 69, 0.15);
+}
+
+/* the fill runs left to right as the section scrolls through */
+.career__progress {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #173145 0%, #6d5ce7 100%);
+    transform: scaleX(var(--progress, 0));
+    transform-origin: left center;
+    will-change: transform;
+}
+
+.career__label {
+    grid-row: 3;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 135%;
+    letter-spacing: -0.03em;
+    color: #9DA8B0;
+    transition: color 0.5s ease;
+}
+
+/* a step stays lit once the line has passed it */
+.career__label.is-reached {
+    color: #173145;
+}
+
+/* =====================================================================
+   Lets discuss
+   ===================================================================== */
+.discuss {
+    margin: 0 15px;
+}
+
+.discuss__inner {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 980px;
+    padding: 40px 36px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-image: url("../assets/img/about-cta.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.discuss__inner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 55%);
+    pointer-events: none;
+}
+
+/* both columns push their top and bottom blocks apart */
+.discuss__col {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.discuss__col--right {
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+.discuss__descr {
+    max-width: 520px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 138%;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+.discuss__title {
+    margin-bottom: 42px;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 94%;
+    color: #fff;
+}
+
+/* the first line is set smaller than the rest of the heading */
+.discuss__title span {
+    display: block;
+    font-size: 35px;
+}
+
+.discuss__logo {
+    margin-top: 20px;
+    width: 146px;
+    height: auto;
+}
+
+.discuss__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ----- squares ----- */
+.discuss__squares {
+    display: flex;
+    gap: 8px;
+}
+
+.discuss__square {
+    display: flex;
+    align-items: flex-end;
+    flex-shrink: 0;
+    width: 315px;
+    height: 224px;
+    padding: 0 20px 34px 34px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 90%;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+.discuss__square--navy {
+    border: none;
+    background: #173145;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}

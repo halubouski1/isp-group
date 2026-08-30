@@ -1,0 +1,1061 @@
+/* =====================================================================
+   About Us — responsive
+   1919px and below: the 1920px layout scaled by 0.75.
+   Generated from about.css — every px value multiplied by 0.75
+   (1px hairlines left alone). Regenerate after editing about.css.
+   ===================================================================== */
+
+@media (max-width: 1919px) {
+    .hero--about {
+        --hero-pad: 30px;
+    }
+
+    .hero--about .hero__content {
+        gap: 150px;
+    }
+
+    .hero__top {
+        margin-right: 7.5px;
+    }
+
+    .hero__note {
+        max-width: 324.75px;
+        margin-bottom: 33.75px;
+        font-size: 12px;
+    }
+
+    .hero__line {
+        height: 4.5px;
+    }
+
+    .hero__line::after {
+        width: 47.25px;
+        height: 4.5px;
+    }
+
+    .hero--about .hero__title {
+        margin-bottom: 47.25px;
+        font-size: 112.5px;
+    }
+
+    .hero__btn-big {
+        min-width: 176.25px;
+    }
+
+    .hero__btn-small {
+        min-width: 189.75px;
+    }
+
+    .hero--about .hero__buttons {
+        gap: 13.5px;
+    }
+
+    .hero__scroll {
+        width: 82.5px;
+        height: 82.5px;
+        border-radius: 750px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
+
+    .experience {
+        padding: 0 30px 0 52.5px;
+    }
+
+    .experience__top {
+        padding-top: 90px;
+        gap: 30px;
+    }
+
+    .experience__title {
+        font-size: 33.75px;
+    }
+
+    .experience__intro {
+        gap: 24.75px;
+    }
+
+    .experience__descr {
+        max-width: 291px;
+        font-size: 12px;
+    }
+
+    .experience__logo {
+        width: 87px;
+    }
+
+    .experience__pin {
+        --ring-top: 220.5px;
+    }
+
+    .experience__ring {
+        --icon-r: calc(var(--arc-r) + 55.5px);
+    }
+
+    .experience__icon {
+        width: 54px;
+        height: 54px;
+        margin: -27px 0 0 -27px;
+    }
+
+    .experience__icon img {
+        width: 18.75px;
+        height: 18.75px;
+    }
+
+    .experience__dot {
+        width: 12.75px;
+        height: 12.75px;
+        margin: -6.38px 0 0 -6.38px;
+    }
+
+    .experience__center {
+        top: calc(var(--ring-top) + 11.25px);
+    }
+
+    .experience__line {
+        height: 156px;
+        margin-bottom: 43.5px;
+    }
+
+    .experience__slides {
+        width: 270px;
+    }
+
+    .experience__slide {
+        transform: translateY(9px);
+    }
+
+    .experience__slide-title {
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+
+    .experience__slide-desc {
+        max-width: 270px;
+        font-size: 13.5px;
+    }
+
+    .deliverables {
+        margin: 0 11.25px;
+    }
+
+    .deliverables__inner {
+        --card: 233.25px;
+        padding: 45px 33.75px;
+        border-radius: 7.5px;
+    }
+
+    .deliverables__top {
+        gap: 30px;
+        margin-bottom: 352.5px;
+    }
+
+    .deliverables__eyebrow {
+        font-size: 15px;
+    }
+
+    .deliverables__logo {
+        width: 87px;
+    }
+
+    .deliverables__bottom {
+        gap: 30px;
+    }
+
+    .deliverables__title {
+        margin-bottom: 30px;
+        font-size: 60px;
+        max-width: 562.5px;
+    }
+
+    .deliverables__cards {
+        gap: 6px;
+    }
+
+    .deliverables__card {
+        padding: 0 15px 26.25px 24.75px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
+
+    .deliverables__num {
+        margin-bottom: 6px;
+        font-size: 41.25px;
+    }
+
+    .deliverables__label {
+        font-size: 15px;
+    }
+
+    .deliverables__aside {
+        gap: 30px;
+    }
+
+    .deliverables__descr {
+        max-width: 219px;
+        font-size: 13.5px;
+    }
+
+    .how {
+        padding: 112.5px 0 97.5px;
+    }
+
+    .how__top {
+        padding: 0 21.5px;
+    }
+
+    .how__divider {
+        margin-bottom: 60px;
+    }
+
+    .how__head {
+        gap: 30px;
+        margin-bottom: 112.5px;
+    }
+
+    .how__title {
+        font-size: 33.75px;
+    }
+
+    .how__nav {
+        gap: 6px;
+    }
+
+    .how__slider .swiper-slide {
+        width: 450px;
+    }
+
+    .how-card {
+        height: 375px;
+        padding-left: 65.25px;
+        padding-top: 63.75px;
+    }
+
+    .how__slider .swiper-slide:first-child .how-card, .how__slider .swiper-slide:first-child, .how__slider .swiper-slide:last-child {
+        width: 350px;
+    }
+
+    .how__slider .swiper-slide:last-child .how-card__title {
+        max-width: 375px;
+    }
+
+    .how-card__icon img {
+        width: 15.75px;
+        height: 15.75px;
+    }
+
+    .how-card__title {
+        max-width: 300px;
+        margin-bottom: 20.25px;
+        font-size: 30px;
+    }
+
+    .how-card__desc {
+        max-width: 337.5px;
+        font-size: 11.25px;
+    }
+
+    .trades {
+        margin: 0 11.25px;
+    }
+
+    .trades__inner {
+        min-height: 825px;
+        padding: 45px 48.75px;
+        border-radius: 7.5px;
+    }
+
+    .trades__top {
+        gap: 30px;
+    }
+
+    .trades__eyebrow {
+        font-size: 15px;
+    }
+
+    .trades__logo {
+        width: 87px;
+    }
+
+    .trades__bottom {
+        gap: 45px;
+    }
+
+    .trades__title {
+        max-width: 720px;
+        margin-bottom: 33.75px;
+        font-size: 52.5px;
+    }
+
+    .trades__btn {
+        min-width: 197.25px;
+    }
+
+    .trades__cols {
+        gap: 39.75px;
+    }
+
+    .trades__col {
+        width: 216px;
+    }
+
+    .trades__col + .trades__col {
+        padding-left: 65.25px;
+        width: 239.25px;
+    }
+
+    .trades__col-title {
+        margin-bottom: 16.5px;
+        font-size: 22.5px;
+    }
+
+    .trades__col-desc {
+        font-size: 12px;
+    }
+
+    .founder {
+        gap: 36px;
+        padding: 105px 41.25px;
+    }
+
+    .founder__grid {
+        --card-h: 318.75px;
+    }
+
+    .founder__cell--note p {
+        font-size: 12.75px;
+        max-width: 255px;
+    }
+
+    .founder__card {
+        padding: 15px 15px 30px;
+    }
+
+    .founder__card-top {
+        gap: 15px;
+    }
+
+    .founder__num {
+        font-size: 12px;
+    }
+
+    .founder__arrow {
+        top: 31.5px;
+        right: 31.5px;
+        width: 9px;
+        height: 9px;
+    }
+
+    .founder__card--two .founder__card-text {
+        max-width: 285px;
+    }
+
+    .founder__card--three .founder__card-text {
+        max-width: 319.5px;
+    }
+
+    .founder__card--five .founder__card-text {
+        max-width: 345px;
+    }
+
+    .founder__card-text {
+        font-size: 15.75px;
+        margin-left: 15px;
+    }
+
+    .founder__card-note {
+        max-width: 270px;
+        font-size: 12.75px;
+    }
+
+    .founder__card--five {
+        padding-top: 30px;
+        padding-right: 30px;
+    }
+
+    .founder__plus {
+        width: 16.5px;
+        height: 16.5px;
+    }
+
+    .founder__plus::before {
+        height: 1.12px;
+    }
+
+    .founder__aside {
+        width: 396.75px;
+    }
+
+    .founder__lead {
+        margin-bottom: 66.75px;
+        font-size: 33.75px;
+        max-width: 375.75px;
+    }
+
+    .founder__photo {
+        margin-bottom: 37.5px;
+    }
+
+    .founder__name {
+        margin-bottom: 8.25px;
+        font-size: 26.25px;
+    }
+
+    .founder__role {
+        font-size: 12.75px;
+    }
+
+    .founder__desc {
+        padding-top: 30px;
+        font-size: 12.75px;
+        max-width: 333px;
+    }
+
+    .career {
+        padding: 0 33px 142.5px;
+    }
+
+    .career__title {
+        margin-bottom: 56.25px;
+        font-size: 33.75px;
+    }
+
+    .career__year {
+        font-size: 52.5px;
+    }
+
+    .career__track {
+        margin: 33.75px 0 26.25px;
+    }
+
+    .career__label {
+        font-size: 15px;
+    }
+
+    .discuss {
+        margin: 0 11.25px;
+    }
+
+    .discuss__inner {
+        gap: 30px;
+        min-height: 735px;
+        padding: 30px 27px;
+        border-radius: 11.25px;
+    }
+
+    .discuss__descr {
+        max-width: 390px;
+        font-size: 12px;
+    }
+
+    .discuss__title {
+        margin-bottom: 31.5px;
+        font-size: 52.5px;
+    }
+
+    .discuss__title span {
+        font-size: 26.25px;
+    }
+
+    .discuss__logo {
+        margin-top: 15px;
+        width: 109.5px;
+    }
+
+    .discuss__squares {
+        gap: 6px;
+    }
+
+    .discuss__square {
+        width: 236.25px;
+        height: 168px;
+        padding: 0 15px 25.5px 25.5px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        font-size: 22.5px;
+    }
+
+    /* icons sized by their width/height attributes in the markup */
+    .btn__arrow {
+        width: 12px;
+        height: 12px;
+    }
+
+    .hero__scroll img {
+        width: 13.5px;
+        height: auto;
+    }
+
+    .experience__icon img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .founder__arrow {
+        width: 9px;
+        height: 9px;
+    }
+
+    .how-card__icon img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .slider-btn img {
+        width: 11.25px;
+        height: 11.25px;
+    }
+}
+
+@media (max-width: 1340px) {
+    .deliverables__bottom { flex-direction: column; align-items: stretch; }
+    .deliverables__aside { height: auto; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
+    .deliverables__descr { max-width: 420px; }
+
+    .trades__bottom { flex-direction: column; align-items: stretch; gap: 50px; }
+    .trades__cols { width: 100%; }
+    .trades__col { width: auto; flex: 1; }
+    .trades__title { max-width: 100%; }
+
+    .founder { flex-direction: column; gap: 60px; }
+    .founder__desc { margin-top: 0; padding-top: 20px; }
+    .founder__grid { width: 100%; }
+    .founder__aside { width: 100%; }
+    .founder__photo {
+        max-width: 600px;
+        align-self: end;
+    }
+
+    .founder__name, .founder__role, .founder__desc { align-self: flex-end; text-align: right; }
+
+    .discuss__inner { flex-direction: column; gap: 60px; min-height: 600px; }
+
+    /* height: 100% would resolve against .discuss__inner, whose own height is
+       auto — a percentage needs a definite parent height and min-height does
+       not provide one. Growing into the free space does the same job here. */
+    .discuss__col {
+        flex: 1;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+    .discuss__col--right { display: none;}
+    .discuss__logo { display: none; }
+    .discuss__squares { display: none; }
+    .discuss__square { flex: 1 1 calc(50% - 8px); width: auto; }
+}
+
+@media (max-width: 1025px) {
+
+    .hero__top, .hero__scroll {
+        display: none;
+    }
+
+    .hero--about .hero__title {
+        margin-bottom: 30px;
+        font-size: 80px;
+    }
+
+    .experience {
+        padding: 0 20px 0 30px;
+    }
+    .experience__top { flex-direction: column; gap: 30px; }
+    .experience__intro { align-self: flex-start; display: none; }
+    .experience__descr { text-align: left; }
+
+    /* .deliverables — one tall panel: logo left / label right, the heading,
+       then the four figures alternating left and right down the photo, and
+       the button pinned to the bottom. The card frames are dropped, only the
+       numbers stay. */
+    .deliverables__inner {
+        display: flex;
+        flex-direction: column;
+        min-height: 900px;
+    }
+
+    .deliverables__inner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 60%);
+            pointer-events: none;
+    }
+
+        .deliverables__inner::after {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 60%);
+    }
+
+    .deliverables__top {
+        flex-direction: row-reverse;
+        margin-bottom: 45px;
+    }
+
+    .deliverables__bottom {
+        flex: 1;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 45px;
+    }
+
+    .deliverables__main {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .deliverables__title { margin-bottom: 60px; }
+
+    .deliverables__cards {
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    /* no frame, no fixed size — just the figure and its caption */
+    .deliverables__card,
+    .deliverables__card--light {
+        width: auto;
+        max-width: 62%;
+        height: auto;
+        padding: 0;
+        border: none;
+        background: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        color: #fff;
+    }
+
+    .deliverables__card:nth-child(even) {
+        align-self: flex-end;
+    }
+
+    .deliverables__aside {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .deliverables__descr { display: none; }
+
+    .deliverables__btn { width: 100%; min-width: 0; }
+
+    /* .career — the three rows have to stay in step, so the timeline scrolls
+       sideways as one piece instead of stacking. The side padding moves off
+       the section and onto its children, so the row can scroll all the way to
+       the screen edge instead of being cut at the container. */
+    .career {
+        --side: 28px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .career__year {
+        line-height: 100%;
+    }
+
+    .career__title { padding: 0 var(--side); }
+
+    .career__grid {
+        grid-template-columns: repeat(5, 200px);
+        padding: 0 var(--side);
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .career__grid::-webkit-scrollbar { display: none; }
+
+    /* .trades — one tall panel: logo left / label right, the heading, the two
+       blocks stacked with a rule between them, and the button at the bottom.
+       .trades__main collapses so the heading and the button become siblings
+       of the columns and can be reordered around them. */
+    .trades__inner {
+        min-height: 900px;
+    }
+
+    .trades__top {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+
+    .trades__eyebrow {
+        max-width: 220px;
+        line-height: 130%;
+        text-align: right;
+    }
+
+    .trades__bottom {
+        flex: 1;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-end;
+        gap: 0;
+    }
+
+    .trades__main { display: contents; }
+
+    .trades__title { order: 1; max-width: 100%; }
+
+    .trades__cols {
+        order: 2;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .trades__col { width: auto; }
+
+    /* the separator turns horizontal once the columns are stacked */
+    .trades__col + .trades__col {
+        padding-left: 0;
+        padding-top: 30px;
+        margin-top: 30px;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        width: 100%;
+    }
+
+    .trades__inner::after {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 55%);
+    }
+
+    .trades__inner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 55%);
+        pointer-events: none;
+    }
+
+    .trades__btn {
+        order: 3;
+        width: 100%;
+        min-width: 0;
+        margin-top: 50px;
+    }
+
+    /* .discuss — heading on top, the intro and the button pinned to the
+       bottom. .discuss__main collapses so its heading and button become
+       siblings of the paragraph and can be ordered around it. */
+    .discuss__inner {
+        min-height: 700px;
+    }
+
+    .discuss__col--left {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .discuss__main { display: contents; }
+
+    .discuss__title { order: 1; }
+
+    .discuss__descr {
+        order: 2;
+        margin-top: auto;
+        max-width: 100%;
+    }
+
+    .discuss__btn {
+        order: 3;
+        width: 100%;
+        min-width: 0;
+        margin-top: 30px;
+    }
+
+    .how { padding: 90px 0 80px; }
+    .how__head { margin-bottom: 80px; }
+    .how__slider .swiper-slide { width: 400px; }
+    .how-card { height: 280px; padding-left: 40px; }
+}
+
+@media (max-width: 769px) {
+    /* Everything becomes one column in this order: the lead paragraph, the six
+       cells, then the portrait block. .founder__aside collapses so its parts
+       become siblings of the grid and the lead can move above it — the markup
+       stays as it is for the desktop layout. */
+    .founder {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 60px 20px;
+    }
+
+    .founder__aside { display: contents; }
+
+    .founder__lead { order: 1; margin-bottom: 40px; font-size: 26px; }
+    .founder__grid { order: 2; }
+    .founder__photo { order: 3; }
+    .founder__name { order: 4; }
+    .founder__role { order: 5; }
+    .founder__desc { order: 6; }
+
+    .founder__grid {
+        --card-h: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .founder__cell--photo,
+    .founder__card--two,
+    .founder__card--three,
+    .founder__card--four,
+    .founder__cell--note,
+    .founder__card--five {
+        grid-area: auto;
+    }
+
+    .founder__cell--photo { height: 200px; }
+    .founder__card { min-height: 260px; padding: 15px 20px 20px; }
+    .founder__card--four { min-height: 180px; }
+    .founder__cell--note { padding: 40px 0; }
+    .founder__card-note { max-width: 100%; margin-top: 20px; }
+    .founder__cell--note p,
+    .founder__card-text { font-size: 14px; max-width: 100%; }
+
+    /* the portrait block runs full width and left aligned again */
+    .founder__photo {
+        max-width: 100%;
+        margin: 40px 0 30px;
+        align-self: stretch;
+    }
+
+    .founder__name,
+    .founder__role,
+    .founder__desc {
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .founder__desc { margin-top: 0; padding-top: 40px; }
+
+    .career { padding-bottom: 90px; }
+    .career__grid { grid-template-columns: repeat(5, 150px); }
+    .career__year { font-size: 28px; }
+    .career__track { margin: 22px 0 18px; }
+    .career__label { font-size: 12px; }
+
+    .footer-mob {
+        margin: 10px 15px 26px;
+    }
+}
+
+@media (max-width: 570px) {
+    .career { --side: 20px; }
+
+    .hero--about { --hero-pad: 20px; }
+    .hero--about .hero__content { gap: 80px; }
+    .hero__note { max-width: 100%; }
+    .hero--about .hero__title {         
+        font-size: 67px;
+        margin-bottom: 30px;
+        max-width: 329px;
+        line-height: 100%; 
+    }
+    .hero__scroll { display: none; }
+
+    .experience {
+        padding: 0 20px;
+    }
+    .experience__top { padding-top: 100px; }
+    .experience__title { font-size: 35px; line-height: 100%; max-width: 300px; }
+    .experience__title span { display: inline; }
+    .experience__icon img {
+        width: 18px;
+        height: 18px;
+    }
+    .experience__slide-title {
+        margin-bottom: 6px;
+        font-size: 20px;
+    }
+    .experience__slide-desc { font-size: 16px; line-height: 156%; max-width: 100%; }
+    .experience__intro { flex-direction: column; gap: 20px; }
+    .experience__pin { --ring-top: 310px; }
+    .experience__line { height: 115px; margin-bottom: 40px; }
+    .experience__slides { width: 271px; }
+
+    .deliverables { margin: 0 10px; }
+    .deliverables__eyebrow {
+        font-size: 13px;
+    }
+    .deliverables__top { margin-bottom: 30px; }
+    .deliverables__inner { padding: 20px; min-height: 765px; background-image: url(../assets/img/deliverables-mob.jpg);}
+    .deliverables__logo { width: 86px; }
+    .deliverables__card:nth-child(2) { margin-bottom: 90px; }
+    .deliverables__card:nth-child(3) { margin-bottom: 65px; }
+    .deliverables__cards { flex: 0; gap: 0;}
+    .deliverables__title { font-size: 35px; margin-bottom: 55px; max-width: 265px; }
+    .deliverables__num { margin-bottom: 2px; font-size: 25px; }
+    .deliverables__label { font-size: 14px; max-width: 101px; }
+
+    .how { padding: 100px 0; }
+    .how__top { padding: 0 20px; }
+    .how__divider { margin-bottom: 50px; }
+    .how__head { margin-bottom: 60px; }
+    .how__title { font-size: 35px; }
+    .how__slider .swiper-slide { width: 320px; padding-bottom: 40px; padding-right: 20px; }
+    .how-card { height: 240px; padding-left: 24px; padding-top: 0; }
+    .how-card__title { font-size: 25px; margin-bottom: 15px; }
+    .how-card__desc { max-width: 100%; font-size: 16px; max-width: 290px; }
+    .how-card__icon img {
+        width: 25px;
+        height: 25px;
+    }
+    .how-card__desc br { display: none; }
+        /* The arrows live in .how__head, which comes before the slider in the
+       markup. Both wrappers collapse so the divider, title, slider and nav
+       become direct children of .how and the nav can be ordered under the
+       cards without touching the HTML. */
+    .how {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .how__slider .swiper-slide:first-child .how-card, .how__slider .swiper-slide:first-child, .how__slider .swiper-slide:last-child {
+        width: 320px;
+    }
+
+    .how__top,
+    .how__head {
+        display: contents;
+    }
+
+    /* the 20px inset lived on .how__top, which no longer has a box */
+    .how__divider {
+        order: 1;
+        margin: 0 20px 50px;
+    }
+
+    .how__title {
+        order: 2;
+        margin: 0 20px 60px;
+    }
+
+    /* A flex item will not shrink below its content width, and the slides are
+       wider than the screen — without this the whole page scrolls sideways. */
+    .how__slider {
+        order: 3;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .how__nav {
+        order: 4;
+        margin: 50px 20px 0;
+    }
+
+    .trades { margin: 0 10px; }
+    .trades__inner { padding: 20px; min-height: 975px;  background-image: url(../assets/img/specialists-mob.jpg); }
+    .trades__logo { width: 86px; }
+    .trades__eyebrow { max-width: 180px; font-size: 13px; }
+    .trades__title { font-size: 35px; margin-bottom: 70px; max-width: 298px; }
+    .trades__col-title { font-size: 20px; margin-bottom: 7px; line-height: 165%; }
+    .trades__col-desc { font-size: 14px; line-height: 179%; }
+
+    .founder {
+        padding-top: 110px;
+        padding-bottom: 120px;
+    }
+    .founder__lead {
+        font-size: 35px;
+        line-height: 114%;
+        margin-bottom: 30px;
+    }
+
+    .founder__cell--photo {
+        height: 220px;
+    }
+
+    .founder__card {
+        min-height: 220px;
+        padding: 13px;
+        border-top: none;
+    }
+
+    .founder__card--three {
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .founder__card-note {
+        margin-top: 6px;
+        font-size: 13px;
+        line-height: 131%;
+        max-width: 276px;
+    }
+
+    .founder__card-text {
+        margin-left: 0px;
+    }
+
+    .founder__arrow {
+        top: 13px;
+        right: 13px;
+    }
+
+    .founder__cell--note {
+        padding: 116px 0;
+    }
+
+    .founder__name {
+        font-size: 30px;
+        line-height: 83%;
+        margin-bottom: 10px;
+    }
+
+    .founder__role {
+        font-size: 17px;
+        line-height: 171%;
+    }
+
+    .founder__cell--note p {
+        font-size: 14px;
+        line-height: 121%;
+        max-width: 272px;
+    }
+
+    .founder__photo {
+        margin: 30px 0;
+    }
+
+    .founder__desc {
+        padding-top: 50px;
+        font-size: 14px;
+        line-height: 121%;
+        max-width: 303px;
+    }
+
+    .career__title {
+        padding: 0 20px;
+        font-size: 35px;
+        line-height: 100%;
+        margin-bottom: 70px;
+    }
+
+    .career__year {
+        font-size: 45px;
+    }
+
+    .career__label {
+        font-size: 14px;
+    }
+    .discuss { margin: 0 10px; }
+    .discuss__inner { padding: 37px 20px 20px; gap: 40px; min-height: 765px; }
+    .discuss__inner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 55%);
+    pointer-events: none;
+    }
+    .discuss__title { font-size: 50px; line-height: 100%; }
+    .discuss__descr { font-size: 16px; line-height: 138%;}
+    .discuss__title span { font-size: 20px; }
+    .discuss__btn { width: 100%; min-width: 0; margin-top: 37px; }
+    .discuss__logo { width: 86px; margin-bottom: 24px; }
+    .discuss__square { flex-basis: 100%; height: 130px; font-size: 16px; }
+}

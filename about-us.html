@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ren">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/media.css">
+      <link rel="stylesheet" href="css/about.css">
+      <link rel="stylesheet" href="css/media-about.css">
+      <script>document.documentElement.style.setProperty("--fixed-vh", window.innerHeight + "px");</script>
+      <title>KAR Interiors</title>
+</head>
+<body>
+
+<header class="header">
+    <a class="header__logo" href="/" aria-label="ISP Group">
+        <img src="assets/img/logo.svg" alt="ISP Group" width="146" height="21">
+    </a>
+
+    <div class="header__right">
+        <nav class="nav" aria-label="Main navigation">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#services">Services</a></li>
+                <li class="nav__dot" aria-hidden="true">
+<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="2" cy="2" r="2" fill="white" />
+</svg>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#about">About Us</a></li>
+                <li class="nav__dot" aria-hidden="true">
+<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="2" cy="2" r="2" fill="white" />
+</svg>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#services-list">Services</a></li>
+                <li class="nav__dot" aria-hidden="true">
+<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="2" cy="2" r="2" fill="white" />
+</svg>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+                <li class="nav__dot" aria-hidden="true">
+<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="2" cy="2" r="2" fill="white" />
+</svg>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="burger" type="button" aria-label="Open menu">
+            <img src="assets/icons/burger-menu.svg" alt="" width="19" height="11">
+        </button>
+    </div>
+</header>
+
+<section class="hero hero--about">
+    <video class="hero__video" src="assets/vid/about.mp4" autoplay muted loop playsinline preload="auto"></video>
+
+    <div class="hero__content">
+        <div class="hero__top">
+            <p class="hero__note">An interior renovation team with a decade of international project experience — now based in Miami.</p>
+            <span class="hero__line" aria-hidden="true"></span>
+        </div>
+
+        <div class="hero__bottom">
+            <div class="hero__cta">
+                <h1 class="hero__title">About ISP Group</h1>
+
+                <div class="hero__buttons">
+                    <a class="btn btn--light hero__btn-big" href="#team">
+                        <span class="btn__text">Meet ISP Group</span>
+                        <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a class="btn btn--dark hero__btn-small" href="index.html#services">
+                        <span class="btn__text">Learn More</span>
+                        <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <button class="hero__scroll" type="button" data-scroll-next aria-label="Scroll to the next section">
+                <img src="assets/icons/learn-more.svg" alt="" aria-hidden="true" width="18" height="25">
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="experience" id="experience">
+    <div class="experience__pin" data-experience>
+        <div class="experience__stage">
+            <div class="experience__top">
+                <h2 class="experience__title">Experience <span>Before the Name</span></h2>
+
+                <div class="experience__intro">
+                    <p class="experience__descr">Bridge crypto and fiat with ease — use ready KYC, card issuing, and payment tools to stay legal and seamless.</p>
+                    <img class="experience__logo" src="assets/img/dark-logo.svg" alt="ISP Group" width="86" height="12">
+                </div>
+            </div>
+
+            <div class="experience__ring">
+                <svg class="experience__arc" viewBox="0 0 1601 1612" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M1600.5 806C1600.5 594.622 1516.21 391.902 1366.19 242.436C1216.16 92.9694 1012.67 9.00002 800.5 9C588.327 8.99998 384.844 92.9694 234.815 242.436C84.7855 391.902 0.500032 594.622 0.5 806" stroke="#222222" stroke-opacity="0.25" stroke-dasharray="2 2"/>
+                    <path d="M0.499955 806C0.499955 1017.38 84.7854 1220.1 234.814 1369.56C384.844 1519.03 588.327 1603 800.5 1603C1012.67 1603 1216.16 1519.03 1366.19 1369.56C1516.21 1220.1 1600.5 1017.38 1600.5 806" stroke="#222222" stroke-opacity="0.25" stroke-dasharray="2 2"/>
+                </svg>
+
+                    <span class="experience__item" data-experience-item>
+                        <span class="experience__icon">
+                            <img src="assets/icons/experience-card-1.svg" alt="" aria-hidden="true" width="20" height="20">
+                        </span>
+                        <span class="experience__dot"></span>
+                    </span>
+
+                    <span class="experience__item" data-experience-item>
+                        <span class="experience__icon">
+                            <img src="assets/icons/experience-card-2.svg" alt="" aria-hidden="true" width="20" height="20">
+                        </span>
+                        <span class="experience__dot"></span>
+                    </span>
+
+                    <span class="experience__item" data-experience-item>
+                        <span class="experience__icon">
+                            <img src="assets/icons/experience-card-3.svg" alt="" aria-hidden="true" width="20" height="20">
+                        </span>
+                        <span class="experience__dot"></span>
+                    </span>
+
+                    <span class="experience__item" data-experience-item>
+                        <span class="experience__icon">
+                            <img src="assets/icons/experience-card-1.svg" alt="" aria-hidden="true" width="20" height="20">
+                        </span>
+                        <span class="experience__dot"></span>
+                    </span>
+
+                    <span class="experience__item" data-experience-item>
+                        <span class="experience__icon">
+                            <img src="assets/icons/experience-card-2.svg" alt="" aria-hidden="true" width="20" height="20">
+                        </span>
+                        <span class="experience__dot"></span>
+                    </span>
+
+                    <span class="experience__item" data-experience-item>
+                        <span class="experience__icon">
+                            <img src="assets/icons/experience-card-3.svg" alt="" aria-hidden="true" width="20" height="20">
+                        </span>
+                        <span class="experience__dot"></span>
+                    </span>
+            </div>
+
+            <div class="experience__center">
+                <span class="experience__line" data-experience-line></span>
+
+                <div class="experience__slides">
+                    <div class="experience__slide" data-experience-slide>
+                        <h3 class="experience__slide-title">Built on Experience</h3>
+                        <p class="experience__slide-desc">ISP Group was established in Miami by a team whose construction experience began long before the company itself.</p>
+                    </div>
+
+                    <div class="experience__slide" data-experience-slide>
+                        <h3 class="experience__slide-title">Built on Precision</h3>
+                        <p class="experience__slide-desc">Every stage is planned, measured and checked, so the finish holds up years after the crew has left the site.</p>
+                    </div>
+
+                    <div class="experience__slide" data-experience-slide>
+                        <h3 class="experience__slide-title">Built on Trust</h3>
+                        <p class="experience__slide-desc">Clear estimates, steady communication and work that is handed over exactly as it was agreed.</p>
+                    </div>
+
+                    <div class="experience__slide" data-experience-slide>
+                        <h3 class="experience__slide-title">Built on Craft</h3>
+                        <p class="experience__slide-desc">Screeds, tile, hardwood and plaster are handled by specialists who do that one trade every day.</p>
+                    </div>
+
+                    <div class="experience__slide" data-experience-slide>
+                        <h3 class="experience__slide-title">Built on Planning</h3>
+                        <p class="experience__slide-desc">Drawings, materials and schedules are settled before the first delivery arrives on site.</p>
+                    </div>
+
+                    <div class="experience__slide" data-experience-slide>
+                        <h3 class="experience__slide-title">Built to Last</h3>
+                        <p class="experience__slide-desc">Materials are chosen for durability first, so the space keeps its look long after handover.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="deliverables" id="what-we-do">
+    <div class="deliverables__inner">
+        <div class="deliverables__top">
+            <span class="deliverables__eyebrow">What We Do</span>
+            <img class="deliverables__logo" src="assets/img/logo.svg" alt="ISP Group" width="146" height="21">
+        </div>
+
+        <div class="deliverables__bottom">
+            <div class="deliverables__main">
+                <h2 class="deliverables__title">From Homes to Commercial Spaces</h2>
+
+                <ul class="deliverables__cards">
+                    <li class="deliverables__card">
+                        <span class="deliverables__num" data-countup="10" data-countup-suffix="+">10+</span>
+                        <span class="deliverables__label">Years of Team Experience</span>
+                    </li>
+
+                    <li class="deliverables__card">
+                        <span class="deliverables__num" data-countup="120" data-countup-suffix="+">120+</span>
+                        <span class="deliverables__label">Projects in Team Portfolio</span>
+                    </li>
+
+                    <li class="deliverables__card deliverables__card--light">
+                        <span class="deliverables__num" data-countup="5">5</span>
+                        <span class="deliverables__label">Service Lines</span>
+                    </li>
+
+                    <li class="deliverables__card">
+                        <span class="deliverables__num" data-countup="3">3</span>
+                        <span class="deliverables__label">Counties Served</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="deliverables__aside">
+                <p class="deliverables__descr">Today, ISP Group works across residential and commercial construction. We take on projects at different scales — from custom homes and renovations to offices, commercial interiors, build-outs, and specialized finishing work.</p>
+
+                <a class="btn btn--light deliverables__btn" href="contact.html">
+                    <span class="btn__text">Discuss Your Project</span>
+                    <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="how" id="how-we-work">
+    <div class="how__top">
+        <span class="how__divider"></span>
+
+        <div class="how__head">
+            <h2 class="how__title">How We Work</h2>
+
+            <div class="how__nav">
+                <button class="slider-btn slider-btn--prev how__arrow how__arrow--prev" type="button" aria-label="Previous slide">
+                    <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
+                </button>
+                <button class="slider-btn slider-btn--next how__arrow how__arrow--next" type="button" aria-label="Next slide">
+                    <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="how__slider swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide how-card">
+                <span class="how-card__icon">
+                    <img src="assets/icons/how-icon-1.svg" alt="" aria-hidden="true" width="21" height="21">
+                </span>
+
+                <div class="how-card__text">
+                    <h3 class="how-card__title">We show up</h3>
+                    <p class="how-card__desc">Deadlines and budgets are commitments, not targets. <br> We plan carefully so we can hold to them.</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide how-card">
+                <span class="how-card__icon">
+                    <img src="assets/icons/how-icon-2.svg" alt="" aria-hidden="true" width="21" height="21">
+                </span>
+
+                <div class="how-card__text">
+                    <h3 class="how-card__title">Safety on every site</h3>
+                    <p class="how-card__desc">We run tight safety protocols on every job. Our team is insured and trained, and we expect the same from anyone working alongside us.</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide how-card">
+                <span class="how-card__icon">
+                    <img src="assets/icons/how-icon-3.svg" alt="" aria-hidden="true" width="21" height="21">
+                </span>
+
+                <div class="how-card__text">
+                    <h3 class="how-card__title">We do not cut corners</h3>
+                    <p class="how-card__desc">From the first day of site prep to the final walkthrough <br> — same standard, every project.</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide how-card">
+                <span class="how-card__icon">
+                    <img src="assets/icons/how-icon-1.svg" alt="" aria-hidden="true" width="21" height="21">
+                </span>
+
+                <div class="how-card__text">
+                    <h3 class="how-card__title">You will always know where things stand</h3>
+                    <p class="how-card__desc">No radio silence, no surprises. We keep clients in the loop <br> at every stage of the build.</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide how-card">
+                <span class="how-card__icon">
+                    <img src="assets/icons/how-icon-2.svg" alt="" aria-hidden="true" width="21" height="21">
+                </span>
+
+                <div class="how-card__text">
+                    <h3 class="how-card__title">One team, start to finish</h3>
+                    <p class="how-card__desc">The people who plan the work are the people who <br> deliver it — nothing gets lost in a handover.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trades">
+    <div class="trades__inner">
+        <div class="trades__top">
+            <span class="trades__eyebrow">Specialists in interior renovation and fit-out</span>
+            <img class="trades__logo" src="assets/img/logo.svg" alt="ISP Group" width="146" height="21">
+        </div>
+
+        <div class="trades__bottom">
+            <div class="trades__main">
+                <h2 class="trades__title">We specialize in the five trades that make an interior</h2>
+
+                <a class="btn btn--light trades__btn" href="contact.html">
+                    <span class="btn__text">Discuss Your Project</span>
+                    <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="trades__cols">
+                <div class="trades__col">
+                    <h3 class="trades__col-title">ISP Group was founded in Miami</h3>
+                    <p class="trades__col-desc">The people behind the company spent the previous ten years managing interior construction and renovation projects internationally</p>
+                </div>
+
+                <div class="trades__col">
+                    <h3 class="trades__col-title">What We Are Here to Do</h3>
+                    <p class="trades__col-desc">Deliver interior renovation that holds up — technically sound, visually clean, and completed on time. Every project, every time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="founder">
+    <div class="founder__grid">
+        <div class="founder__cell founder__cell--photo">
+            <img src="assets/img/founder-card-1.jpg" alt="" loading="lazy">
+        </div>
+
+        <article class="founder__card founder__card--two">
+            <div class="founder__card-top">
+                <span class="founder__num">[ 2</span>
+                <img class="founder__arrow" src="assets/icons/founder-arrow.svg" alt="" aria-hidden="true" width="12" height="12">
+            </div>
+            <p class="founder__card-text">I have been in construction since 2012. I started as a field worker on job sites and gradually moved into engineering and management roles.</p>
+        </article>
+
+        <div class="founder__cell founder__cell--note">
+            <p>The market here is active, construction volumes are substantial, and I understand where and how we can be useful.</p>
+        </div>
+
+        <article class="founder__card founder__card--three">
+            <div class="founder__card-top">
+                <span class="founder__num">[ 3</span>
+                <img class="founder__arrow" src="assets/icons/founder-arrow.svg" alt="" aria-hidden="true" width="12" height="12">
+            </div>
+            <p class="founder__card-text">Before starting my own business, I served as a director at one of the largest construction companies in Russia.</p>
+        </article>
+
+        <article class="founder__card founder__card--four">
+            <div class="founder__card-top">
+                <span class="founder__num">[ 4</span>
+            </div>
+            <span class="founder__plus" aria-hidden="true"></span>
+        </article>
+
+        <article class="founder__card founder__card--five">
+            <div class="founder__card-top">
+                <span class="founder__num">[ 5</span>
+            </div>
+            <p class="founder__card-note">For the first few years, the company operated in the Russian market. In 2026, I made the decision to expand to South Florida.</p>
+            <p class="founder__card-text">My education ran alongside my practical work: a Bachelor's and Master's degree in Industrial and Civil Engineering. But most of what I know, I learned outside the classroom.</p>
+        </article>
+    </div>
+
+    <div class="founder__aside">
+        <p class="founder__lead" data-fill-text>I founded the company in 2020 to apply my years of construction experience to my own venture</p>
+
+        <img class="founder__photo" src="assets/img/founder-card-2.jpg" alt="Aleksandr Orlov" loading="lazy">
+
+        <h3 class="founder__name">Aleksandr Orlov</h3>
+        <span class="founder__role">Founder &amp; CEO — ISP Group</span>
+
+        <p class="founder__desc">Today, our Miami team works on commercial and residential projects. We are a small company, and that is a deliberate choice — it is easier to maintain quality and stay in control of what happens on every job site.</p>
+    </div>
+</section>
+
+<section class="career">
+    <h2 class="career__title">Career Path</h2>
+
+    <div class="career__grid" data-career>
+            <span class="career__year" data-career-year>2012</span>
+            <span class="career__year" data-career-year>2015</span>
+            <span class="career__year" data-career-year>2018</span>
+            <span class="career__year" data-career-year>2020</span>
+            <span class="career__year" data-career-year>2026</span>
+
+        <div class="career__track">
+            <span class="career__progress" data-career-progress></span>
+        </div>
+
+            <span class="career__label" data-career-label>Started as<br>field worker</span>
+            <span class="career__label" data-career-label>Engineering &amp;<br>management roles</span>
+            <span class="career__label" data-career-label>Director at major<br>Russian firm</span>
+            <span class="career__label" data-career-label>Founded ISP<br>Group</span>
+            <span class="career__label" data-career-label>Expanded to<br>South Florida</span>
+    </div>
+</section>
+
+<section class="discuss">
+    <div class="discuss__inner">
+        <div class="discuss__col discuss__col--left">
+            <p class="discuss__descr">Whether it is a full fit-out, a renovation, or a single trade — tell us what you need and we will give you a straight answer on scope, timeline, and cost.</p>
+
+            <div class="discuss__main">
+                <h2 class="discuss__title"><span>Lets discuss</span>Your Project</h2>
+
+                <a class="btn btn--light discuss__btn" href="contact.html">
+                    <span class="btn__text">Discuss Your Project</span>
+                    <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="discuss__col discuss__col--right">
+            <img class="discuss__logo" src="assets/img/logo.svg" alt="ISP Group" width="146" height="21">
+
+            <ul class="discuss__squares">
+                <li class="discuss__square">
+                    <span>Own Every<br>Detail</span>
+                </li>
+
+                <li class="discuss__square">
+                    <span>Built with<br>Accuracy</span>
+                </li>
+
+                <li class="discuss__square discuss__square--navy">
+                    <span>Clear Every<br>Step</span>
+                </li>
+
+                <li class="discuss__square">
+                    <span>Long-Term<br>Thinking</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__content">
+    <div class="footer__top">
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Projects</a>
+        <a href="about-us.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <button class="footer__totop" type="button" aria-label="Back to top">
+        <img src="assets/icons/to-top-arrow.svg" alt="" aria-hidden="true">
+      </button>
+    </div>
+
+    <div class="footer__mid">
+      <div class="footer__mid-row">
+        <div class="footer__mid-left">
+          <div>
+            <a class="footer__contact-link" href="#contact" data-popup-open>
+              <span>Contact Us</span>
+              <img class="footer__arrow" src="assets/icons/footer-contact-arrow.svg" alt="" aria-hidden="true">
+            </a>
+  
+            <div class="footer__dev">
+              <img class="footer__dev-logo" src="assets/icons/dev-logo.svg" alt="" aria-hidden="true">
+              <span class="footer__dev-text">Website<br>Development</span>
+            </div>
+          </div>
+
+      <button class="footer__totop--mobile footer__totop" type="button" aria-label="Back to top">
+        <img src="assets/icons/to-top-arrow.svg" alt="" aria-hidden="true">
+      </button>
+        </div>
+
+        <div class="footer__mid-right">
+          <div class="footer__contact-item">
+            <div class="footer__contact-label">
+              <span>Phone</span>
+              <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true">
+            </div>
+            <a class="footer__contact-value" href="tel:+19297075551">+1 929 707 5551</a>
+          </div>
+
+          <div class="footer__contact-item">
+            <div class="footer__contact-label">
+              <span>E-Mail</span>
+              <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true">
+            </div>
+            <a class="footer__contact-value" href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__mid-row footer__mid-row--bottom">
+        <div class="footer__copy">
+          <span>© 2026</span>
+          <a class="footer__policy" href="#">Pricacy and Policy</a>
+        </div>
+
+        <div class="footer__socials">
+          <a class="footer__social" href="#">
+            <span>telegram</span>
+            <img src="assets/icons/footer-social.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="footer__social" href="#">
+            <span>whatsapp</span>
+            <img src="assets/icons/footer-social.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="footer__social" href="#">
+            <span>instagram</span>
+            <img src="assets/icons/footer-social.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="footer-mob">
+  <div class="footer-mob__panel">
+    <div class="footer-mob__head">
+      <button class="footer-mob__totop" type="button" aria-label="Back to top">
+        <img src="assets/icons/to-top-arrow.svg" alt="" aria-hidden="true" width="14" height="14">
+      </button>
+      <img class="footer-mob__logo" src="assets/img/dark-logo.svg" alt="ISP Group" width="86" height="12">
+    </div>
+
+    <nav class="footer-mob__links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="portfolio.html">Projects</a>
+      <a href="about-us.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <span class="footer-mob__divider"></span>
+
+    <div class="footer-mob__contacts">
+      <div class="footer-mob__contact">
+        <div class="footer-mob__contact-label">
+          <span>E-Mail</span>
+          <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true" width="12" height="12">
+        </div>
+        <a class="footer-mob__contact-value" href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a>
+      </div>
+
+      <div class="footer-mob__contact">
+        <div class="footer-mob__contact-label">
+          <span>Phone</span>
+          <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true" width="12" height="12">
+        </div>
+        <a class="footer-mob__contact-value" href="tel:+19297075551">+1 929 707 5551</a>
+      </div>
+    </div>
+
+    <div class="footer-mob__bottom">
+      <div class="footer-mob__dev">
+        <img class="footer-mob__dev-logo" src="assets/icons/dev-logo-mob.svg" alt="Fernandes Media" width="121" height="34">
+        <span class="footer-mob__dev-text">Website development</span>
+      </div>
+
+      <div class="footer-mob__socials">
+        <a class="footer-mob__social" href="#" aria-label="WhatsApp">
+          <img src="assets/icons/wp.svg" alt="" aria-hidden="true" width="20" height="21">
+        </a>
+        <a class="footer-mob__social" href="#" aria-label="Instagram">
+          <img src="assets/icons/ig.svg" alt="" aria-hidden="true" width="20" height="21">
+        </a>
+        <a class="footer-mob__social" href="#" aria-label="Telegram">
+          <img src="assets/icons/tg.svg" alt="" aria-hidden="true" width="20" height="21">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-mob__legal">
+    <span>&copy; 2026</span>
+    <a class="footer-mob__policy" href="#">Pricacy and Policy</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/accordion-js@3.3.4/dist/accordion.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
