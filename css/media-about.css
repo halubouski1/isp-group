@@ -882,7 +882,7 @@
         font-size: 13px;
     }
     .deliverables__top { margin-bottom: 30px; }
-    .deliverables__inner { padding: 20px; min-height: 765px; background-image: url(../assets/img/deliverables-mob.jpg);}
+    .deliverables__inner { padding: 20px; min-height: 765px; background-image: url(../assets/img/deliverables-mob.webp);}
     .deliverables__logo { width: 86px; }
     .deliverables__card:nth-child(2) { margin-bottom: 90px; }
     .deliverables__card:nth-child(3) { margin-bottom: 65px; }
@@ -949,7 +949,7 @@
     }
 
     .trades { margin: 0 10px; }
-    .trades__inner { padding: 20px; min-height: 975px;  background-image: url(../assets/img/specialists-mob.jpg); }
+    .trades__inner { padding: 20px; min-height: 975px;  background-image: url(../assets/img/specialists-mob.webp); }
     .trades__logo { width: 86px; }
     .trades__eyebrow { max-width: 180px; font-size: 13px; }
     .trades__title { font-size: 35px; margin-bottom: 70px; max-width: 298px; }

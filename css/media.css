@@ -38,6 +38,25 @@
       font-size: 13.25px;
   }
 
+  .nav__dropdown {
+      top: calc(100% + 10.5px);
+      min-width: 172.5px;
+      padding: 4.5px;
+      border-radius: 4.5px;
+      backdrop-filter: blur(10.5px);
+      -webkit-backdrop-filter: blur(10.5px);
+  }
+
+  .nav__dropdown::before {
+      height: 10.5px;
+  }
+
+  .nav__dropdown-link {
+      padding: 8.25px 10.5px;
+      border-radius: 3px;
+      font-size: 11.25px;
+  }
+
   .burger {
       width: 29.25px;
       height: 29.25px;
@@ -1087,7 +1106,7 @@
     }
 
     .about::before {
-        background: url(../assets/img/dashed-bg-mob.png) center / cover no-repeat;
+        background: url(../assets/img/dashed-bg-mob.webp) center / cover no-repeat;
     }
 
     /* .services */

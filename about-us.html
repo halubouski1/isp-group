@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ren">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,19 +23,22 @@
     <div class="header__right">
         <nav class="nav" aria-label="Main navigation">
             <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="index.html#services">Services</a></li>
+                <li class="nav__item nav__item--services">
+                    <a class="nav__link" href="index.html#services">Services</a>
+                    <ul class="nav__dropdown">
+                        <li><a class="nav__dropdown-link" href="floor-screed.html">Floor Screed</a></li>
+                        <li><a class="nav__dropdown-link" href="floor-finishing.html">Floor Finishing</a></li>
+                        <li><a class="nav__dropdown-link" href="plastering.html">Plastering</a></li>
+                        <li><a class="nav__dropdown-link" href="drywall.html">Drywall Works</a></li>
+                        <li><a class="nav__dropdown-link" href="wall-ceiling-finishing.html">Wall &amp; Ceiling Finishing</a></li>
+                    </ul>
+                </li>
                 <li class="nav__dot" aria-hidden="true">
 <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="2" cy="2" r="2" fill="white" />
 </svg>
                 </li>
                 <li class="nav__item"><a class="nav__link" href="about-us.html">About Us</a></li>
-                <li class="nav__dot" aria-hidden="true">
-<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="2" cy="2" r="2" fill="white" />
-</svg>
-                </li>
-                <li class="nav__item"><a class="nav__link" href="service-page.html">Services</a></li>
                 <li class="nav__dot" aria-hidden="true">
 <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="2" cy="2" r="2" fill="white" />
@@ -357,10 +360,10 @@
     </div>
 </section>
 
-<section class="founder">
+<section class="founder" id="team">
     <div class="founder__grid">
         <div class="founder__cell founder__cell--photo">
-            <img src="assets/img/founder-card-1.jpg" alt="" loading="lazy">
+            <img src="assets/img/founder-card-1.webp" alt="" loading="lazy">
         </div>
 
         <article class="founder__card founder__card--two">
@@ -402,7 +405,7 @@
     <div class="founder__aside">
         <p class="founder__lead" data-fill-text>I founded the company in 2020 to apply my years of construction experience to my own venture</p>
 
-        <img class="founder__photo" src="assets/img/founder-card-2.jpg" alt="Aleksandr Orlov" loading="lazy">
+        <img class="founder__photo" src="assets/img/founder-card-2.webp" alt="Aleksandr Orlov" loading="lazy">
 
         <h3 class="founder__name">Aleksandr Orlov</h3>
         <span class="founder__role">Founder &amp; CEO — ISP Group</span>
@@ -494,7 +497,7 @@
       <div class="footer__mid-row">
         <div class="footer__mid-left">
           <div>
-            <a class="footer__contact-link" href="#contact" data-popup-open>
+            <a class="footer__contact-link" href="contact.html" data-popup-open>
               <span>Contact Us</span>
               <img class="footer__arrow" src="assets/icons/footer-contact-arrow.svg" alt="" aria-hidden="true">
             </a>

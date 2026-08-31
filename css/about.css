@@ -344,7 +344,7 @@
     padding: 60px 45px;
     border-radius: 10px;
     overflow: hidden;
-    background-image: url("../assets/img/deliverables.jpg");
+    background-image: url("../assets/img/deliverables.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -587,7 +587,7 @@
     padding: 60px 65px;
     border-radius: 10px;
     overflow: hidden;
-    background-image: url("../assets/img/specialists.jpg");
+    background-image: url("../assets/img/specialists.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -994,7 +994,7 @@
     padding: 40px 36px;
     border-radius: 15px;
     overflow: hidden;
-    background-image: url("../assets/img/about-cta.jpg");
+    background-image: url("../assets/img/about-cta.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

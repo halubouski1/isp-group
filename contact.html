@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ren">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,19 +22,22 @@
     <div class="header__right">
         <nav class="nav" aria-label="Main navigation">
             <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="index.html#services">Services</a></li>
+                <li class="nav__item nav__item--services">
+                    <a class="nav__link" href="index.html#services">Services</a>
+                    <ul class="nav__dropdown">
+                        <li><a class="nav__dropdown-link" href="floor-screed.html">Floor Screed</a></li>
+                        <li><a class="nav__dropdown-link" href="floor-finishing.html">Floor Finishing</a></li>
+                        <li><a class="nav__dropdown-link" href="plastering.html">Plastering</a></li>
+                        <li><a class="nav__dropdown-link" href="drywall.html">Drywall Works</a></li>
+                        <li><a class="nav__dropdown-link" href="wall-ceiling-finishing.html">Wall &amp; Ceiling Finishing</a></li>
+                    </ul>
+                </li>
                 <li class="nav__dot" aria-hidden="true">
 <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="2" cy="2" r="2" fill="white" />
 </svg>
                 </li>
                 <li class="nav__item"><a class="nav__link" href="about-us.html">About Us</a></li>
-                <li class="nav__dot" aria-hidden="true">
-<svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="2" cy="2" r="2" fill="white" />
-</svg>
-                </li>
-                <li class="nav__item"><a class="nav__link" href="service-page.html">Services</a></li>
                 <li class="nav__dot" aria-hidden="true">
 <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="2" cy="2" r="2" fill="white" />
@@ -57,7 +60,7 @@
 </header>
 
 <section class="hero hero--contact" id="home">
-  <img class="hero__video" src="assets/img/contact-hero.jpg" alt="" aria-hidden="true">
+  <img class="hero__video" src="assets/img/contact-hero.webp" alt="" aria-hidden="true">
 
   <div class="co-hero__intro">
     <span class="co-hero__eyebrow">Please contact us to discuss your project</span>
@@ -155,7 +158,7 @@
       <div class="footer__mid-row">
         <div class="footer__mid-left">
           <div>
-            <a class="footer__contact-link" href="#contact" data-popup-open>
+            <a class="footer__contact-link" href="#home" data-popup-open>
               <span>Contact Us</span>
               <img class="footer__arrow" src="assets/icons/footer-contact-arrow.svg" alt="" aria-hidden="true">
             </a>

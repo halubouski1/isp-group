@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Plastering — page-specific overrides
+
+   service.css is shared by every service page and carries the Floor Screed
+   photos by default, so this file only re-points the artwork. Loaded after
+   service.css / media-service.css.
+   ========================================================================== */
+
+/* ----- Stages slider ----- */
+.stage-card--1 {
+    background-image: url('../assets/img/plastering-card-1.webp');
+}
+
+.stage-card--2 {
+    background-image: url('../assets/img/plastering-card-2.webp');
+}
+
+.stage-card--3 {
+    background-image: url('../assets/img/plastering-card-3.webp');
+}
+
+.stage-card--4 {
+    background-image: url('../assets/img/plastering-card-4.webp');
+}
+
+/* no fifth photo yet — reuses the first, same as the other service pages */
+.stage-card--5 {
+    background-image: url('../assets/img/plastering-card-1.webp');
+}
