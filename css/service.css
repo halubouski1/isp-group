@@ -1,0 +1,882 @@
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+/* --hero-pad mirrors the hero's horizontal padding so the top rule can reach
+   out past it to the very left edge of the screen without shifting layout */
+.hero {
+    --hero-pad: 50px;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: none;
+}
+
+/* the rule sits midway between the header and the bottom block: both children
+   take an equal share of the free space above them */
+.hero__content {
+    justify-content: flex-start;
+}
+
+.hero__top,
+.hero__bottom {
+    margin-top: auto;
+}
+
+.hero__bottom {
+    margin-top: 385px;
+}
+
+/* the right inset lives on the wrapper so the line's tip stops 80px short of
+   the hero's padding edge */
+.hero__top {
+    margin-right: 20px;
+}
+
+.hero__line {
+    position: relative;
+    display: block;
+    height: 6px;
+}
+
+.hero__line::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--hero-pad));
+    right: 0;
+    top: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero__line::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 63px;
+    height: 6px;
+    background-color: #fff;
+}
+
+.hero__bottom {
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero__left {
+    display: flex;
+    align-items: center;
+    gap: 105px;
+}
+
+.hero__title {
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 100%;
+    color: #fff;
+}
+
+.hero__descr {
+    flex-shrink: 0;
+    max-width: 375px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 169%;
+    color: #fff;
+}
+
+.hero__btn {
+    flex-shrink: 0;
+    min-width: 256px;
+}
+
+
+/* ==========================================================================
+   Solutions
+   ========================================================================== */
+.solutions {
+    position: relative;
+    padding: 160px 100px 150px 65px;
+    background-color: #f7f7f7;
+}
+
+.solutions::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../assets/img/dashed-bg.png') center / cover no-repeat;
+    pointer-events: none;
+}
+
+.solutions__inner {
+    position: relative;
+    z-index: 1;
+}
+
+.solutions__title {
+    max-width: 900px;
+    margin-bottom: 65px;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 97%;
+    letter-spacing: -0.03em;
+    background: linear-gradient(100.08deg, #173145 29.99%, #3979ab 112.92%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.solutions__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    /* measured from the button, which is the last thing in the taller column */
+    margin-bottom: 160px;
+}
+
+.solutions__desc {
+    max-width: 600px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 144%;
+    letter-spacing: -0.03em;
+    color: #173145;
+}
+
+.solutions__desc--narrow {
+    max-width: 430px;
+}
+
+/* the button hangs off the right-hand column, so it lines up with it rather
+   than with the section's padding edge */
+.solutions__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    gap: 60px;
+    max-width: 442px;
+}
+
+.solutions__btn {
+    gap: 30px;
+}
+
+.solutions__list {
+    display: flex;
+    gap: 112px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.solutions__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.solutions__num {
+    margin-bottom: 28px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: -0.03em;
+    color: #344a5b;
+}
+
+.solutions__name {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 119%;
+    letter-spacing: -0.03em;
+    color: #344a5b;
+}
+
+
+/* ==========================================================================
+   Stages (slider) — a self-contained copy of .services with its own classes
+   ========================================================================== */
+.stages {
+    position: relative;
+    padding-bottom: 150px;
+    background-color: #F7F7F7;
+}
+
+.stages__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding-left: 25px;
+    padding-right: 40px;
+}
+
+.stages__title {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 111%;
+    letter-spacing: -0.03em;
+    color: rgba(123, 131, 138, 0.6);
+}
+
+.stages__title span {
+    color: #344a5b;
+}
+
+/* ----- Slider buttons ----- */
+.stages__nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stages-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #173145;
+    transition: opacity 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.stages-btn img {
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.stages-btn--prev img {
+    transform: scaleX(-1);
+}
+
+.stages-btn:hover {
+    opacity: 0.75;
+}
+
+/* ----- Disabled ----- */
+.stages-btn.swiper-button-disabled {
+    cursor: default;
+    opacity: 1;
+    border-color: #9398a6;
+    background-color: transparent;
+}
+
+.stages-btn.swiper-button-disabled img {
+    filter: brightness(0);
+    opacity: 0.3;
+}
+
+/* ----- Slider ----- */
+.stages__slider .swiper-slide {
+    width: 562px;
+    height: auto;
+}
+
+/* ----- Card ----- */
+.stage-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 753px;
+    padding: 0 32px 35px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.stage-card--1 {
+    background-image: url('../assets/img/services-card-1.jpg');
+}
+
+.stage-card--2 {
+    background-image: url('../assets/img/services-card-2.jpg');
+}
+
+.stage-card--3 {
+    background-image: url('../assets/img/services-card-3.jpg');
+}
+
+.stage-card--4 {
+    background-image: url('../assets/img/services-card-4.jpg');
+}
+
+.stage-card--5 {
+    background-image: url('../assets/img/services-card-5.jpg');
+}
+
+.stage-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.15) 35%,
+            rgba(0, 0, 0, 0.55) 100%);
+    pointer-events: none;
+}
+
+/* one full-width row instead of the two half cells the services card uses:
+   the index sits on the left, the hover button on the right */
+.stage-card__top {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    right: 25px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.stage-card__meta {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    flex-direction: column;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.stage-card__index {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.stage-card__dots rect {
+    fill: #fff;
+    fill-opacity: 0.25;
+}
+
+.stage-card--1 .stage-card__dots rect:nth-of-type(1),
+.stage-card--2 .stage-card__dots rect:nth-of-type(2),
+.stage-card--3 .stage-card__dots rect:nth-of-type(3),
+.stage-card--4 .stage-card__dots rect:nth-of-type(4),
+.stage-card--5 .stage-card__dots rect:nth-of-type(5) {
+    fill-opacity: 1;
+}
+
+.stage-card__btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    min-width: 215px;
+    padding: 16px 16px 16px 28px;
+    gap: 20px;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 14px;
+    opacity: 0;
+    transform: translate(20px, -50%);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+}
+
+.stage-card__body {
+    position: relative;
+    z-index: 2;
+}
+
+.stage-card__title {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 125%;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+/* kept clear of the circle button that fades in at the bottom right */
+.stage-card__descr {
+    max-width: 430px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139%;
+    color: #fff;
+}
+
+.stage-card__circle {
+    position: absolute;
+    right: 29px;
+    bottom: 45px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.stage-card__circle img {
+    filter: invert(1);
+}
+
+/* ----- Card hover ----- */
+.stage-card:hover .stage-card__meta {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.stage-card:hover .stage-card__btn {
+    opacity: 1;
+    transform: translate(0, -50%);
+    pointer-events: auto;
+}
+
+.stage-card:hover .stage-card__circle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==========================================================================
+   Pricing
+   ========================================================================== */
+.pricing {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 1020px;
+    margin: 150px 25px;
+    margin-top: 0;
+    padding: 50px 40px 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* <picture> so the art-directed mobile crop can swap in below 570px — the
+   wrapper and the <img> both have to stretch */
+.pricing__bg,
+.pricing__bg img {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: none;
+}
+
+/* keeps the copy readable over the photo — darkest where the cards sit */
+.pricing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.45) 0%,
+            rgba(0, 0, 0, 0.2) 35%,
+            rgba(0, 0, 0, 0.65) 100%);
+    pointer-events: none;
+}
+
+.pricing__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.pricing__note {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 100%;
+    color: #fff;
+}
+
+.pricing__logo {
+    width: 116px;
+    height: auto;
+}
+
+.pricing__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.pricing__title {
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 96%;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+.pricing__cards {
+    display: flex;
+    gap: 14px;
+}
+
+.pricing__btn {
+    flex-shrink: 0;
+    min-width: 256px;
+}
+
+/* ----- Card ----- */
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 408px;
+    height: 311px;
+    padding: 25px 22px 22px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+}
+
+.pricing-card--light {
+    border-color: #fff;
+    background: #fff;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.pricing-card__label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pricing-card--light .pricing-card__label {
+    color: rgba(23, 49, 69, 0.8);
+}
+
+.pricing-card__price {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 90%;
+    letter-spacing: -0.03em;
+    color: #fff;
+}
+
+.pricing-card__price span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 88%;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.pricing-card--light .pricing-card__price {
+    color: #173145;
+}
+
+.pricing-card--light .pricing-card__price span {
+    color: rgba(23, 49, 69, 0.5);
+}
+
+/* the rule sits 37px under the price, the copy 28px under the rule */
+.pricing-card__text {
+    margin-top: 30px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 131%;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.pricing-card--light .pricing-card__text {
+    border-top-color: rgba(23, 49, 69, 0.25);
+    color: rgba(23, 49, 69, 0.5);
+}
+
+
+/* ==========================================================================
+   CTA form
+   --------------------------------------------------------------------------
+   The .contact__* form classes are copied verbatim from the portfolio page so
+   the shared [data-select] dropdown script in main.js keeps working.
+   ========================================================================== */
+.cta {
+    position: relative;
+    /* above the footer's z-index:2, so the dropdown can hang past the section */
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 1200px;
+    margin: 0 15px;
+    padding: 40px 40px 125px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+/* No overflow:hidden on .cta — it would clip the Property Type dropdown, which
+   opens past the section's bottom edge on narrow screens. The photo and the
+   overlay round their own corners instead. */
+.cta__bg,
+.cta::after {
+    border-radius: inherit;
+}
+
+.cta__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+}
+
+/* darkens the photo so the heading and the fields stay readable */
+.cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.35) 0%,
+            rgba(0, 0, 0, 0.15) 40%,
+            rgba(0, 0, 0, 0.45) 100%);
+    pointer-events: none;
+}
+
+.cta__top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.cta__logo img {
+    width: 116px;
+    height: auto;
+}
+
+.cta__link {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: #e7e7e7;
+    transition: opacity 0.25s ease;
+}
+
+.cta__link:hover {
+    opacity: 0.65;
+}
+
+.cta__bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cta__title {
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #e7e7e7;
+}
+
+.cta__descr {
+    display: block;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    color: #e7e7e7;
+}
+
+/* ----- Form ----- */
+.contact__form {
+    flex-shrink: 0;
+    width: 466px; /* 224 + 18 + 224 */
+    max-width: 100%;
+}
+
+.contact__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18px;
+    row-gap: 15px;
+}
+
+.contact__input,
+.contact__select-trigger {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    padding: 0 12px 0 22px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    background: rgba(255, 255, 255, 0.02);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: #fff;
+    transition: border-color 0.25s ease;
+}
+
+.contact__input::placeholder {
+    color: #fff;
+}
+
+.contact__input:focus,
+.contact__select-trigger:focus-visible {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ----- Custom dropdown ----- */
+.contact__select {
+    position: relative;
+}
+
+.contact__select-trigger {
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.contact__select-value {
+    color: #fff;
+    transition: color 0.2s ease;
+}
+
+.contact__select.is-filled .contact__select-value {
+    color: #fff;
+}
+
+.contact__select-chevron {
+    flex-shrink: 0;
+    width: 7px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.contact__select.is-open .contact__select-chevron {
+    transform: rotate(180deg);
+}
+
+.contact__select-list {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(28, 21, 15, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+
+.contact__select.is-open .contact__select-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.contact__select-option {
+    padding: 11px 14px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact__select-option:hover,
+.contact__select-option.is-selected {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* ----- Submit — full width ----- */
+.contact__submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+    padding: 18px 28px 18px 32px;
+    border-radius: 6px;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    color: #000;
+    transition: background-color 0.25s ease;
+}
+
+.contact__submit:hover {
+    background-color: #ece7df;
+}
+
+.contact__submit img {
+    width: 16px;
+    height: 16px;
+}
+
+.footer {
+    margin-top: -30px;
+}
+
+/* ==========================================================================
+   FAQ CTA — mobile only (media.css hides .faq__buttons below 1025px)
+   ========================================================================== */
+.faq-cta {
+    display: none;
+}

@@ -1,0 +1,797 @@
+/* ==========================================================================
+   Service page — responsive
+   ========================================================================== */
+
+/* Below 1920px the whole layout is the desktop one scaled by 0.75, the same
+   convention media.css uses for the main page. */
+@media (max-width: 1919px) {
+    /* ----- Hero ----- */
+    .hero {
+        --hero-pad: 37.5px;
+    }
+
+    .hero__top {
+        margin-right: 15px;
+    }
+
+    .hero__line {
+        height: 4.5px;
+    }
+
+    .hero__line::after {
+        width: 47.25px;
+        height: 4.5px;
+    }
+
+    .hero__bottom {
+        margin-top: 288.75px;
+        gap: 30px;
+    }
+
+    .hero__left {
+        gap: 78.75px;
+    }
+
+    /* media.css caps the index-page hero title at 603.75px here — the service
+       title is a single line and must not inherit that */
+    .hero__title {
+        max-width: none;
+        font-size: 90px;
+    }
+
+    .hero__descr {
+        max-width: 281.25px;
+        font-size: 12px;
+    }
+
+    .hero__btn {
+        min-width: 192px;
+    }
+
+    /* ----- Solutions ----- */
+    .solutions {
+        padding: 120px 75px 112.5px 48.75px;
+    }
+
+    .solutions__title {
+        max-width: 675px;
+        margin-bottom: 48.75px;
+        font-size: 90px;
+    }
+
+    .solutions__row {
+        gap: 30px;
+        margin-bottom: 120px;
+    }
+
+    .solutions__desc {
+        max-width: 450px;
+        font-size: 13.5px;
+    }
+
+    .solutions__desc--narrow {
+        max-width: 322.5px;
+    }
+
+    .solutions__col {
+        gap: 45px;
+        max-width: 331.5px;
+    }
+
+    .solutions__btn {
+        gap: 22.5px;
+    }
+
+    .solutions__list {
+        gap: 84px;
+    }
+
+    .solutions__num {
+        margin-bottom: 21px;
+        font-size: 12px;
+    }
+
+    .solutions__name {
+        font-size: 12px;
+    }
+
+    /* ----- Stages ----- */
+    .stages {
+        padding-bottom: 112.5px;
+    }
+
+    .stages__head {
+        gap: 30px;
+        margin-bottom: 45px;
+        padding-left: 18.75px;
+        padding-right: 30px;
+    }
+
+    .stages__title {
+        font-size: 33.75px;
+    }
+
+    .stages__nav {
+        gap: 6px;
+    }
+
+    .stages-btn {
+        width: 37.5px;
+        height: 37.5px;
+    }
+
+    .stages-btn img,
+    .stage-card__circle img {
+        width: 11.25px;
+        height: 11.25px;
+    }
+
+    .stages__slider .swiper-slide {
+        width: 421.5px;
+    }
+
+    .stage-card {
+        height: 564.75px;
+        padding: 0 24px 26.25px;
+        border-radius: 7.5px;
+    }
+
+    .stage-card__top {
+        left: 18.75px;
+        right: 18.75px;
+        padding: 16.5px 0;
+    }
+
+    .stage-card__meta {
+        gap: 3.75px;
+    }
+
+    .stage-card__index {
+        font-size: 12px;
+    }
+
+    .stage-card__dots {
+        width: 37.5px;
+        height: 9px;
+    }
+
+    .stage-card__btn {
+        min-width: 161.25px;
+        padding: 12px 12px 12px 21px;
+        gap: 15px;
+        font-size: 10.5px;
+        transform: translate(15px, -50%);
+    }
+
+    .stage-card__title {
+        margin-bottom: 7.5px;
+        font-size: 30px;
+    }
+
+    .stage-card__descr {
+        max-width: 322.5px;
+        font-size: 13.5px;
+    }
+
+    .stage-card__circle {
+        right: 21.75px;
+        bottom: 33.75px;
+        width: 37.5px;
+        height: 37.5px;
+        transform: translateY(9px);
+    }
+
+    .stage-card:hover .stage-card__meta {
+        transform: translateX(-7.5px);
+    }
+
+    /* ----- Pricing ----- */
+    .pricing {
+        min-height: 765px;
+        margin: 112.5px 18.75px;
+        margin-top: 0;
+        padding: 37.5px 30px 30px;
+        border-radius: 15px;
+    }
+
+    .pricing__top {
+        gap: 30px;
+    }
+
+    .pricing__note {
+        font-size: 15.75px;
+    }
+
+    .pricing__logo {
+        width: 87px;
+    }
+
+    .pricing__bottom {
+        gap: 30px;
+    }
+
+    .pricing__title {
+        margin-bottom: 37.5px;
+        font-size: 60px;
+    }
+
+    .pricing__cards {
+        gap: 10.5px;
+    }
+
+    .pricing__btn {
+        min-width: 192px;
+    }
+
+    .pricing-card {
+        width: 306px;
+        height: 233.25px;
+        padding: 18.75px 16.5px 16.5px 18.75px;
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+    }
+
+    .pricing-card__label {
+        font-size: 10.5px;
+    }
+
+    .pricing-card__price {
+        gap: 9px;
+        font-size: 22.5px;
+    }
+
+    .pricing-card__price span {
+        font-size: 12px;
+    }
+
+    .pricing-card__text {
+        margin-top: 22.5px;
+        padding-top: 21px;
+        font-size: 12px;
+    }
+
+    /* ----- CTA form ----- */
+    .cta {
+        min-height: 900px;
+        margin: 0 11.25px;
+        padding: 30px 30px 93.75px;
+        border-radius: 7.5px;
+    }
+
+    .cta__top {
+        gap: 18px;
+    }
+
+    .cta__logo img {
+        width: 87px;
+    }
+
+    .cta__link {
+        font-size: 13.5px;
+    }
+
+    .cta__bottom {
+        gap: 30px;
+    }
+
+    .cta__title {
+        margin-bottom: 30px;
+        font-size: 112.5px;
+    }
+
+    .cta__descr {
+        font-size: 18.75px;
+    }
+
+    .contact__form {
+        width: 349.5px;
+    }
+
+    .contact__fields {
+        column-gap: 13.5px;
+        row-gap: 11.25px;
+    }
+
+    .contact__input,
+    .contact__select-trigger {
+        height: 39px;
+        padding: 0 9px 0 16.5px;
+        border-radius: 3.75px;
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        font-size: 11.25px;
+    }
+
+    .contact__select-trigger {
+        gap: 9px;
+    }
+
+    .contact__select-chevron {
+        width: 5.25px;
+    }
+
+    .contact__select-list {
+        top: calc(100% + 4.5px);
+        padding: 4.5px;
+        border-radius: 4.5px;
+        backdrop-filter: blur(10.5px);
+        -webkit-backdrop-filter: blur(10.5px);
+        transform: translateY(-4.5px);
+    }
+
+    .contact__select-option {
+        padding: 8.25px 10.5px;
+        border-radius: 3px;
+        font-size: 11.25px;
+    }
+
+    .contact__submit {
+        margin-top: 11.25px;
+        padding: 13.5px 21px 13.5px 24px;
+        border-radius: 4.5px;
+        font-size: 11.25px;
+    }
+
+    .contact__submit img {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 1270px) {
+    .hero__left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .hero__content {
+        justify-content: flex-end;
+    }
+
+    .hero__top {
+        display: none;
+    }
+
+    .solutions__list {
+        gap: 50px;
+    }
+
+    .pricing__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .cta__title {
+        font-size: 75px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .hero__title {
+        font-size: 70px;
+    }
+
+    .solutions__row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    .solutions__title {
+        max-width: 100%;
+        font-size: 60px;
+    }
+
+    .solutions__col {
+        align-self: flex-end;
+    }
+
+    .solutions__list {
+        flex-wrap: wrap;
+    }
+
+    .pricing__cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pricing__btn {
+        align-self: center;
+    }
+
+    .pricing__title {
+        text-align: center;
+    }
+
+    .cta__bottom {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@media (max-width: 769px) {
+    .hero__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .pricing__cards {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .pricing__left {
+        width: 100%;
+    }
+
+    .pricing__title {
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+
+    .pricing__top {
+        margin-bottom: 50px;
+    }
+
+    .cta__title {
+        font-size: 63px;
+    }
+}
+
+@media (max-width: 570px) {
+    /* Form → the contacts-page mobile layout: every field on its own row,
+       4px rhythm throughout. */
+    .contact__form {
+        width: 100%;
+    }
+
+    .contact__fields {
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+    }
+
+    .contact__input,
+    .contact__select-trigger {
+        height: 52px;
+        max-width: 100%;
+        font-size: 13px;
+    }
+
+    .contact__input::placeholder,
+    .contact__select-value {
+        color: rgba(255, 255, 255, 0.45);
+    }
+
+    .contact__select-option {
+        font-size: 13px;
+    }
+
+    .contact__submit {
+        margin-top: 4px;
+        font-size: 13px;
+        height: 52px;
+    }
+
+    /* .faq__buttons is display:none below 1025px — this is the standalone
+       copy that takes its place under the accordion */
+    .faq-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px 120px;
+        background-color: #F7F7F7;
+    }
+
+    .faq-cta .btn {
+        width: 100%;
+    }
+
+    .hero {
+        --hero-pad: 20px;
+        padding-bottom: 20px;
+    }
+
+    .hero__title {
+        font-size: 75px;
+        line-height: 84%;
+    }
+
+    .hero__descr {
+        font-size: 14px;
+        line-height: 193%;
+        max-width: 320px;
+    }
+
+    .hero__bottom {
+        gap: 50px;
+    }
+
+    .hero__btn {
+        width: 100%;
+    }
+
+    /* solutions */
+    .solutions {
+        padding: 100px 20px 120px 20px;
+    }
+
+    .solutions__title {
+        font-size: 35px;
+        line-height: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* The button lives inside .solutions__col, next to the right-hand
+       paragraph, so it is not a sibling of .solutions__list and `order` alone
+       cannot move it below the items. display:contents drops both wrappers so
+       every piece becomes a direct child of .solutions__inner, which then
+       orders them: title -> both paragraphs -> items -> button. */
+    .solutions__row,
+    .solutions__col {
+        display: contents;
+    }
+
+    .solutions__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .solutions__title {
+        order: 1;
+        margin-bottom: 0;
+    }
+
+    .solutions__desc,
+    .solutions__desc--narrow {
+        order: 2;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 156%;
+    }
+
+    .solutions__list {
+        order: 3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 20px;
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .solutions__num {
+        font-size: 16px;
+        line-height: 175%;
+        color: #344a5b;
+        margin-bottom: 28px;
+    }
+
+    .solutions__name {
+        font-size: 16px;
+        line-height: 119%;
+    }
+
+    .solutions__btn {
+        order: 4;
+        width: 100%;
+        margin-top: 30px
+    }
+
+    /* stages */
+    .stages__title {
+        font-size: 35px;
+        line-height: 143%;
+    }
+
+    .stages__head {
+        margin-bottom: 35px;
+    }
+
+    .stages__nav {
+        display: none;
+    }
+
+    /* Swiper is destroyed below 570px (see main.js), but its stylesheet still
+       applies: overflow:hidden and the transform on .swiper-wrapper would both
+       break position:sticky, so they are reset here. */
+    .stages__slider {
+        overflow: visible;
+        padding: 0 10px;
+    }
+
+    .stages__slider .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        transform: none;
+    }
+
+    .stages__slider .swiper-slide {
+        width: 100%;
+        height: auto;
+        transform: none;
+    }
+
+    .stages {
+        padding-bottom: 110px;
+    }
+
+    .stage-card {
+        height: 430px;
+        padding: 0 16px 24px;
+    }
+
+    .stage-card__top {
+        left: 14px;
+        right: 14px;
+        padding: 14px 0;
+    }
+
+    .stage-card__index {
+        font-size: 12px;
+    }
+
+    .stage-card__dots {
+        width: 37px;
+        height: auto;
+    }
+
+    .stage-card__title {
+        margin-bottom: 16px;
+        font-size: 24px;
+    }
+
+    .stage-card__descr {
+        max-width: 83%;
+        font-size: 14px;
+    }
+
+    .stage-card__btn {
+        min-width: 140.25px;
+        padding: 12px 12px 12px 21px;
+        gap: 15px;
+        font-size: 10.5px;
+        transform: translate(15px, -50%);
+    }
+
+    .stage-card__circle {
+        bottom: 20.75px;
+    }
+
+    /* .pricing */
+    .pricing {
+        margin: 0 12px;
+        margin-bottom: 120px;
+        padding: 20px;
+    }
+
+    .pricing__top {
+        flex-direction: row-reverse;
+        margin-bottom: 400px;
+    }
+
+    .pricing__logo {
+        width: 70px;
+    }
+
+    .pricing__note {
+        font-size: 13px;
+    }
+
+    .pricing__title {
+        text-align: left;
+        font-size: 35px;
+        line-height: 88%;
+        margin-bottom: 30px;
+    }
+
+    .pricing-card {
+        width: 100%;
+        padding: 25px;
+        padding-bottom: 30px;
+        min-height: 245px;
+    }
+
+    .pricing-card__label {
+        font-size: 14px;
+        line-height: 100%;
+    }
+
+    .pricing-card__price {
+        font-size: 25px;
+        line-height: 108%;
+    }
+
+    .pricing-card__price span {
+        font-size: 14px;
+        line-height: 100%;
+    }
+
+    .pricing-card__text {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 136%;
+    }
+
+    .pricing__cards {
+        gap: 20px;
+    }
+
+    .pricing__btn {
+        width: 100%;
+    }
+
+    .pricing__bottom {
+        gap: 80px;
+    }
+
+    /* cta */
+    .cta__link {
+        display: none;
+    }
+
+    .cta {
+        padding: 20px;
+        min-height: 765px;
+        justify-content: start;
+        gap: 85px;
+    }
+
+    .cta__title {
+        font-size: 55px;
+        line-height: 100%;
+        text-align: left;
+        max-width: 240px;
+        margin-bottom: 15px;
+    }
+
+    .cta__descr {
+        font-size: 16px;
+        line-height: 150%;
+        max-width: 250px;
+    }
+
+    .cta__bottom {
+        height: 100%;
+        flex-grow: 1;
+    }
+}
+
+/* The cards pile up on scroll. It needs room for a whole card plus the peeking
+   edges of the ones below it, so on short screens they simply scroll instead. */
+@media (max-width: 570px) and (min-height: 580px) {
+    .stages__slider {
+        --deck-top: 20px;
+        --deck-step: 28px;
+    }
+
+    .stages__slider .swiper-slide {
+        position: sticky;
+    }
+
+    .stages__slider .swiper-slide:nth-child(1) {
+        top: var(--deck-top);
+    }
+
+    .stages__slider .swiper-slide:nth-child(2) {
+        top: calc(var(--deck-top) + var(--deck-step));
+    }
+
+    .stages__slider .swiper-slide:nth-child(3) {
+        top: calc(var(--deck-top) + var(--deck-step) * 2);
+    }
+
+    .stages__slider .swiper-slide:nth-child(4) {
+        top: calc(var(--deck-top) + var(--deck-step) * 3);
+    }
+
+    .stages__slider .swiper-slide:nth-child(5) {
+        top: calc(var(--deck-top) + var(--deck-step) * 4);
+    }
+}

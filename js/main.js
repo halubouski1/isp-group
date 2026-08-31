@@ -118,6 +118,48 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.services__slider')
 }
 
 // ========================================
+// Stages slider (service page) — same deck behaviour as the services slider
+// ========================================
+if (typeof Swiper !== 'undefined' && document.querySelector('.stages__slider')) {
+  const deckQuery = window.matchMedia('(max-width: 570px)');
+  let stagesSwiper = null;
+
+  const syncStagesSlider = () => {
+    if (deckQuery.matches) {
+      if (stagesSwiper) {
+        stagesSwiper.destroy(true, true);
+        stagesSwiper = null;
+      }
+      return;
+    }
+
+    if (stagesSwiper) return;
+
+    stagesSwiper = new Swiper('.stages__slider', {
+      slidesPerView: 'auto',
+      // values below 1920px are the layout scaled by 0.75 (see media-service.css)
+      spaceBetween: 11.25,
+      slidesOffsetBefore: 11.25,
+      breakpoints: {
+        1920: {
+          spaceBetween: 15,
+          slidesOffsetBefore: 25,
+        },
+      },
+      slidesOffsetAfter: 15,
+      speed: 700,
+      navigation: {
+        nextEl: '.stages-btn--next',
+        prevEl: '.stages-btn--prev',
+      },
+    });
+  };
+
+  syncStagesSlider();
+  deckQuery.addEventListener('change', syncStagesSlider);
+}
+
+// ========================================
 // Purpose slider
 // ========================================
 if (typeof Swiper !== 'undefined' && document.querySelector('.purpose__slider')) {
