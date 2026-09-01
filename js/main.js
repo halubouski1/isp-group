@@ -759,3 +759,59 @@ document.addEventListener('keydown', (e) => {
   if (openedPopup) closePopup(openedPopup);
   if (menu && menu.classList.contains('is-open')) closeMenu();
 });
+
+// ========================================
+// Project detail — image slider
+// ========================================
+if (typeof Swiper !== 'undefined' && document.querySelector('.project__slider')) {
+  new Swiper('.project__slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    slidesOffsetBefore: 50,
+    slidesOffsetAfter: 50,
+    speed: 600,
+    grabCursor: true,
+    navigation: {
+      prevEl: '.project__prev',
+      nextEl: '.project__next',
+    },
+    breakpoints: {
+      1919: {
+        spaceBetween: 16,
+        slidesOffsetBefore: 50,
+        slidesOffsetAfter: 50,
+      },
+      1024: {
+        spaceBetween: 12,
+        slidesOffsetBefore: 38,
+        slidesOffsetAfter: 38,
+      },
+      0: {
+        spaceBetween: 12,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
+      }
+    }
+  });
+}
+
+// ========================================
+// Portfolio slider (Swiper)
+// ========================================
+if (typeof Swiper !== 'undefined' && document.querySelector('.portfolio__swiper')) {
+  new Swiper('.portfolio__swiper', {
+    loop: false,
+    speed: 800,
+    spaceBetween: 20,
+    grabCursor: true,
+    navigation: {
+      prevEl: '.portfolio__prev',
+      nextEl: '.portfolio__next',
+    },
+    breakpoints: {
+      1024: {
+        spaceBetween: 0,
+      },
+      },
+  });
+}
