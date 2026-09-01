@@ -1,0 +1,408 @@
+/* ==========================================================================
+   News & Insights
+   --------------------------------------------------------------------------
+   The section reuses .hero so the absolutely positioned header sits over it,
+   but none of the hero's full-screen behaviour applies here.
+   ========================================================================== */
+.hero.news {
+    display: block;
+    height: auto;
+    min-height: 0;
+    padding: 325px 0 0;
+    overflow: visible;
+    color: #173145;
+    background-color: #f7f7f7;
+}
+
+.news::before {
+    display: none;
+}
+
+/* the shared header is white-on-dark; this page is light, so the nav and the
+   burger are re-coloured the same way post.css does it */
+.nav__link {
+    color: #344a5b;
+}
+
+.burger {
+    background-color: #344a5b;
+}
+
+/* The card pool is markup only — the script reads it and renders the current
+   page. [hidden] alone loses to the class rules that set a display value, so
+   these are spelled out. */
+.news__pool[hidden],
+.news__slider[hidden],
+.news__slider-nav[hidden],
+.news-pagination[hidden] {
+    display: none;
+}
+
+/* ----- Head: title + filters ----- */
+.news__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 0 30px;
+}
+
+.news__title {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 83%;
+    letter-spacing: -0.03em;
+    color: #173145;
+}
+
+.news__filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ----- Filter dropdown ----- */
+.news-filter {
+    position: relative;
+}
+
+.news-filter__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    min-width: 184px;
+    padding: 8px 8px 8px 24px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 156%;
+    color: #000;
+    transition: border-color 0.25s ease;
+}
+
+.news-filter__trigger:hover,
+.news-filter.is-open .news-filter__trigger {
+    border-color: rgba(23, 49, 69, 0.45);
+}
+
+.news-filter__arrow {
+    flex-shrink: 0;
+    width: 37px;
+    height: 37px;
+    padding: 12px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    transition: transform 0.3s ease;
+}
+
+.news-filter.is-open .news-filter__arrow {
+    transform: rotate(180deg);
+}
+
+/* the overlay list — same panel behaviour as the contact form's select */
+.news-filter__list {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    z-index: 20;
+    padding: 6px;
+    margin: 0;
+    list-style: none;
+    border: 1px solid rgba(23, 49, 69, 0.12);
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 12px 30px rgba(23, 49, 69, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+
+.news-filter.is-open .news-filter__list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.news-filter__option {
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: rgba(23, 49, 69, 0.75);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.news-filter__option:hover,
+.news-filter__option.is-selected {
+    background-color: rgba(23, 49, 69, 0.07);
+    color: #173145;
+}
+
+/* ----- Grid: the first four cards ----- */
+.news__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 55px;
+    padding: 0 20px;
+}
+
+/* Cards fade up as a page is rendered; main.js staggers them with an inline
+   animation-delay and strips the class once the animation is done. */
+@keyframes news-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.news-card--enter {
+    animation: news-card-in 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .news-card--enter {
+        animation: none;
+    }
+}
+
+/* the button is mobile-only; main.js unhides it there */
+.news__load-more {
+    display: none;
+}
+
+/* nothing matched the current category */
+.news__grid[data-empty="true"]::after {
+    content: 'No articles in this category yet.';
+    grid-column: 1 / -1;
+    padding: 40px 0;
+    font-size: 18px;
+    color: rgba(23, 49, 69, 0.55);
+}
+
+/* ----- Card ----- */
+.news-card__media {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.news-card__img {
+    display: block;
+    width: 100%;
+    height: 570px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-card__img {
+    transform: scale(1.03);
+}
+
+/* content sits on the bottom edge of the photo */
+.news-card__overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px 18px;
+}
+
+/* the tags give way to the Read more button on hover */
+.news-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.news-card:hover .news-card__tags {
+    opacity: 0;
+    transform: translateX(-8px);
+    pointer-events: none;
+}
+
+.news-card__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 7px;
+    padding-right: 23px;
+    border-radius: 2px;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    background: rgba(255, 255, 255, 0.02);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+    color: #fff;
+}
+
+/* the coloured dot in front of the label */
+.news-card__tag::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+.news-card__tag--green::before { background-color: #3ec96a; }
+.news-card__tag--red::before   { background-color: #e2574c; }
+.news-card__tag--cyan::before  { background-color: #35c4c4; }
+
+/* Revealed on card hover. It must not be nested inside another <a>: that is
+   invalid HTML, the browser un-nests it, and the descendant selector below
+   then matches nothing — which is why it never showed. */
+/* Pinned to the photo's bottom-right instead of sitting in the overlay's flex
+   row: the tags keep their width while fading, and in a flex row that width
+   would push the button past the card edge and clip it. */
+.news-card__more {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+    display: inline-flex;
+    align-items: center;
+    min-width: 207px;
+    justify-content: space-between;
+    gap: 20px;
+    flex-shrink: 0;
+    padding: 12px 14px 12px 18px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none;
+}
+
+.news-card:hover .news-card__more {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.news-card__title {
+    margin-top: 36px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 137%;
+    letter-spacing: -0.03em;
+    color: #173145;
+    transition: opacity 0.25s ease;
+}
+
+.news-card__title a:hover {
+    opacity: 0.65;
+}
+
+/* ----- Slider with the rest of the news ----- */
+.news__slider-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 175px;
+    margin-bottom: 25px;
+    padding-right: 30px;
+}
+
+.news-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: #173145;
+    transition: opacity 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.news-btn img {
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.news-btn--prev img {
+    transform: scaleX(-1);
+}
+
+.news-btn:not(.swiper-button-disabled):hover {
+    opacity: 0.75;
+}
+
+.news-btn.swiper-button-disabled {
+    cursor: default;
+    background-color: transparent;
+    border-color: #9398a6;
+}
+
+.news-btn.swiper-button-disabled img {
+    filter: brightness(0);
+    opacity: 0.3;
+}
+
+.news__slider .swiper-slide {
+    width: 558px;
+    height: auto;
+}
+
+/* ----- Pagination ----- */
+.news-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 80px;
+    padding: 0 30px 70px;
+}
+
+.news-pagination__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 141%;
+    text-align: center;
+    color: rgba(46, 46, 46, 0.5);
+    transition: color 0.25s ease;
+}
+
+.news-pagination__link:hover,
+.news-pagination__link.is-active {
+    color: #173145;
+}
+
+.news__slider .news-card__img {
+    height: 343px;
+}
+
+.news__slider .news-card .news-card__title {
+    max-width: 400px;
+}
+
+/* .services-grid__list */
+.services-grid__list {
+    padding-bottom: 220px;
+}

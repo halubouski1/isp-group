@@ -213,6 +213,254 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.insights__slider')
 }
 
 // ========================================
+// News list
+// ----------------------------------------
+// Every article sits in .news__pool. Desktop shows one paginated page at a
+// time (PER_GRID in the grid, the rest in the slider); below the mobile
+// breakpoint the slider and pagination give way to a Load more button.
+// ========================================
+if (document.querySelector('.news__pool')) {
+  const PER_PAGE = 10;
+  const PER_GRID = 4;
+  const MOBILE_FIRST = 4;
+  const MOBILE_STEP = 4;
+
+  const pool = document.querySelector('.news__pool');
+  const grid = document.querySelector('.news__grid');
+  const slider = document.querySelector('.news__slider');
+  const sliderNav = document.querySelector('.news__slider-nav');
+  const wrapper = slider.querySelector('.swiper-wrapper');
+  const pagination = document.querySelector('.news-pagination');
+  const loadMore = document.querySelector('.news__load-more');
+  const head = document.querySelector('.news__head');
+
+  const all = [...pool.querySelectorAll('.news-card')].map((c) => ({
+    html: c.outerHTML,
+    categories: (c.dataset.categories || '').split(/\s+/).filter(Boolean),
+    date: c.dataset.date || '',
+    views: Number(c.dataset.views) || 0,
+  }));
+  const mobile = window.matchMedia('(max-width: 570px)');
+
+  let swiper = null;
+  let current = 0;
+  let shown = MOBILE_FIRST;
+  let category = '';
+  let sort = '';
+  let cards = all.map((n) => n.html);
+  let pageCount = Math.max(1, Math.ceil(cards.length / PER_PAGE));
+
+  // Rebuilds the working list from the two filters. Sorting is done on a copy
+  // so the pool order stays the source of truth.
+  const applyFilters = () => {
+    let list = category ? all.filter((n) => n.categories.includes(category)) : all.slice();
+
+    if (sort === 'newest-first') list.sort((a, b) => b.date.localeCompare(a.date));
+    else if (sort === 'oldest-first') list.sort((a, b) => a.date.localeCompare(b.date));
+    else if (sort === 'most-read') list.sort((a, b) => b.views - a.views);
+
+    cards = list.map((n) => n.html);
+    pageCount = Math.max(1, Math.ceil(cards.length / PER_PAGE));
+    current = 0;
+    shown = MOBILE_FIRST;
+
+    pagination.innerHTML = Array.from({ length: pageCount }, (_, i) =>
+      `<a class="news-pagination__link" href="#" data-page="${i}">${i + 1}</a>`).join('');
+
+    grid.dataset.empty = cards.length ? 'false' : 'true';
+    renderCurrentMode();
+  };
+
+  // Cards fade up as they arrive; the stagger is applied per card and the
+  // class is dropped again so nothing lingers on the element.
+  const animate = (container, from = 0) => {
+    [...container.children].forEach((child, i) => {
+      if (i < from) return;
+      const card = child.classList.contains('news-card') ? child : child.querySelector('.news-card');
+      if (!card) return;
+      card.classList.add('news-card--enter');
+      card.style.animationDelay = `${(i - from) * 60}ms`;
+      card.addEventListener('animationend', () => {
+        card.classList.remove('news-card--enter');
+        card.style.animationDelay = '';
+      }, { once: true });
+    });
+  };
+
+  const buildSwiper = () => {
+    if (typeof Swiper === 'undefined') return;
+    if (swiper) {
+      swiper.update();
+      swiper.slideTo(0, 0);
+      return;
+    }
+    swiper = new Swiper('.news__slider', {
+      slidesPerView: 'auto',
+      spaceBetween: 18,
+      // the side inset lives here rather than in CSS padding, so the track
+      // still clips the cards at the gutter instead of showing them through it
+      slidesOffsetBefore: 30,
+      slidesOffsetAfter: 30,
+      speed: 700,
+      navigation: {
+        nextEl: '.news-btn--next',
+        prevEl: '.news-btn--prev',
+      },
+    });
+  };
+
+  const renderDesktop = (page) => {
+    const slice = cards.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
+
+    grid.innerHTML = slice.slice(0, PER_GRID).join('');
+    wrapper.innerHTML = slice
+      .slice(PER_GRID)
+      .map((card) => `<div class="swiper-slide">${card}</div>`)
+      .join('');
+
+    // the slider is pointless with nothing left over for it
+    const rest = slice.length - PER_GRID;
+    slider.hidden = rest <= 0;
+    sliderNav.hidden = rest <= 0;
+    pagination.hidden = pageCount < 2;
+    loadMore.hidden = true;
+
+    pagination.querySelectorAll('.news-pagination__link').forEach((link, i) => {
+      link.classList.toggle('is-active', i === page);
+      link.setAttribute('aria-current', i === page ? 'page' : 'false');
+    });
+
+    current = page;
+    buildSwiper();
+    animate(grid);
+    animate(wrapper);
+  };
+
+  // `append` keeps the cards already on screen instead of re-rendering them,
+  // so only the new batch animates in
+  const renderMobile = (count, append = false) => {
+    const next = Math.min(count, cards.length);
+
+    if (append) {
+      const from = grid.children.length;
+      grid.insertAdjacentHTML('beforeend', cards.slice(from, next).join(''));
+      animate(grid, from);
+    } else {
+      grid.innerHTML = cards.slice(0, next).join('');
+      animate(grid);
+    }
+
+    shown = next;
+    slider.hidden = true;
+    sliderNav.hidden = true;
+    pagination.hidden = true;
+    loadMore.hidden = shown >= cards.length;
+  };
+
+  const renderCurrentMode = () => {
+    if (mobile.matches) {
+      renderMobile(shown);
+    } else {
+      shown = MOBILE_FIRST;
+      renderDesktop(current);
+    }
+  };
+
+  // ----- pagination -----
+  pagination.addEventListener('click', (e) => {
+    const link = e.target.closest('.news-pagination__link');
+    if (!link) return;
+    e.preventDefault();
+
+    const page = Number(link.dataset.page);
+    if (page === current) return;
+    renderDesktop(page);
+
+    // glide back up to the heading rather than jumping
+    if (lenis) {
+      lenis.scrollTo(head, { duration: 1.2, offset: -100 });
+    } else {
+      head.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  // ----- load more (mobile): one batch at a time -----
+  loadMore.addEventListener('click', () => {
+    renderMobile(shown + MOBILE_STEP, true);
+  });
+
+  // ----- filters -----
+  document.querySelectorAll('[data-news-filter]').forEach((filter) => {
+    const name = filter.querySelector('input[type="hidden"]').name;
+    filter.addEventListener('news-filter:change', (e) => {
+      if (name === 'categories') category = e.detail === 'all' ? '' : e.detail;
+      else sort = e.detail;
+      applyFilters();
+    });
+  });
+
+  mobile.addEventListener('change', renderCurrentMode);
+  applyFilters();
+}
+
+// ========================================
+// News filters — overlay dropdowns (category / recency)
+// ========================================
+document.querySelectorAll('[data-news-filter]').forEach((filter) => {
+  const trigger = filter.querySelector('.news-filter__trigger');
+  const valueEl = filter.querySelector('.news-filter__value');
+  const hidden = filter.querySelector('input[type="hidden"]');
+  const options = filter.querySelectorAll('.news-filter__option');
+  const label = valueEl.textContent;
+
+  const close = () => {
+    filter.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+  };
+
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const willOpen = !filter.classList.contains('is-open');
+    // only one panel at a time
+    document.querySelectorAll('[data-news-filter].is-open').forEach((other) => {
+      other.classList.remove('is-open');
+      other.querySelector('.news-filter__trigger').setAttribute('aria-expanded', 'false');
+    });
+    filter.classList.toggle('is-open', willOpen);
+    trigger.setAttribute('aria-expanded', String(willOpen));
+  });
+
+  options.forEach((option) => {
+    option.addEventListener('click', () => {
+      options.forEach((o) => o.classList.remove('is-selected'));
+      option.classList.add('is-selected');
+      // the first option resets the filter back to its label
+      const isReset = option.dataset.value === 'all';
+      valueEl.textContent = isReset ? label : option.textContent;
+      if (hidden) hidden.value = isReset ? '' : option.dataset.value;
+      close();
+
+      // the news list listens for this and re-renders
+      filter.dispatchEvent(new CustomEvent('news-filter:change', {
+        detail: option.dataset.value,
+      }));
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!filter.contains(e.target)) close();
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  document.querySelectorAll('[data-news-filter].is-open').forEach((f) => {
+    f.classList.remove('is-open');
+    f.querySelector('.news-filter__trigger').setAttribute('aria-expanded', 'false');
+  });
+});
+
+// ========================================
 // Scroll-filled text
 // ========================================
 const fillTexts = document.querySelectorAll('[data-fill-text]');

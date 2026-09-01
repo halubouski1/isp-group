@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/media.css">
+      <link rel="stylesheet" href="css/news.css">
+      <link rel="stylesheet" href="css/media-news.css">
+      <script>document.documentElement.style.setProperty("--fixed-vh", window.innerHeight + "px");</script>
+      <title>News &amp; Insights — ISP Group</title>
+      <meta name="description" content="News, project updates and insights from ISP Group — interior construction and finishing across South Florida.">
+</head>
+<body>
+
+      <header class="header">
+          <a class="header__logo" href="index.html" aria-label="ISP Group">
+              <img src="assets/img/dark-logo.svg" alt="ISP Group" width="146" height="21">
+          </a>
+  
+          <div class="header__right">
+              <nav class="nav" aria-label="Main navigation">
+                  <ul class="nav__list">
+                      <li class="nav__item nav__item--services">
+                          <a class="nav__link" href="index.html#services">Services</a>
+                          <ul class="nav__dropdown">
+                              <li><a class="nav__dropdown-link" href="floor-screed.html">Floor Screed</a></li>
+                              <li><a class="nav__dropdown-link" href="floor-finishing.html">Floor Finishing</a></li>
+                              <li><a class="nav__dropdown-link" href="plastering.html">Plastering</a></li>
+                              <li><a class="nav__dropdown-link" href="drywall.html">Drywall Works</a></li>
+                              <li><a class="nav__dropdown-link" href="wall-ceiling-finishing.html">Wall &amp; Ceiling Finishing</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav__dot" aria-hidden="true">
+      <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="2" cy="2" r="2" fill="#344A5B" />
+      </svg>
+                      </li>
+                      <li class="nav__item"><a class="nav__link" href="about-us.html">About Us</a></li>
+                      <li class="nav__dot" aria-hidden="true">
+      <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="2" cy="2" r="2" fill="#344A5B" />
+      </svg>
+                      </li>
+                      
+                      <li class="nav__item"><a class="nav__link" href="portfolio.html">Projects</a></li>
+                      <li class="nav__dot" aria-hidden="true">
+      <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="2" cy="2" r="2" fill="#344A5B" />
+      </svg>
+                      </li>
+                      <li class="nav__item"><a class="nav__link" href="news.html">News</a></li>
+                      <li class="nav__dot" aria-hidden="true">
+      <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="2" cy="2" r="2" fill="#344A5B" />
+      </svg>
+                      </li>
+                      <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+                  </ul>
+              </nav>
+  
+              <button class="burger" type="button" aria-label="Open menu">
+                  <img src="assets/icons/burger-menu-light.svg" alt="" width="19" height="11">
+              </button>
+          </div>
+      </header>
+
+<div class="menu" aria-hidden="true">
+    <div class="menu__overlay" data-menu-close></div>
+    <aside class="menu__panel">
+        <button class="menu__close" type="button" data-menu-close aria-label="Close menu">
+            <img src="assets/icons/menu-close.svg" alt="">
+        </button>
+
+        <div class="menu__inner">
+            <nav class="menu__nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="portfolio.html">Projects</a>
+                <a href="about-us.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="news.html">News</a>
+            </nav>
+
+            <div class="menu__socials">
+                <a href="#" class="menu__social">Instagram <img src="assets/icons/popup-link.svg" alt=""></a>
+                <a href="https://wa.me/19712424048" class="menu__social">whatsapp <img src="assets/icons/popup-link.svg" alt=""></a>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<section class="hero news">
+    <div class="news__head">
+      <h1 class="news__title">News &amp; Insights</h1>
+
+      <div class="news__filters">
+        <div class="news-filter" data-news-filter>
+          <button class="news-filter__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="news-filter__value">Categories</span>
+            <img class="news-filter__arrow" src="assets/icons/news-filter-arrow.svg" alt="" aria-hidden="true">
+          </button>
+
+          <ul class="news-filter__list" role="listbox">
+            <li class="news-filter__option" role="option" data-value="all">All</li>
+            <li class="news-filter__option" role="option" data-value="day-news">Day news</li>
+            <li class="news-filter__option" role="option" data-value="opportunities">Opportunities</li>
+            <li class="news-filter__option" role="option" data-value="projects">Projects</li>
+            <li class="news-filter__option" role="option" data-value="company">Company</li>
+          </ul>
+
+          <input type="hidden" name="categories" value="">
+        </div>
+
+        <div class="news-filter" data-news-filter>
+          <button class="news-filter__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="news-filter__value">By recency</span>
+            <img class="news-filter__arrow" src="assets/icons/news-filter-arrow.svg" alt="" aria-hidden="true">
+          </button>
+
+          <ul class="news-filter__list" role="listbox">
+            <li class="news-filter__option" role="option" data-value="newest-first">Newest first</li>
+            <li class="news-filter__option" role="option" data-value="oldest-first">Oldest first</li>
+            <li class="news-filter__option" role="option" data-value="most-read">Most read</li>
+          </ul>
+
+          <input type="hidden" name="recency" value="">
+        </div>
+      </div>
+    </div>
+
+    <!-- Every article lives here; the script below renders the current page
+         into the grid and the slider. -->
+    <div class="news__pool" hidden>
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-09-01" data-views="4800">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--red">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">New Opportunities as Stocks Fall S&amp;P500</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-08-29" data-views="4663">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--cyan">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Why Floor Screed Is the Most Underrated Step in Any Fit-Out</h2>
+      </article>
+
+      <article class="news-card" data-categories="projects company" data-date="2026-08-26" data-views="4526">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            <span class="news-card__tag news-card__tag--green">Company</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">ISP Group Opens a Second Crew in Miami</h2>
+      </article>
+
+      <article class="news-card" data-categories="insights projects" data-date="2026-08-23" data-views="4389">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--red">Insights</span>
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Building in South Florida: What You Need to Know</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-08-20" data-views="4252">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--red">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Choosing the Right Floor Finish for a Coastal Climate</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-08-17" data-views="4115">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--cyan">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Behind the Scenes of a Full Condo Renovation</h2>
+      </article>
+
+      <article class="news-card" data-categories="projects company" data-date="2026-08-14" data-views="3978">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            <span class="news-card__tag news-card__tag--green">Company</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Five Plaster Details That Decide How a Room Reads</h2>
+      </article>
+
+      <article class="news-card" data-categories="insights projects" data-date="2026-08-11" data-views="3841">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--red">Insights</span>
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Heated Floors: What to Budget Before You Pour</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-08-08" data-views="3704">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--red">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">How We Keep Dust Out of Occupied Properties</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-08-05" data-views="3567">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--cyan">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">From Bare Slab to Handover in Eleven Weeks</h2>
+      </article>
+
+      <article class="news-card" data-categories="projects company" data-date="2026-08-02" data-views="3430">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            <span class="news-card__tag news-card__tag--green">Company</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">New Opportunities as Stocks Fall S&amp;P500</h2>
+      </article>
+
+      <article class="news-card" data-categories="insights projects" data-date="2026-07-30" data-views="3293">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--red">Insights</span>
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Why Floor Screed Is the Most Underrated Step in Any Fit-Out</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-07-27" data-views="3156">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--red">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">ISP Group Opens a Second Crew in Miami</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-07-24" data-views="3019">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--cyan">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Building in South Florida: What You Need to Know</h2>
+      </article>
+
+      <article class="news-card" data-categories="projects company" data-date="2026-07-21" data-views="2882">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            <span class="news-card__tag news-card__tag--green">Company</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Choosing the Right Floor Finish for a Coastal Climate</h2>
+      </article>
+
+      <article class="news-card" data-categories="insights projects" data-date="2026-07-18" data-views="2745">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--red">Insights</span>
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Behind the Scenes of a Full Condo Renovation</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-07-15" data-views="2608">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--red">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Five Plaster Details That Decide How a Room Reads</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-07-12" data-views="2471">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--cyan">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Heated Floors: What to Budget Before You Pour</h2>
+      </article>
+
+      <article class="news-card" data-categories="projects company" data-date="2026-07-09" data-views="2334">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            <span class="news-card__tag news-card__tag--green">Company</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">How We Keep Dust Out of Occupied Properties</h2>
+      </article>
+
+      <article class="news-card" data-categories="insights projects" data-date="2026-07-06" data-views="2197">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--red">Insights</span>
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">From Bare Slab to Handover in Eleven Weeks</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-07-03" data-views="2060">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--red">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">New Opportunities as Stocks Fall S&amp;P500</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-06-30" data-views="1923">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--cyan">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Why Floor Screed Is the Most Underrated Step in Any Fit-Out</h2>
+      </article>
+
+      <article class="news-card" data-categories="projects company" data-date="2026-06-27" data-views="1786">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            <span class="news-card__tag news-card__tag--green">Company</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">ISP Group Opens a Second Crew in Miami</h2>
+      </article>
+
+      <article class="news-card" data-categories="insights projects" data-date="2026-06-24" data-views="1649">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--red">Insights</span>
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Building in South Florida: What You Need to Know</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-06-21" data-views="1512">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--red">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Choosing the Right Floor Finish for a Coastal Climate</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-06-18" data-views="1375">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--cyan">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Behind the Scenes of a Full Condo Renovation</h2>
+      </article>
+
+      <article class="news-card" data-categories="projects company" data-date="2026-06-15" data-views="1238">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            <span class="news-card__tag news-card__tag--green">Company</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Five Plaster Details That Decide How a Room Reads</h2>
+      </article>
+
+      <article class="news-card" data-categories="insights projects" data-date="2026-06-12" data-views="1101">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--red">Insights</span>
+            <span class="news-card__tag news-card__tag--cyan">Projects</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">Heated Floors: What to Budget Before You Pour</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-06-09" data-views="964">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-1.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--red">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">How We Keep Dust Out of Occupied Properties</h2>
+      </article>
+
+      <article class="news-card" data-categories="day-news opportunities" data-date="2026-06-06" data-views="827">
+        <div class="news-card__media">
+          <img class="news-card__img" src="assets/img/news-card-2.webp" alt="" loading="lazy">
+
+          <span class="news-card__overlay">
+            <span class="news-card__tags">
+            <span class="news-card__tag news-card__tag--green">Day news</span>
+            <span class="news-card__tag news-card__tag--cyan">Opportunities</span>
+            </span>
+
+            <a href="post.html" class="news-card__more">
+              Read more
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+          </span>
+        </div>
+
+        <h2 class="news-card__title">From Bare Slab to Handover in Eleven Weeks</h2>
+      </article>
+    </div>
+
+    <div class="news__grid"></div>
+
+    <!-- mobile only: replaces the slider + pagination with a single reveal -->
+    <button class="btn btn--navy news__load-more" type="button" hidden>
+      <span class="btn__text">Load more</span>
+      <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="news__slider-nav">
+      <button class="news-btn news-btn--prev" type="button" aria-label="Previous slide">
+        <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
+      </button>
+      <button class="news-btn news-btn--next" type="button" aria-label="Next slide">
+        <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
+      </button>
+    </div>
+
+    <div class="news__slider swiper">
+      <div class="swiper-wrapper"></div>
+    </div>
+
+    <nav class="news-pagination" aria-label="News pages"></nav>
+</section>
+
+<section class="services-grid" id="projects"  data-aos="fade-up">
+    <ul class="services-grid__list">
+        <li class="grid-card grid-card--1">
+            <div class="grid-card__top">
+                <div class="grid-card__row">
+                    <span class="grid-card__line"></span>
+                    <span class="grid-card__num">001</span>
+                </div>
+                <h3 class="grid-card__title">Custom Homes</h3>
+            </div>
+
+            <button class="btn btn--light grid-card__btn" href="#contact">
+                <span class="btn__text">Learn more</span>
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </li>
+
+        <li class="grid-card grid-card--2">
+            <div class="grid-card__top">
+                <div class="grid-card__row">
+                    <span class="grid-card__line"></span>
+                    <span class="grid-card__num">002</span>
+                </div>
+                <h3 class="grid-card__title">Commercial Spaces</h3>
+            </div>
+
+            <button class="btn btn--light grid-card__btn" data-popup="popup-request">
+                <span class="btn__text">Learn more</span>
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </li>
+
+        <li class="grid-card grid-card--3">
+            <div class="grid-card__top">
+                <div class="grid-card__row">
+                    <span class="grid-card__line"></span>
+                    <span class="grid-card__num">003</span>
+                </div>
+                <h3 class="grid-card__title">Renovations</h3>
+            </div>
+
+            <button class="btn btn--light grid-card__btn" data-popup="popup-request">
+                <span class="btn__text">Learn more</span>
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </li>
+
+        <li class="grid-card grid-card--4">
+            <div class="grid-card__top">
+                <div class="grid-card__row">
+                    <span class="grid-card__line"></span>
+                    <span class="grid-card__num">004</span>
+                </div>
+                <h3 class="grid-card__title">Additions &amp; Expansions</h3>
+            </div>
+
+            <button class="btn btn--light grid-card__btn" data-popup="popup-request">
+                <span class="btn__text">Learn more</span>
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </li>
+    </ul>
+</section>
+
+  <footer class="footer">
+  <div class="footer__content">
+    <div class="footer__top">
+      <nav class="footer__links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Projects</a>
+        <a href="about-us.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="news.html">News</a>
+      </nav>
+      <button class="footer__totop" type="button" aria-label="Back to top">
+        <img src="assets/icons/to-top-arrow.svg" alt="" aria-hidden="true">
+      </button>
+    </div>
+
+    <div class="footer__mid">
+      <div class="footer__mid-row">
+        <div class="footer__mid-left">
+          <div>
+            <button type="button" class="footer__contact-link" data-popup="popup-request">
+              <span>Contact Us</span>
+              <img class="footer__arrow" src="assets/icons/footer-contact-arrow.svg" alt="" aria-hidden="true">
+            </button>
+  
+            <div class="footer__dev">
+              <img class="footer__dev-logo" src="assets/icons/dev-logo.svg" alt="" aria-hidden="true">
+              <span class="footer__dev-text">Website<br>Development</span>
+            </div>
+          </div>
+
+      <button class="footer__totop--mobile footer__totop" type="button" aria-label="Back to top">
+        <img src="assets/icons/to-top-arrow.svg" alt="" aria-hidden="true">
+      </button>
+        </div>
+
+        <div class="footer__mid-right">
+          <div class="footer__contact-item">
+            <div class="footer__contact-label">
+              <span>Phone</span>
+              <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true">
+            </div>
+            <a class="footer__contact-value" href="tel:+19297075551">+1 929 707 5551</a>
+          </div>
+
+          <div class="footer__contact-item">
+            <div class="footer__contact-label">
+              <span>E-Mail</span>
+              <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true">
+            </div>
+            <a class="footer__contact-value" href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__mid-row footer__mid-row--bottom">
+        <div class="footer__copy">
+          <span>© 2026</span>
+          <a class="footer__policy" href="#">Privacy Policy</a>
+        </div>
+
+        <div class="footer__socials">
+          <a class="footer__social" href="#">
+            <span>telegram</span>
+            <img src="assets/icons/footer-social.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="footer__social" href="#">
+            <span>whatsapp</span>
+            <img src="assets/icons/footer-social.svg" alt="" aria-hidden="true">
+          </a>
+          <a class="footer__social" href="#">
+            <span>instagram</span>
+            <img src="assets/icons/footer-social.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="footer-mob">
+  <div class="footer-mob__panel">
+    <div class="footer-mob__head">
+      <button class="footer-mob__totop" type="button" aria-label="Back to top">
+        <img src="assets/icons/to-top-arrow.svg" alt="" aria-hidden="true" width="14" height="14">
+      </button>
+      <img class="footer-mob__logo" src="assets/img/dark-logo.svg" alt="ISP Group" width="86" height="12">
+    </div>
+
+    <nav class="footer-mob__links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="portfolio.html">Projects</a>
+      <a href="about-us.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="news.html">News</a>
+    </nav>
+
+    <span class="footer-mob__divider"></span>
+
+    <div class="footer-mob__contacts">
+      <div class="footer-mob__contact">
+        <div class="footer-mob__contact-label">
+          <span>E-Mail</span>
+          <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true" width="12" height="12">
+        </div>
+        <a class="footer-mob__contact-value" href="mailto:info@ispgroupgc.com">info@ispgroupgc.com</a>
+      </div>
+
+      <div class="footer-mob__contact">
+        <div class="footer-mob__contact-label">
+          <span>Phone</span>
+          <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true" width="12" height="12">
+        </div>
+        <a class="footer-mob__contact-value" href="tel:+19297075551">+1 929 707 5551</a>
+      </div>
+    </div>
+
+    <div class="footer-mob__bottom">
+      <div class="footer-mob__dev">
+        <img class="footer-mob__dev-logo" src="assets/icons/dev-logo-mob.svg" alt="Fernandes Media" width="121" height="34">
+        <span class="footer-mob__dev-text">Website development</span>
+      </div>
+
+      <div class="footer-mob__socials">
+        <a class="footer-mob__social" href="#" aria-label="WhatsApp">
+          <img src="assets/icons/wp.svg" alt="" aria-hidden="true" width="20" height="21">
+        </a>
+        <a class="footer-mob__social" href="#" aria-label="Instagram">
+          <img src="assets/icons/ig.svg" alt="" aria-hidden="true" width="20" height="21">
+        </a>
+        <a class="footer-mob__social" href="#" aria-label="Telegram">
+          <img src="assets/icons/tg.svg" alt="" aria-hidden="true" width="20" height="21">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-mob__legal">
+    <span>&copy; 2026</span>
+    <a class="footer-mob__policy" href="#">Privacy Policy</a>
+  </div>
+</div>
+
+<div class="popup" id="popup-request" aria-hidden="true">
+    <div class="popup__overlay" data-popup-close></div>
+
+    <div class="popup__window">
+        <div class="popup__image">
+            <img src="assets/img/popup.webp" alt="">
+        </div>
+
+        <div class="popup__content">
+            <button class="popup__close" type="button" data-popup-close aria-label="Close popup">
+                <picture>
+                    <source media="(max-width: 570px)" srcset="assets/icons/menu-close-mob.svg">
+                    <img src="assets/icons/menu-close.svg" alt="">
+                </picture>
+            </button>
+
+            <div class="popup__scroll" data-lenis-prevent>
+            <div class="popup__top">
+                <h2 class="popup__title">Where Quality Sets the Standard</h2>
+
+                <form class="popup__form" action="#" method="post">
+                    <div class="popup__field">
+                        <input type="tel" id="popup-phone" class="popup__input popup__phone">
+                    </div>
+                    <input type="email" class="popup__input" placeholder="Enter your Email">
+                    <button type="submit" class="btn btn--navy popup__submit">
+                        <span>Leave a Request</span>
+                        <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="popup__socials">
+                <a href="#" class="popup__social">Instagram <img src="assets/icons/popup-link.svg" alt=""></a>
+                <a href="https://wa.me/19712424048" class="popup__social">whatsapp <img src="assets/icons/popup-link.svg" alt=""></a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInputWithUtils.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
