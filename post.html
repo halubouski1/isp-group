@@ -11,6 +11,7 @@
     <meta name="robots" content="noindex, follow" />
     <script>document.documentElement.style.setProperty('--fixed-vh', window.innerHeight + 'px');</script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -29,7 +30,7 @@
               <nav class="nav" aria-label="Main navigation">
                   <ul class="nav__list">
                       <li class="nav__item nav__item--services">
-                          <a class="nav__link" href="#services">Services</a>
+                          <a class="nav__link" href="index.html#services">Services</a>
                           <ul class="nav__dropdown">
                               <li><a class="nav__dropdown-link" href="floor-screed.html">Floor Screed</a></li>
                               <li><a class="nav__dropdown-link" href="floor-finishing.html">Floor Finishing</a></li>
@@ -50,13 +51,13 @@
       </svg>
                       </li>
                       
-                      <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+                      <li class="nav__item"><a class="nav__link" href="portfolio.html">Projects</a></li>
                       <li class="nav__dot" aria-hidden="true">
       <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="2" cy="2" r="2" fill="#344A5B" />
       </svg>
                       </li>
-                      <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+                      <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
                   </ul>
               </nav>
   
@@ -65,6 +66,31 @@
               </button>
           </div>
       </header>
+
+<div class="menu" aria-hidden="true">
+    <div class="menu__overlay" data-menu-close></div>
+    <aside class="menu__panel">
+        <button class="menu__close" type="button" data-menu-close aria-label="Close menu">
+            <img src="assets/icons/menu-close.svg" alt="">
+        </button>
+
+        <div class="menu__inner">
+            <nav class="menu__nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="portfolio.html">Projects</a>
+                <a href="about-us.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="menu__socials">
+                <a href="#" class="menu__social">Instagram <img src="assets/icons/popup-link.svg" alt=""></a>
+                <a href="https://wa.me/19712424048" class="menu__social">whatsapp <img src="assets/icons/popup-link.svg" alt=""></a>
+            </div>
+        </div>
+    </aside>
+</div>
+
     <!-- =====================================================================
          HERO (wraps the header)
          ===================================================================== -->
@@ -95,8 +121,8 @@
           </div>
         </div>
         <picture class="hero__image">
-          <source media="(max-width: 570px)" srcset="assets/img/post-hero-img-mob.jpg">
-          <img src="assets/img/post-hero-img.jpg" alt="Hero Image">
+          <source media="(max-width: 570px)" srcset="assets/img/post-hero-img-mob.webp">
+          <img src="assets/img/post-hero-img.webp" alt="Hero Image">
         </picture>
       </div>
     </section>
@@ -117,7 +143,7 @@
           </div>
         </div>
         <div class="post-intro__right">
-          <img class="post-intro__image" src="assets/img/post-preview.jpg" alt="">
+          <img class="post-intro__image" src="assets/img/post-preview.webp" alt="">
         </div>
       </div>
     </section>
@@ -132,27 +158,27 @@
         <div class="post-article__body">
           <p>What makes a great board of directors? <br> A good board of directors has never been more important to corporate success. Not only because of the new responsibilities they shoulder — think risk, ethics, transparency and stakeholders — but also because businesses now face unprecedented disruption from all directions. A governing board that provides strategic direction and expert advice, which anticipates risks and challenges and has the trust of management can be instrumental in helping a company to achieve its goals.</p>
           <p>This is why it pays to invest some time in thinking about the composition of the governing board, particularly when a company comes under new ownership as it often happens in PE or M&amp;A situations. How you assemble an effective and experienced board of directors matters to the outcomes you want to achieve. Here are some factors to bear in mind.</p>
-          <img src="assets/img/post-img-1.jpg" alt="">
+          <img src="assets/img/post-img-1.webp" alt="">
           <ol>
-            <li>Context matters. Ask yourself "what is this board here to do?" Think of the strategy, positioning of the business, the specific industry, the shareholder structure and the phase it is in. A start-up will have very different needs from a growing or mature business, or one that is undergoing market or technological disruption or a private equity portfolio. Ask what is critical for the company now or might be in the future, then seek directors with the relevant experience for its needs. It is a special context, for example, when ownership changes, the cultural fit becomes important, too. The new board must share the values, style and ambition of the company's new owners.</li>
+            <li>Context matters. Ask yourself "what is this board here to do?" Think of the strategy, positioning of the business, the specific industry, the shareholder structure and the phase it is in. A start-up will have very different needs from a growing or mature business, or one that is undergoing market or technological disruption or a private equity portfolio. Ask what is critical for the company now or might be in the future, then seek directors with the relevant experience for its needs. It is a special context, for example, when ownership changes, the cultural fit becomes important, too. The new board must share the values, style and ambition of the company’s new owners.</li>
             <li>There is value in continuity. New owners often want to make a clean sweep of things, but they must remember that there is sometimes value in retaining board members who know the company well and who can advise on what went on before. A hybrid board that brings together the new proprietary directors, a historic member and outside expertise is a good model.</li>
-            <li>Keep the board small. This is particularly important for portfolio companies in private hands. Four or five people is more than enough. Each member should make a unique contribution, whether it's direct industry expertise, financial acumen or big-picture strategic talents. Together, they must span the breadth of expertise a company needs to accomplish what it has set out to do. All must be financially literate, and some previous board experience is preferable, too. For new companies in private equity portfolios, it might be useful to appoint a director who has experience of the entire private equity lifecycle, from acquisition to divestment. From time to time, you may want to reach out to external advisers to address particular topics, but there is no need to give them a permanent seat at the table.</li>
+            <li>Keep the board small. This is particularly important for portfolio companies in private hands. Four or five people is more than enough. Each member should make a unique contribution, whether it’s direct industry expertise, financial acumen or big-picture strategic talents. Together, they must span the breadth of expertise a company needs to accomplish what it has set out to do. All must be financially literate, and some previous board experience is preferable, too. For new companies in private equity portfolios, it might be useful to appoint a director who has experience of the entire private equity lifecycle, from acquisition to divestment. From time to time, you may want to reach out to external advisers to address particular topics, but there is no need to give them a permanent seat at the table.</li>
           </ol>
-          <img src="assets/img/post-img-2.jpg" alt="">
+          <img src="assets/img/post-img-2.webp" alt="">
           <ol start="4">
-            <li>Technological know-how is essential. Every company today is being disrupted by new technologies and many Private equity investors are keen to have tech businesses in their portfolio. This makes it more important than ever to have real technological expertise on the board. But you don't need a geek. Go for someone with a broader background — someone who has run a technology business, for example, who understands technology but also the commercial side of things.</li>
-            <li>Aim for good dynamics. While you will need to have a good understanding of individual's style and motivations, you will also need to consider how the board's dynamics would potentially turn out; consider how they will get on together. Striking the right balance in the composition of a board is as important as the individual talents within it.</li>
+            <li>Technological know-how is essential. Every company today is being disrupted by new technologies and many Private equity investors are keen to have tech businesses in their portfolio. This makes it more important than ever to have real technological expertise on the board. But you don’t need a geek. Go for someone with a broader background — someone who has run a technology business, for example, who understands technology but also the commercial side of things.</li>
+            <li>Aim for good dynamics. While you will need to have a good understanding of individual’s style and motivations, you will also need to consider how the board’s dynamics would potentially turn out; consider how they will get on together. Striking the right balance in the composition of a board is as important as the individual talents within it.</li>
             <li>A diverse board is more effective. Aim for diversity — of thought, experience, style. Diverse boards are more dynamic — in their understanding of issues, in their points of view and in the way they come to decisions. A board should seek to reflect the entire business, including its employees, customers and markets, and not just the ownership structure. For private equity owners, remember that there will be an exit at some point; a diverse board will bring a more agile mindset to the task.</li>
-            <li>The role of the chair is crucial. A good chair knows how to establish constructive relationships across several constituencies: with the CEO, with shareholders, with fellow members of the board. Chairs must have the trust of management and stakeholders in the company. They don't have to know everything, but they must be able to ask the right questions of the right people and give others an opportunity to contribute. Particularly in private equity context, the Chair can play a very effective role in handling tricky situations between shareholders and the owners.</li>
+            <li>The role of the chair is crucial. A good chair knows how to establish constructive relationships across several constituencies: with the CEO, with shareholders, with fellow members of the board. Chairs must have the trust of management and stakeholders in the company. They don’t have to know everything, but they must be able to ask the right questions of the right people and give others an opportunity to contribute. Particularly in private equity context, the Chair can play a very effective role in handling tricky situations between shareholders and the owners.</li>
           </ol>
-          <img src="assets/img/post-img-3.jpg" alt="">
+          <img src="assets/img/post-img-3.webp" alt="">
           <ol start="8">
-            <li>Schedule regular health checks. Once a year, the board should reflect on its own performance. They should ask themselves: How are we getting on together? What contribution are we making to the company's success? Could we do better, and if so, how? Do we have the right balance of expertise? Are we trusted by management? Is our dialogue with executives' fluid? What have we learned and how do we change? In my experience, very few boards — even in big, listed companies — take time out for self-reflection. They would be immensely more effective if they did. It is about have a real conversation about how the board and individuals are doing.</li>
+            <li>Schedule regular health checks. Once a year, the board should reflect on its own performance. They should ask themselves: How are we getting on together? What contribution are we making to the company’s success? Could we do better, and if so, how? Do we have the right balance of expertise? Are we trusted by management? Is our dialogue with executives' fluid? What have we learned and how do we change? In my experience, very few boards — even in big, listed companies — take time out for self-reflection. They would be immensely more effective if they did. It is about have a real conversation about how the board and individuals are doing.</li>
             <li>Encourage regular management reviews and offsites. Boards often hesitate to make the tough calls when everything points to a problem with management. Regular conversations with and about management can help. How is the CEO doing? How is management working together as a team? Offsites are another good opportunity to deepen the dialogue with management and debate the bigger picture. Even the best-laid plans should be revisited from time to time.</li>
-            <li>Find the right balance with management. Boards today are expected to know a lot more about the businesses they oversee and to work more closely with management. There are tensions here: how to remain objective and independent while also building a constructive and trusted relationship with management; how to impart advice without meddling in day-to-day operations. It's all about finding the right balance. Creating a working relationship based on trust helps to give each other feedback when there is tension.</li>
+            <li>Find the right balance with management. Boards today are expected to know a lot more about the businesses they oversee and to work more closely with management. There are tensions here: how to remain objective and independent while also building a constructive and trusted relationship with management; how to impart advice without meddling in day-to-day operations. It’s all about finding the right balance. Creating a working relationship based on trust helps to give each other feedback when there is tension.</li>
           </ol>
           <h2>Heading 2</h2>
-          <p>Find the right balance with management. Boards today are expected to know a lot more about the businesses they oversee and to work more closely with management. There are tensions here: how to remain objective and independent while also building a constructive and trusted relationship with management; how to impart advice without meddling in day-to-day operations. It's all about finding the right balance.</p>
+          <p>Find the right balance with management. Boards today are expected to know a lot more about the businesses they oversee and to work more closely with management. There are tensions here: how to remain objective and independent while also building a constructive and trusted relationship with management; how to impart advice without meddling in day-to-day operations. It’s all about finding the right balance.</p>
           <h3>Heading 3</h3>
           <p>Boards often hesitate to make the tough calls when everything points to a problem with management. Regular conversations with and about management can help. Offsites are another good opportunity to deepen the dialogue with management and debate the bigger picture.</p>
         </div>
@@ -178,7 +204,7 @@
           <div class="swiper-slide">
             <a class="insight-card" href="post.html">
               <div class="insight-card__media">
-                <img class="insight-card__img" src="assets/img/post-news-slider-1.jpg" alt="" loading="lazy">
+                <img class="insight-card__img" src="assets/img/post-news-slider-1.webp" alt="" loading="lazy">
                 <span class="insight-card__arrow" aria-hidden="true">
                   <img src="assets/icons/news-arrow-slider.svg" alt="" width="14" height="14">
                 </span>
@@ -189,7 +215,7 @@
           <div class="swiper-slide">
             <a class="insight-card" href="post.html">
               <div class="insight-card__media">
-                <img class="insight-card__img" src="assets/img/post-news-slider-2.jpg" alt="" loading="lazy">
+                <img class="insight-card__img" src="assets/img/post-news-slider-2.webp" alt="" loading="lazy">
                 <span class="insight-card__arrow" aria-hidden="true">
                   <img src="assets/icons/news-arrow-slider.svg" alt="" width="14" height="14">
                 </span>
@@ -200,7 +226,7 @@
           <div class="swiper-slide">
             <a class="insight-card" href="post.html">
               <div class="insight-card__media">
-                <img class="insight-card__img" src="assets/img/post-news-slider-3.jpg" alt="" loading="lazy">
+                <img class="insight-card__img" src="assets/img/post-news-slider-3.webp" alt="" loading="lazy">
                 <span class="insight-card__arrow" aria-hidden="true">
                   <img src="assets/icons/news-arrow-slider.svg" alt="" width="14" height="14">
                 </span>
@@ -211,7 +237,7 @@
           <div class="swiper-slide">
             <a class="insight-card" href="post.html">
               <div class="insight-card__media">
-                <img class="insight-card__img" src="assets/img/post-news-slider-4.jpg" alt="" loading="lazy">
+                <img class="insight-card__img" src="assets/img/post-news-slider-4.webp" alt="" loading="lazy">
                 <span class="insight-card__arrow" aria-hidden="true">
                   <img src="assets/icons/news-arrow-slider.svg" alt="" width="14" height="14">
                 </span>
@@ -241,10 +267,10 @@
       <div class="footer__mid-row">
         <div class="footer__mid-left">
           <div>
-            <a class="footer__contact-link" href="#contact" data-popup-open>
+            <button type="button" class="footer__contact-link" data-popup="popup-request">
               <span>Contact Us</span>
               <img class="footer__arrow" src="assets/icons/footer-contact-arrow.svg" alt="" aria-hidden="true">
-            </a>
+            </button>
   
             <div class="footer__dev">
               <img class="footer__dev-logo" src="assets/icons/dev-logo.svg" alt="" aria-hidden="true">
@@ -279,7 +305,7 @@
       <div class="footer__mid-row footer__mid-row--bottom">
         <div class="footer__copy">
           <span>© 2026</span>
-          <a class="footer__policy" href="#">Pricacy and Policy</a>
+          <a class="footer__policy" href="#">Privacy Policy</a>
         </div>
 
         <div class="footer__socials">
@@ -360,12 +386,58 @@
 
   <div class="footer-mob__legal">
     <span>&copy; 2026</span>
-    <a class="footer-mob__policy" href="#">Pricacy and Policy</a>
+    <a class="footer-mob__policy" href="#">Privacy Policy</a>
   </div>
 </div>
+
+<div class="popup" id="popup-request" aria-hidden="true">
+    <div class="popup__overlay" data-popup-close></div>
+
+    <div class="popup__window">
+        <div class="popup__image">
+            <img src="assets/img/popup.webp" alt="">
+        </div>
+
+        <div class="popup__content">
+            <button class="popup__close" type="button" data-popup-close aria-label="Close popup">
+                <picture>
+                    <source media="(max-width: 570px)" srcset="assets/icons/menu-close-mob.svg">
+                    <img src="assets/icons/menu-close.svg" alt="">
+                </picture>
+            </button>
+
+            <div class="popup__scroll" data-lenis-prevent>
+            <div class="popup__top">
+                <h2 class="popup__title">Where Quality Sets the Standard</h2>
+
+                <form class="popup__form" action="#" method="post">
+                    <div class="popup__field">
+                        <input type="tel" id="popup-phone" class="popup__input popup__phone">
+                    </div>
+                    <input type="email" class="popup__input" placeholder="Enter your Email">
+                    <button type="submit" class="btn btn--navy popup__submit">
+                        <span>Leave a Request</span>
+                        <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="popup__socials">
+                <a href="#" class="popup__social">Instagram <img src="assets/icons/popup-link.svg" alt=""></a>
+                <a href="https://wa.me/19712424048" class="popup__social">whatsapp <img src="assets/icons/popup-link.svg" alt=""></a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInputWithUtils.min.js" defer></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>

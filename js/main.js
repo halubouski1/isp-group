@@ -446,13 +446,18 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.cases__grid')) {
 // Scroll down to the next section (hero control)
 // ========================================
 document.querySelectorAll('[data-scroll-next]').forEach((button) => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (e) => {
     const section = button.closest('section');
     const target = section && section.nextElementSibling;
     if (!target) return;
 
+    // the trigger can be an <a> with a same-page href as a no-JS fallback —
+    // stop the jump so Lenis can glide there instead
+    e.preventDefault();
+
     if (lenis) {
-      lenis.scrollTo(target, { duration: 1.4 });
+      // same 100px gap the CSS scroll-margin-top gives native #hash jumps
+      lenis.scrollTo(target, { duration: 1.4, offset: -100 });
       return;
     }
     target.scrollIntoView({ behavior: 'smooth' });
@@ -654,3 +659,103 @@ if (careerGrid) {
   if (lenis) lenis.on('scroll', updateCareer);
 }
 
+// ========================================
+// Popup — open via [data-popup], close via [data-popup-close] / overlay / Esc
+// ========================================
+const openPopup = (popup) => {
+  popup.classList.add('is-open');
+  popup.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  if (lenis) lenis.stop();
+};
+
+const closePopup = (popup) => {
+  popup.classList.remove('is-open');
+  popup.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (lenis) lenis.start();
+};
+
+document.querySelectorAll('[data-popup]').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.getElementById(btn.dataset.popup);
+    if (target) openPopup(target);
+  });
+});
+
+document.querySelectorAll('.popup').forEach((popup) => {
+  popup.querySelectorAll('[data-popup-close]').forEach((el) => {
+    el.addEventListener('click', () => closePopup(popup));
+  });
+});
+
+// intl-tel-input — auto-detect country from the typed phone number
+const phoneInput = document.querySelector('#popup-phone');
+if (phoneInput && typeof window.intlTelInput !== 'undefined') {
+  window.intlTelInput(phoneInput, {
+    initialCountry: 'us',
+    nationalMode: false, // keep the full "+…" number inside the field, editable
+    allowDropdown: false, // no manual picker — the flag only follows the typed number
+  });
+
+  // "+1" is a real (dark) value; the rest of the number is shown as a grey mask.
+  const DIAL = '+1';
+  phoneInput.value = DIAL;
+
+  const field = phoneInput.closest('.popup__field');
+  const hint = document.createElement('span');
+  hint.className = 'popup__phone-hint';
+  hint.setAttribute('aria-hidden', 'true');
+  // Invisible "+1" reserves the exact width of the real value so the mask lines up after it
+  hint.innerHTML = `<span class="popup__phone-hint-prefix">${DIAL}</span> (000)-000-00-00`;
+  field.appendChild(hint);
+
+  const syncHint = () => {
+    const cs = getComputedStyle(phoneInput);
+    hint.style.paddingLeft = cs.paddingLeft;
+    hint.style.fontSize = cs.fontSize;
+    // Show the mask only while nothing beyond the dial code has been typed
+    hint.style.display = phoneInput.value.trim() === DIAL ? 'flex' : 'none';
+  };
+
+  phoneInput.addEventListener('input', syncHint);
+  syncHint();
+}
+
+// ========================================
+// Menu — slide-out drawer opened by the burger
+// ========================================
+const menu = document.querySelector('.menu');
+const burger = document.querySelector('.burger');
+
+const openMenu = () => {
+  menu.classList.add('is-open');
+  menu.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  if (lenis) lenis.stop();
+};
+
+const closeMenu = () => {
+  menu.classList.remove('is-open');
+  menu.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (lenis) lenis.start();
+};
+
+if (menu && burger) {
+  burger.addEventListener('click', openMenu);
+  menu.querySelectorAll('[data-menu-close]').forEach((el) => {
+    el.addEventListener('click', closeMenu);
+  });
+  menu.querySelectorAll('.menu__nav a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  const openedPopup = document.querySelector('.popup.is-open');
+  if (openedPopup) closePopup(openedPopup);
+  if (menu && menu.classList.contains('is-open')) closeMenu();
+});

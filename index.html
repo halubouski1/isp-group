@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/media.css">
@@ -43,13 +44,13 @@
 </svg>
                 </li>
                 
-                <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+                <li class="nav__item"><a class="nav__link" href="portfolio.html">Projects</a></li>
                 <li class="nav__dot" aria-hidden="true">
 <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="2" cy="2" r="2" fill="white" />
 </svg>
                 </li>
-                <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+                <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
@@ -58,6 +59,30 @@
         </button>
     </div>
 </header>
+
+<div class="menu" aria-hidden="true">
+    <div class="menu__overlay" data-menu-close></div>
+    <aside class="menu__panel">
+        <button class="menu__close" type="button" data-menu-close aria-label="Close menu">
+            <img src="assets/icons/menu-close.svg" alt="">
+        </button>
+
+        <div class="menu__inner">
+            <nav class="menu__nav">
+                <a href="index.html">Home</a>
+                <a href="#services">Services</a>
+                <a href="portfolio.html">Projects</a>
+                <a href="about-us.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="menu__socials">
+                <a href="#" class="menu__social">Instagram <img src="assets/icons/popup-link.svg" alt=""></a>
+                <a href="https://wa.me/19712424048" class="menu__social">whatsapp <img src="assets/icons/popup-link.svg" alt=""></a>
+            </div>
+        </div>
+    </aside>
+</div>
 
 <section class="hero">
     <video class="hero__video" src="assets/vid/hero.mp4" autoplay muted loop playsinline preload="auto"></video>
@@ -77,14 +102,14 @@
                 <li class="stats__item">
                     <span class="stats__circle"><span class="stats__value" data-countup="10" data-countup-suffix="+">10+</span></span>
                     <div class="stats__text">
-                        <span class="stats__title">Years of Expiriance</span>
+                        <span class="stats__title">Years of Experience</span>
                         <p class="stats__desc">Decades of combined know-how under one roof.</p>
                     </div>
                 </li>
                 <li class="stats__item">
                     <span class="stats__circle"><span class="stats__value" data-countup="5">5</span></span>
                     <div class="stats__text">
-                        <span class="stats__title">Core Sirvices</span>
+                        <span class="stats__title">Core Services</span>
                         <p class="stats__desc">Efficient service with minimal wait times</p>
                     </div>
                 </li>
@@ -93,20 +118,20 @@
             <div class="hero__cta">
                 <h2 class="hero__subtitle">Where Quality Sets the Standard.</h2>
                 <div class="hero__buttons">
-                    <a class="btn btn--light hero__btn-big" href="#contact">
+                    <button class="btn btn--light hero__btn-big" data-popup="popup-request">
                         <span class="btn__text">Build With Us</span>
                         <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </a>
-                    <a class="btn btn--dark hero__btn-small" href="#about">
+                    </button>
+                    <button class="btn btn--dark hero__btn-small" data-scroll-next>
                         <span class="btn__text">Learn More</span>
                         <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -119,7 +144,7 @@
 
         <div class="about__text" data-aos="fade-up" data-aos-delay="100">
             <p class="about__desc">We create thoughtfully built residential and commercial spaces — from custom homes and renovations to offices, retail environments, and commercial buildings. Every project is approached with the same focus on quality, functionality, and lasting value.</p>
-            <a class="btn btn--navy about__btn" href="#contact">
+            <a class="btn btn--navy about__btn" href="about-us.html">
                 <span class="btn__text">More About Our Company</span>
                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -132,7 +157,7 @@
 
 <section class="services" id="services" data-aos="fade-up">
     <div class="services__head">
-        <h2 class="services__title">Our <span>Servives</span></h2>
+        <h2 class="services__title">Our <span>Services</span></h2>
 
         <div class="services__nav">
             <button class="slider-btn slider-btn--prev" type="button" aria-label="Previous slide">
@@ -164,7 +189,7 @@
                                     <rect x="40.6045" width="9.28118" height="11.0214" rx="3"/>
                                 </svg>
                             </div>
-                            <a class="btn btn--dark service-card__btn" href="#contact">
+                            <a class="btn btn--dark service-card__btn" href="floor-screed.html">
                                 <span class="btn__text">Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -176,7 +201,7 @@
 
                     <h3 class="service-card__title">Floor Screed</h3>
 
-                    <a class="service-card__circle" href="#contact" aria-label="Floor Screed — learn more">
+                    <a class="service-card__circle" href="floor-screed.html" aria-label="Floor Screed — learn more">
                         <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
                     </a>
                 </article>
@@ -200,7 +225,7 @@
                                     <rect x="40.6045" width="9.28118" height="11.0214" rx="3"/>
                                 </svg>
                             </div>
-                            <a class="btn btn--dark service-card__btn" href="#contact">
+                            <a class="btn btn--dark service-card__btn" href="floor-finishing.html">
                                 <span class="btn__text">Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -212,7 +237,7 @@
 
                     <h3 class="service-card__title">Floor Finishing</h3>
 
-                    <a class="service-card__circle" href="#contact" aria-label="Floor Finishing — learn more">
+                    <a class="service-card__circle" href="floor-finishing.html" aria-label="Floor Finishing — learn more">
                         <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
                     </a>
                 </article>
@@ -236,7 +261,7 @@
                                     <rect x="40.6045" width="9.28118" height="11.0214" rx="3"/>
                                 </svg>
                             </div>
-                            <a class="btn btn--dark service-card__btn" href="#contact">
+                            <a class="btn btn--dark service-card__btn" href="plastering.html">
                                 <span class="btn__text">Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -248,7 +273,7 @@
 
                     <h3 class="service-card__title">Plastering</h3>
 
-                    <a class="service-card__circle" href="#contact" aria-label="Plastering — learn more">
+                    <a class="service-card__circle" href="plastering.html" aria-label="Plastering — learn more">
                         <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
                     </a>
                 </article>
@@ -272,7 +297,7 @@
                                     <rect x="40.6045" width="9.28118" height="11.0214" rx="3"/>
                                 </svg>
                             </div>
-                            <a class="btn btn--dark service-card__btn" href="#contact">
+                            <a class="btn btn--dark service-card__btn" href="wall-ceiling-finishing.html">
                                 <span class="btn__text">Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -284,7 +309,7 @@
 
                     <h3 class="service-card__title">Wall &amp; Ceiling Works</h3>
 
-                    <a class="service-card__circle" href="#contact" aria-label="Wall and Ceiling Works — learn more">
+                    <a class="service-card__circle" href="wall-ceiling-finishing.html" aria-label="Wall and Ceiling Works — learn more">
                         <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
                     </a>
                 </article>
@@ -308,7 +333,7 @@
                                     <rect x="40.6045" width="9.28118" height="11.0214" rx="3"/>
                                 </svg>
                             </div>
-                            <a class="btn btn--dark service-card__btn" href="#contact">
+                            <a class="btn btn--dark service-card__btn" href="drywall.html">
                                 <span class="btn__text">Learn More</span>
                                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -318,9 +343,9 @@
                         </div>
                     </div>
 
-                    <h3 class="service-card__title">Tiling &amp; Stonework</h3>
+                    <h3 class="service-card__title">Drywall Works</h3>
 
-                    <a class="service-card__circle" href="#contact" aria-label="Tiling and Stonework — learn more">
+                    <a class="service-card__circle" href="drywall.html" aria-label="Tiling and Stonework — learn more">
                         <img src="assets/icons/slider-btn-arrow.svg" alt="" width="15" height="15">
                     </a>
                 </article>
@@ -338,27 +363,27 @@
                 <a class="build__logo" href="/" aria-label="ISP Group">
                     <img src="assets/img/logo.svg" alt="ISP Group" width="146" height="21">
                 </a>
-                <a class="build__link" href="#contact">Contact Us</a>
+                <btn class="build__link" data-popup="popup-request">Contact Us</btn>
             </div>
 
             <div class="build__bottom">
                 <div class="build__main">
                     <h2 class="build__title">Every Space Deserves To Be Built Right.</h2>
                     <div class="build__buttons">
-                        <a class="btn btn--light build__btn" href="#projects">
+                        <a class="btn btn--light build__btn" href="portfolio.html">
                             <span class="btn__text">Explore Our Work</span>
                             <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
-                        <a class="btn btn--dark build__btn" href="#contact">
+                        <button class="btn btn--dark build__btn" data-popup="popup-request">
                             <span class="btn__text">Contact Our Team</span>
                             <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -372,13 +397,13 @@
     <div class="way__head">
         <h2 class="way__title"><span>A Better Way</span> to Build</h2>
 
-        <a class="btn btn--outline" href="#contact">
+        <button class="btn btn--outline" data-popup="popup-request">
             <span class="btn__text">Book the consultation</span>
             <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.3337 2.6665V7.33317C13.3337 8.04041 13.0527 8.71869 12.5526 9.21879C12.0525 9.71889 11.3742 9.99984 10.667 9.99984H2.66699" stroke="#344A5B" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M6.00033 6.6665L2.66699 9.99984L6.00033 13.3332" stroke="#344A5B" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-        </a>
+        </button>
     </div>
 
     <ul class="way__list">
@@ -452,13 +477,13 @@
                 <h3 class="grid-card__title">Custom Homes</h3>
             </div>
 
-            <a class="btn btn--light grid-card__btn" href="#contact">
-                <span class="btn__text">View Service</span>
+            <button class="btn btn--light grid-card__btn" href="#contact">
+                <span class="btn__text">Learn more</span>
                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </a>
+            </button>
         </li>
 
         <li class="grid-card grid-card--2">
@@ -470,13 +495,13 @@
                 <h3 class="grid-card__title">Commercial Spaces</h3>
             </div>
 
-            <a class="btn btn--light grid-card__btn" href="#contact">
-                <span class="btn__text">View Service</span>
+            <button class="btn btn--light grid-card__btn" data-popup="popup-request">
+                <span class="btn__text">Learn more</span>
                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </a>
+            </button>
         </li>
 
         <li class="grid-card grid-card--3">
@@ -488,13 +513,13 @@
                 <h3 class="grid-card__title">Renovations</h3>
             </div>
 
-            <a class="btn btn--light grid-card__btn" href="#contact">
-                <span class="btn__text">View Service</span>
+            <button class="btn btn--light grid-card__btn" data-popup="popup-request">
+                <span class="btn__text">Learn more</span>
                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </a>
+            </button>
         </li>
 
         <li class="grid-card grid-card--4">
@@ -506,13 +531,13 @@
                 <h3 class="grid-card__title">Additions &amp; Expansions</h3>
             </div>
 
-            <a class="btn btn--light grid-card__btn" href="#contact">
-                <span class="btn__text">View Service</span>
+            <button class="btn btn--light grid-card__btn" data-popup="popup-request">
+                <span class="btn__text">Learn more</span>
                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </a>
+            </button>
         </li>
     </ul>
 </section>
@@ -523,13 +548,13 @@
             <span class="conversation__second"><span class="conversation__slash">//</span> <span class="conversation__accent">Conversation</span></span>
         </h2>
 
-        <a class="btn btn--navy conversation__btn" href="#contact">
+        <button class="btn btn--navy conversation__btn" data-popup="popup-request">
             <span class="btn__text">Start Your Project</span>
             <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-        </a>
+        </button>
     </div>
 
     <ul class="conversation__list">
@@ -719,13 +744,13 @@
         <div class="fill__text">
             <p class="fill__desc" data-fill-text>Every project begins with understanding how the space needs to work. For this project, our team managed the process from early planning through construction and final finishes, creating an environment that balances functionality, durability, and thoughtful design.</p>
 
-            <a class="btn btn--navy fill__btn" href="#contact">
+            <button class="btn btn--navy fill__btn" data-popup="popup-request">
                 <span class="btn__text">Book the consultation</span>
                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </a>
+            </button>
         </div>
     </div>
 
@@ -742,20 +767,20 @@
         </div>
 
         <div class="faq__buttons">
-            <a class="btn btn--navy" href="#contact">
+            <button class="btn btn--navy" data-popup="popup-request">
                 <span class="btn__text">Start Your Build</span>
                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </a>
-            <a class="btn btn--outline faq__btn--contact" href="#contact">
+            </button>
+            <button class="btn btn--outline faq__btn--contact" data-popup="popup-request">
                 <span class="btn__text">Contact Us</span>
                 <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </a>
+            </button>
         </div>
     </div>
 
@@ -864,7 +889,7 @@
 
         <div class="build__content">
             <div class="build__head">
-                <span class="build__link">Let's discuss your project</span>
+                <span class="build__link">Let’s discuss your project</span>
                 <a class="build__link" href="#contact">Contact Us</a>
             </div>
 
@@ -872,14 +897,14 @@
                 <div class="build__main">
                     <h2 class="build__title">Tell Us What You Would Like to Build</h2>
                     <div class="build__buttons">
-                        <a class="btn btn--light build__btn" href="#projects">
+                        <button class="btn btn--light build__btn" href="#projects">
                             <span class="btn__text">Discuss Your Project</span>
                             <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </a>
-                        <a class="btn btn--dark build__btn" href="#contact">
+                        </button>
+                        <a class="btn btn--dark build__btn" href="contact.html">
                             <span class="btn__text">Call today</span>
                             <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -926,10 +951,10 @@
       <div class="footer__mid-row">
         <div class="footer__mid-left">
           <div>
-            <a class="footer__contact-link" href="#contact" data-popup-open>
+            <button type="button" class="footer__contact-link" data-popup="popup-request">
               <span>Contact Us</span>
               <img class="footer__arrow" src="assets/icons/footer-contact-arrow.svg" alt="" aria-hidden="true">
-            </a>
+            </button>
   
             <div class="footer__dev">
               <img class="footer__dev-logo" src="assets/icons/dev-logo.svg" alt="" aria-hidden="true">
@@ -964,7 +989,7 @@
       <div class="footer__mid-row footer__mid-row--bottom">
         <div class="footer__copy">
           <span>© 2026</span>
-          <a class="footer__policy" href="#">Pricacy and Policy</a>
+          <a class="footer__policy" href="#">Privacy Policy</a>
         </div>
 
         <div class="footer__socials">
@@ -1045,8 +1070,52 @@
 
   <div class="footer-mob__legal">
     <span>&copy; 2026</span>
-    <a class="footer-mob__policy" href="#">Pricacy and Policy</a>
+    <a class="footer-mob__policy" href="#">Privacy Policy</a>
   </div>
+</div>
+
+<div class="popup" id="popup-request" aria-hidden="true">
+    <div class="popup__overlay" data-popup-close></div>
+
+    <div class="popup__window">
+        <div class="popup__image">
+            <img src="assets/img/popup.webp" alt="">
+        </div>
+
+        <div class="popup__content">
+            <button class="popup__close" type="button" data-popup-close aria-label="Close popup">
+                <picture>
+                    <source media="(max-width: 570px)" srcset="assets/icons/menu-close-mob.svg">
+                    <img src="assets/icons/menu-close.svg" alt="">
+                </picture>
+            </button>
+
+            <div class="popup__scroll" data-lenis-prevent>
+            <div class="popup__top">
+                <h2 class="popup__title">Where Quality Sets the Standard</h2>
+
+                <form class="popup__form" action="#" method="post">
+                    <div class="popup__field">
+                        <input type="tel" id="popup-phone" class="popup__input popup__phone">
+                    </div>
+                    <input type="email" class="popup__input" placeholder="Enter your Email">
+                    <button type="submit" class="btn btn--navy popup__submit">
+                        <span>Leave a Request</span>
+                        <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="popup__socials">
+                <a href="#" class="popup__social">Instagram <img src="assets/icons/popup-link.svg" alt=""></a>
+                <a href="https://wa.me/19712424048" class="popup__social">whatsapp <img src="assets/icons/popup-link.svg" alt=""></a>
+            </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -1054,6 +1123,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/accordion-js@3.3.4/dist/accordion.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInputWithUtils.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
