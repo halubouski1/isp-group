@@ -1,0 +1,500 @@
+/* ==========================================================================
+   Post page — responsive
+   ========================================================================== */
+
+/* Below 1920px the whole layout is the desktop one scaled by 0.75, the same
+   convention media.css uses for the main page. */
+@media (max-width: 1919px) {
+  /* ----- Breadcrumb ----- */
+  .contacts-breadcrumb {
+    gap: 9px;
+  }
+
+  .contacts-breadcrumb__link {
+    font-size: 10.5px;
+  }
+
+  /* ----- Hero ----- */
+  .hero {
+    padding: 150px 15px 75px 15px;
+  }
+
+  .hero__inner {
+    gap: 37.5px;
+  }
+
+  .post-hero__wrapper {
+    gap: 37.5px;
+    padding-left: 37.5px;
+    padding-right: 37.5px;
+  }
+
+  .hero__image,
+  .hero__image img {
+    border-radius: 9px;
+  }
+
+  .hero__descr-wrapper {
+    gap: 18px;
+  }
+
+  .hero__tags {
+    gap: 7.5px;
+  }
+
+  .hero-tag__dot {
+    width: 9.75px;
+    height: 9.75px;
+  }
+
+  .hero__tag {
+    gap: 7.5px;
+    border-radius: 3.75px;
+    padding: 10.5px;
+    padding-right: 12.75px;
+    font-size: 11.25px;
+  }
+
+  .hero__title {
+    max-width: 705px;
+    font-size: 90px;
+  }
+
+  .hero__date {
+    font-size: 13.5px;
+  }
+
+  .hero__descr {
+    max-width: 547.5px;
+    font-size: 13.5px;
+  }
+
+  /* ----- Post intro ----- */
+  .post-intro {
+    padding: 0 15px 192.75px 45px;
+  }
+
+  .post-intro__inner {
+    gap: 45px;
+  }
+
+  .post-intro__left {
+    padding-top: 22.5px;
+  }
+
+  .post-intro__title {
+    max-width: 517.5px;
+    margin-bottom: 37.5px;
+    font-size: 45px;
+  }
+
+  .post-intro__tags {
+    gap: 3px;
+    margin-bottom: 30px;
+  }
+
+  .post-intro__text {
+    gap: 37.5px;
+  }
+
+  .post-intro__text p {
+    max-width: 560.25px;
+    font-size: 13.5px;
+  }
+
+  .post-intro__image {
+    border-radius: 9px;
+  }
+
+  /* ----- Post article ----- */
+  .post-article {
+    padding-bottom: 75px;
+  }
+
+  .post-article__container {
+    max-width: 795px;
+  }
+
+  .post-article__title {
+    margin: 0 0 56.25px;
+    padding-bottom: 7.5px;
+    font-size: 69.75px;
+  }
+
+  .post-article__body {
+    font-size: 22.5px;
+  }
+
+  .post-article__body > * + * {
+    margin-top: 60px;
+  }
+
+  .post-article__body p {
+    max-width: 767.25px;
+    font-size: 22.5px;
+  }
+
+  .post-article__body img {
+    border-radius: 9px;
+  }
+
+  .post-article__body ol,
+  .post-article__body ul {
+    padding-left: 18.75px;
+    margin-left: 18.75px;
+    gap: 60px;
+  }
+
+  .post-article__body li {
+    padding-left: 11.25px;
+  }
+
+  .post-article__body li img {
+    margin-top: 30px;
+  }
+
+  .post-article__body h2 {
+    font-size: 42px;
+  }
+
+  .post-article__body h3 {
+    font-size: 31.5px;
+  }
+
+  .post-article__body h4 {
+    font-size: 24px;
+  }
+
+  .post-article__body :is(h2, h3, h4) + * {
+    margin-top: 24px;
+  }
+
+  /* ----- Insights slider ----- */
+  .insights {
+    padding-bottom: 75px;
+  }
+
+  .insights__head {
+    gap: 30px;
+    margin-bottom: 33.75px;
+    padding: 0 15px;
+  }
+
+  .insights__title {
+    font-size: 22.5px;
+  }
+
+  .insight-card__arrow img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .insights__nav {
+    gap: 6px;
+  }
+
+  .insights-btn {
+    width: 37.5px;
+    height: 37.5px;
+  }
+
+  .insights-btn img {
+    width: 11.25px;
+    height: 11.25px;
+  }
+
+  .insights__slider .swiper-slide {
+    width: 390px;
+  }
+
+  .insight-card__media {
+    border-radius: 9px;
+  }
+
+  .insight-card__img {
+    height: 328px;
+  }
+
+  .insight-card__arrow {
+    top: 15px;
+    right: 15px;
+    width: 33px;
+    height: 33px;
+  }
+
+  .insight-card__title {
+    max-width: 360px;
+    margin-top: 24px;
+    font-size: 19.5px;
+  }
+}
+
+@media (max-width: 1025px) {
+    .post-intro__inner {
+        flex-direction: column;
+    }
+    
+    .post-intro {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .post-intro__left, .post-intro__right {
+        width: 100%;
+    }
+
+    .post-intro__text p {
+        max-width: 100%;
+    }
+
+    .post-article {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 769px) {
+    .post-hero__wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero__title {
+        font-size: 60px;
+    }
+
+    .hero__descr {
+        max-width: 352px;
+    }
+}
+
+@media (max-width: 570px) {
+    .hero {
+        padding-top: 140px;
+        padding-bottom: 53px;
+    }
+
+    .post-hero__wrapper {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .hero__tag {
+        border-radius: 5px;
+        gap: 10px;
+        padding: 11px 17px 11px 14px;
+        font-size: 15px;
+    }
+
+    .hero-tag__dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .hero__tags {
+        gap: 10px;
+    }
+
+    .post-hero__wrapper {
+        gap: 20px;
+    }
+
+    .hero__title {
+        margin-top: 10px;
+        font-size: 33px;
+        line-height: 125%;
+        max-width: 260px;
+    }
+
+    .hero__descr {
+        max-width: 310px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 189%;
+    }
+
+    .hero__descr-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 80px;
+    }
+
+    .hero__date {
+        font-size: 15px;
+        line-height: 189%;
+    }
+
+    .hero__inner {
+        gap: 20px;
+    }
+
+    .hero__image {
+        min-height: 680px;
+        object-fit: cover;
+        margin-left: -8px;
+        margin-right: -8px;
+        width: calc(100% + 16px);
+    }
+
+    /* .post-intro */
+    .post-intro__left {
+        padding-top: 0px;
+    }
+
+    .post-intro {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 100px;
+    }
+
+    .post-intro__title {
+        font-size: 33px;
+        line-height: 125%;
+        margin-bottom: 35px;
+    }
+
+    .post-intro__text p, .post-article__body ol, .post-article__body ul  {
+        font-size: 15px;
+        line-height: 206%;
+    }
+
+    .post-intro__text {
+        gap: 45px;
+    }
+
+    .post-intro__inner {
+        gap: 60px;
+    }
+
+    .post-intro__right {
+        min-height: 470px;
+    }
+
+    .post-intro__image {
+        height: 100%;
+        min-height: 470px;
+        object-fit: cover;
+    }
+
+    /* .post-article */
+    .post-article__title {
+        font-size: 33px;
+        margin-bottom: 35px;
+        line-height: 125%;
+    }
+
+    .post-article__body p {
+        font-size: 16px;
+        line-height: 210%;
+    }
+
+    .post-article__body > * + * {
+        margin-top: 45px;
+    }
+
+    .post-article__body li img {
+        margin-top: 16px;
+    }
+
+    .post-article__body img {
+        min-height: 470px;
+        object-fit: cover;
+    }
+
+    .post-article__body :is(h2, h3, h4) + * {
+        margin-top: 16px;
+    }
+
+    .post-article__body ol,
+    .post-article__body ul {
+        padding-left: 0;
+        margin-left: 20px;
+        gap: 40px;
+    }
+
+    .post-article__body h2 {
+        font-size: 24px;
+    }
+
+    .post-article__body h3 {
+        font-size: 20px;
+    }
+
+    .post-article__body h4 {
+        font-size: 18px;
+    }
+
+    .post-article {
+        padding-bottom: 105px;
+    }
+
+    /* insights */
+
+    /* The arrows live inside .insights__head next to the title, so they cannot
+       be ordered against the slider while that wrapper generates a box.
+       display:contents flattens it into .insights, which then lays the three
+       pieces out in a column: title -> slider -> arrows. */
+    .insights {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 100px;
+    }
+
+    .insights__head {
+        display: contents;
+    }
+
+    .insights__title {
+        font-size: 35px;
+        max-width: 295px;
+        line-height: 100%;
+        order: 1;
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+
+    .insights__slider {
+        order: 2;
+        width: 100%;
+    }
+
+    /* aligned with the slider's 20px slidesOffsetBefore (see main.js) */
+    .insights__nav {
+        order: 3;
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    /* One card per screen, inset by the slider's 20px offset on each side.
+       A fixed px width would overflow a 320px phone and leave a dead gutter on
+       a 430px one; the percentage is resolved against the slider, which is
+       full-bleed, so it tracks the viewport. */
+    .insights__slider .swiper-slide {
+        width: calc(100% - 85px);
+    }
+
+    /* the card width is fluid now, so the image has to keep its shape by ratio
+       rather than by a fixed height */
+    .insight-card__img {
+        height: auto;
+        aspect-ratio: 335 / 263;
+    }
+
+    .insight-card__title {
+        font-size: 20px;
+        line-height: 125%;
+        margin-top: 18px;
+    }
+
+    .insight-card__arrow {
+        top: 13px;
+        right: 13px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .insight-card__arrow img {
+        width: 12px;
+        height: 12px;
+    }
+}

@@ -188,6 +188,31 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.purpose__slider'))
 }
 
 // ========================================
+// Insights slider (post page)
+// ========================================
+if (typeof Swiper !== 'undefined' && document.querySelector('.insights__slider')) {
+  new Swiper('.insights__slider', {
+    slidesPerView: 'auto',
+    // breakpoints are min-width, so this is the value for 1919px and below
+    spaceBetween: 20,
+    breakpoints: {
+      1920: {
+        spaceBetween: 32,
+      },
+    },
+    // the 20px side inset lives here rather than in CSS padding, so the track
+    // still clips the cards at the gutter instead of showing them through it
+    slidesOffsetBefore: 20,
+    slidesOffsetAfter: 20,
+    speed: 700,
+    navigation: {
+      nextEl: '.insights-btn--next',
+      prevEl: '.insights-btn--prev',
+    },
+  });
+}
+
+// ========================================
 // Scroll-filled text
 // ========================================
 const fillTexts = document.querySelectorAll('[data-fill-text]');
