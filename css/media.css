@@ -767,12 +767,17 @@
 
     /* menu */
     .menu__inner {
-        padding: 160px 36px 36px 36px;
+        padding: 100px 36px 36px 36px;
     }
 
     .menu__close {
         top: 19px;
         right: 15px;
+    }
+
+    .menu__close img {
+        width: 25px;
+        height: 25px;
     }
 
     .menu__close svg {
@@ -781,11 +786,11 @@
     }
 
     .menu__nav a {
-        font-size: 41px;
+        font-size: 37px;
     }
 
     .menu__nav {
-        gap: 50px;
+        gap: 30px;
     }
 
     .menu__social {

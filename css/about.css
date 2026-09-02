@@ -227,15 +227,14 @@
     width: 72px;
     height: 72px;
     margin: -36px 0 0 -36px;
-    border: 1px solid rgba(23, 49, 69, 0.15);
     border-radius: 50%;
-    background-color: #F7F7F7;
+    background-color: #E9E9E8;
     transform: rotate(var(--a)) translateY(calc(-1 * var(--icon-r))) rotate(calc(-1 * var(--a)));
 }
 
 .experience__icon img {
-    width: 25px;
-    height: 25px;
+    width: 33px;
+    height: 33px;
     opacity: 0.45;
     transition: opacity 0.4s ease;
 }

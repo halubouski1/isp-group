@@ -98,11 +98,6 @@
         margin: -27px 0 0 -27px;
     }
 
-    .experience__icon img {
-        width: 18.75px;
-        height: 18.75px;
-    }
-
     .experience__dot {
         width: 12.75px;
         height: 12.75px;
@@ -488,8 +483,8 @@
     }
 
     .experience__icon img {
-        width: 15px;
-        height: 15px;
+        width: 25px;
+        height: 25px;
     }
 
     .founder__arrow {
@@ -864,8 +859,8 @@
     .experience__title { font-size: 35px; line-height: 100%; max-width: 300px; }
     .experience__title span { display: inline; }
     .experience__icon img {
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
     }
     .experience__slide-title {
         margin-bottom: 6px;

@@ -2053,7 +2053,7 @@ ul {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 217px 50px 50px 50px;
+    padding: 150px 50px 50px 50px;
 }
 
 .menu__nav {
@@ -2064,7 +2064,7 @@ ul {
 
 .menu__nav a {
     font-weight: 400;
-    font-size: 55px;
+    font-size: 45px;
     color: #173145;
     transition: opacity 0.3s ease;
 }
