@@ -1661,10 +1661,17 @@ ul {
     height: auto;
 }
 
+/* the credit is a link now — the class keeps the flex layout the <div> had */
 .footer__dev {
     display: flex;
     align-items: end;
     gap: 20px;
+    transition: opacity 0.25s ease;
+}
+
+.footer__dev:hover,
+.footer-mob__dev:hover {
+    opacity: 0.65;
 }
 
 .footer__dev-logo {

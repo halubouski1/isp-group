@@ -558,10 +558,6 @@ document.querySelectorAll('[data-select]').forEach((select) => {
 });
 
 // Prevent the demo contact form from reloading the page
-const contactForm = document.querySelector('.contact__form');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => e.preventDefault());
-}
 // ========================================
 // Back to top
 // ========================================
@@ -651,15 +647,12 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.cases__grid')) {
       })
     : null;
 
-  // Hide non-matching slides, then replay the staggered appear animation
-  const filterSlider = (swiper, slides, cat) => {
+  // Re-measure after the caller has set .is-hidden, then replay the staggered
+  // appear animation on whatever is left visible
+  const filterSlider = (swiper, slides) => {
     if (!swiper || !slides.length) return;
 
-    slides.forEach((slide) => {
-      const match = cat === 'all' || slide.dataset.cat === cat;
-      slide.classList.toggle('is-hidden', !match);
-      slide.classList.remove('is-appearing');
-    });
+    slides.forEach((slide) => slide.classList.remove('is-appearing'));
 
     swiper.update();
     swiper.slideTo(0, 0);
@@ -675,19 +668,41 @@ if (typeof Swiper !== 'undefined' && document.querySelector('.cases__grid')) {
   };
 
   const filters = document.querySelectorAll('.cases__filter');
+  const bigEl = document.querySelector('.cases__big');
   const gridSlides = [...document.querySelectorAll('.cases__grid .swiper-slide')];
   const bigSlides = [...document.querySelectorAll('.cases__big .swiper-slide')];
+
+  // Unfiltered, the cases are split across the two sliders — six small cards on
+  // top, four full-width ones below (the [data-extra] grid cards are the same
+  // four, kept hidden). Pick a category and everything that matches collapses
+  // into the top slider instead, so a thin result set stays compact rather than
+  // leaving one lone card in each.
+  const applyFilter = (cat) => {
+    const showAll = cat === 'all';
+
+    gridSlides.forEach((slide) => {
+      const match = showAll
+        ? !('extra' in slide.dataset)
+        : slide.dataset.cat === cat;
+      slide.classList.toggle('is-hidden', !match);
+    });
+
+    bigSlides.forEach((slide) => slide.classList.toggle('is-hidden', !showAll));
+    if (bigEl) bigEl.hidden = !showAll;
+
+    filterSlider(casesGrid, gridSlides);
+    if (showAll) filterSlider(casesBig, bigSlides);
+  };
 
   filters.forEach((filter) => {
     filter.addEventListener('click', () => {
       filters.forEach((f) => f.classList.remove('is-active'));
       filter.classList.add('is-active');
-
-      const cat = filter.dataset.filter;
-      filterSlider(casesGrid, gridSlides, cat);
-      filterSlider(casesBig, bigSlides, cat);
+      applyFilter(filter.dataset.filter);
     });
   });
+
+  applyFilter('all');
 }
 
 // ========================================

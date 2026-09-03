@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ren">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="css/media.css">
-      <link rel="stylesheet" href="css/contact.css">
-      <link rel="stylesheet" href="css/media-contact.css">
+      <link rel="stylesheet" href="css/project.css">
+      <link rel="stylesheet" href="css/media-project.css">
       <script>document.documentElement.style.setProperty("--fixed-vh", window.innerHeight + "px");</script>
-      <title>Contact — ISP Group</title>
-      <meta name="description" content="Get in touch with ISP Group for an interior construction or renovation estimate in South Florida. Tell us about your space and we will come back with scope, materials and a timeline.">
+      <title>Commercial Space — Industrial Leveling — ISP Group</title>
+      <meta name="description" content="Floor Screed project in Moscow — Commercial Space — Industrial Leveling, 4,100 sq ft. Industrial-grade levelling over a commercial slab, poured in bays to control shrinkage. Depth set to carry hea">
       <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
       <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
       <link rel="apple-touch-icon" href="assets/icons/favicon-180.png">
@@ -97,89 +98,130 @@
     </aside>
 </div>
 
+<section class="hero" id="home">
+  <img class="hero__bg" src="assets/img/case-7.webp" alt="Commercial Space — Industrial Leveling">
 
-<section class="hero hero--contact" id="home">
-  <img class="hero__video" src="assets/img/contact-hero.webp" alt="" aria-hidden="true">
+  <div class="hero__bottom pr-hero__bottom">
+    <div class="pr-hero__intro">
+      <p class="pr-hero__desc">
+        MOSCOW
+      </p>
+      <h1 class="pr-hero__title">
+        Commercial Space — Industrial Leveling
+      </h1>
+    </div>
+    <p class="hero__descr">
+      Industrial-grade levelling over a commercial slab, poured in bays to control shrinkage. Depth set to carry heavy traffic and finished flat enough for the polished surface that went on top.
+    </p>
+          <button class="btn btn--light hero__btn-big" data-popup="popup-request">
+                  <span class="btn__text">Start Your Project</span>
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button> 
+  </div>
+</section>
 
-  <div class="co-hero__intro">
-    <span class="co-hero__eyebrow">Please contact us to discuss your project</span>
-    <h1 class="co-hero__title">/Contact</h1>
+<section class="project" id="project" data-aos="fade-up">
+  <div class="project__top">
+    <span class="project__tag project__tag--active"><span class="project__dot"></span>Moscow</span>
+    <span class="project__tag"><span class="project__dot"></span>Floor Screed</span>
+    <span class="project__tag"><span class="project__dot"></span>4,100 sq ft</span>
   </div>
 
-  <div class="hero__bottom hero__bottom--contact">
-    <form class="co-form" name="contact" method="POST" data-netlify="true" novalidate>
-        <input type="hidden" name="form-name" value="contact">
-      <div class="co-form__left">
-        <div class="contact__fields">
-          <input class="contact__input" type="text" name="name" placeholder="Your name" autocomplete="name">
-          <input class="contact__input" type="tel" name="phone" placeholder="Phone number" autocomplete="tel">
-          <input class="contact__input" type="email" name="email" placeholder="E-Mail" autocomplete="email">
+  <p class="project__desc">Industrial-grade levelling over a commercial slab, poured in bays to control shrinkage. Depth set to carry heavy traffic and finished flat enough for the polished surface that went on top.</p>
 
-          <div class="contact__select" data-select>
-            <button class="contact__select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
-              <span class="contact__select-value">Property Type</span>
-              <img class="contact__select-chevron" src="assets/icons/dropdown-chevron.svg" alt="" aria-hidden="true">
-            </button>
-            <ul class="contact__select-list" role="listbox">
-              <li class="contact__select-option" role="option" data-value="apartment">Apartment</li>
-              <li class="contact__select-option" role="option" data-value="house">House</li>
-              <li class="contact__select-option" role="option" data-value="office">Office</li>
-              <li class="contact__select-option" role="option" data-value="commercial">Commercial</li>
-            </ul>
-            <input type="hidden" name="propertyType" value="">
-          </div>
-        </div>
+  <div class="project__nav">
+    <button class="reviews__arrow project__arrow project__prev" type="button" aria-label="Previous">
+      <img src="assets/icons/slider-arrow.svg" alt="" aria-hidden="true">
+    </button>
+    <button class="reviews__arrow project__arrow project__next" type="button" aria-label="Next">
+      <img src="assets/icons/slider-arrow.svg" alt="" aria-hidden="true">
+    </button>
+  </div>
 
-        <button class="contact__submit btn btn--light" type="submit">
-          Leave a request
-                        <svg class="btn__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M13.3337 2.66663V7.33329C13.3337 8.04054 13.0527 8.71881 12.5526 9.21891C12.0525 9.71901 11.3742 9.99996 10.667 9.99996H2.66699" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M6.00033 6.66663L2.66699 9.99996L6.00033 13.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-        </button>
-      </div>
-
-      <textarea class="co-form__message" name="message" placeholder="Additional Massage"></textarea>
-    </form>
-
-    <div class="co-contacts">
-      <div class="footer__mid-right">
-        <div class="footer__contact-item">
-          <div class="footer__contact-label contact-label--value">
-            <span>Phone</span>
-            <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true">
-          </div>
-          <a class="footer__contact-value" href="tel:+17542548884">+1 754 254 8884</a>
-        </div>
-
-        <div class="footer__contact-item">
-          <div class="footer__contact-label contact-label--value">
-            <span>E-Mail</span>
-            <img src="assets/icons/footer-star-label.svg" alt="" aria-hidden="true">
-          </div>
-          <a class="footer__contact-value" href="mailto:info@ispgroupmiami.com">info@ispgroupmiami.com</a>
-        </div>
-      </div>
-
-      <div class="footer__socials">
-        <a class="footer__social" href="#">
-          <span>telegram</span>
-          <img src="assets/icons/contact-social.svg" alt="" aria-hidden="true">
-        </a>
-        <a class="footer__social" href="#">
-          <span>whatsapp</span>
-          <img src="assets/icons/contact-social.svg" alt="" aria-hidden="true">
-        </a>
-        <a class="footer__social" href="#">
-          <span>instagram</span>
-          <img src="assets/icons/contact-social.svg" alt="" aria-hidden="true">
-        </a>
-      </div>
+  <div class="swiper project__slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide project__slide"><img src="assets/img/case-7.webp" alt="Commercial Space — Industrial Leveling" loading="lazy"></div>
+      <div class="swiper-slide project__slide"><img src="assets/img/case-8.webp" alt="Luxury Condo — Interior Paint &amp; Finishes" loading="lazy"></div>
+      <div class="swiper-slide project__slide"><img src="assets/img/case-9.webp" alt="Residential Complex — Partition &amp; Ceiling Works" loading="lazy"></div>
+      <div class="swiper-slide project__slide"><img src="assets/img/case-10.webp" alt="Restaurant Interior — Large Format Porcelain" loading="lazy"></div>
+      <div class="swiper-slide project__slide"><img src="assets/img/case-1.webp" alt="Luxury Condo — Lobby Tile Installation" loading="lazy"></div>
+      <div class="swiper-slide project__slide"><img src="assets/img/case-2.webp" alt="High-Rise Apartment — Full Floor Leveling" loading="lazy"></div>
     </div>
   </div>
 </section>
 
-<footer class="footer">
+
+<section class="portfolio portfolio--project" id="projects">
+  <div class="swiper portfolio__swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide portfolio__slide portfolio__slide--project">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Wall &amp; Ceiling Finishing</span>
+        </span>
+        <img class="portfolio__img" src="assets/img/case-8.webp" alt="Luxury Condo — Interior Paint &amp; Finishes">
+        <div class="portfolio__caption portfolio__caption--project" >
+          <div class="portfolio__info">
+            <h3 class="portfolio__name">Luxury Condo<br>Interior Paint &amp; Finishes</h3>
+            <span class="portfolio__desc">Located in Moscow<br>1,650 sq ft</span>
+          </div>
+          <a class="header__request light__btn" href="case-8.html">
+            Watch the case
+            <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+
+      <div class="swiper-slide portfolio__slide">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Drywall</span>
+        </span>
+        <img class="portfolio__img" src="assets/img/case-9.webp" alt="Residential Complex — Partition &amp; Ceiling Works">
+        <div class="portfolio__caption portfolio__caption--project" >
+          <div class="portfolio__info">
+            <h3 class="portfolio__name">Residential Complex<br>Partition &amp; Ceiling Works</h3>
+            <span class="portfolio__desc">Located in Moscow<br>3,800 sq ft</span>
+          </div>
+          <a class="header__request light__btn" href="case-9.html">
+            Watch the case
+            <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+
+      <div class="swiper-slide portfolio__slide">
+        <span class="case-card__tag">
+          <span class="case-card__pin"><img src="assets/icons/location.svg" alt="" aria-hidden="true"></span>
+          <span>Floor Finishing</span>
+        </span>
+        <img class="portfolio__img" src="assets/img/case-10.webp" alt="Restaurant Interior — Large Format Porcelain">
+        <div class="portfolio__caption portfolio__caption--project" >
+          <div class="portfolio__info">
+            <h3 class="portfolio__name">Restaurant Interior<br>Large Format Porcelain</h3>
+            <span class="portfolio__desc">Located in Moscow<br>1,200 sq ft</span>
+          </div>
+          <a class="header__request light__btn" href="case-10.html">
+            Watch the case
+            <img src="assets/icons/btn-arrow.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="portfolio__arrow portfolio__prev" type="button" aria-label="Previous case">
+    <img src="assets/icons/slider-arrow.svg" alt="" aria-hidden="true">
+  </button>
+  <button class="portfolio__arrow portfolio__next" type="button" aria-label="Next case">
+    <img src="assets/icons/slider-arrow.svg" alt="" aria-hidden="true">
+  </button>
+</section>
+
+<footer class="footer footer--project" id="contact">
   <div class="footer__content">
     <div class="footer__top">
       <nav class="footer__links" aria-label="Footer">
@@ -198,10 +240,10 @@
       <div class="footer__mid-row">
         <div class="footer__mid-left">
           <div>
-            <button type="button" class="footer__contact-link" data-popup="popup-request">
+            <a class="footer__contact-link" href="#contact" data-popup-open>
               <span>Contact Us</span>
               <img class="footer__arrow" src="assets/icons/footer-contact-arrow.svg" alt="" aria-hidden="true">
-            </button>
+            </a>
   
             <a class="footer__dev" href="https://fernandes-media.com" target="_blank" rel="noopener" aria-label="Website by Fernandes Media">
               <img class="footer__dev-logo" src="assets/icons/dev-logo.svg" alt="" aria-hidden="true">
@@ -236,7 +278,7 @@
       <div class="footer__mid-row footer__mid-row--bottom">
         <div class="footer__copy">
           <span>© 2026</span>
-          <a class="footer__policy" href="#">Privacy Policy</a>
+          <a class="footer__policy" href="#">Pricacy and Policy</a>
         </div>
 
         <div class="footer__socials">
@@ -256,6 +298,8 @@
       </div>
     </div>
   </div>
+
+  <div class="footer__map" id="footer-map" aria-label="Location map" role="img"></div>
 </footer>
 
 <div class="footer-mob">
@@ -322,7 +366,6 @@
   </div>
 </div>
 
-
 <div class="popup" id="popup-request" aria-hidden="true">
     <div class="popup__overlay" data-popup-close></div>
 
@@ -370,7 +413,9 @@
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInputWithUtils.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
